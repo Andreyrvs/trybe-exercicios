@@ -24,7 +24,16 @@ O objetivo dos exercícios desse dia foi fixar o que havia aprendido no - Primei
 
 1. Coloque todo o CSS criado até agora nos exercícios anteriores em um arquivo externo.
 
+
+### Sintaxe utilizada
 `` 
 font-size: ;
+font-family: ;
+font-style: ;
+font-weight: ;
+text-align: ;
+text-decoration: ;
+line-height: ;
+background-color: ;
+color: ;
 `` 
-
