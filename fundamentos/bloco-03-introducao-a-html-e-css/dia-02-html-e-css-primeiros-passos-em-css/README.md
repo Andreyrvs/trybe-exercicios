@@ -26,8 +26,8 @@ O objetivo dos exercícios desse dia foi fixar o que havia aprendido no - Primei
 
 
 ### Sintaxe utilizada
-`` 
-font-size: ;
+``` 
+font-size: ; 
 font-family: ;
 font-style: ;
 font-weight: ;
@@ -36,4 +36,4 @@ text-decoration: ;
 line-height: ;
 background-color: ;
 color: ;
-`` 
+``` 
