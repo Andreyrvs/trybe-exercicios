@@ -27,6 +27,9 @@ li > em{
   font-weight: 700;
 }
 
-.linguagens-maiores {
-  
+.linguagens-maiores{
+  color:blue
+}
+.linguagens-maiores li:nth-last-of-type(3) {
+  color: pink;
 }
