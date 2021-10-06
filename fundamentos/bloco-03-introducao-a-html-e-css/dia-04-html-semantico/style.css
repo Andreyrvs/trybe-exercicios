@@ -1,7 +1,7 @@
 h1 {
   text-align: center;
   display: inline;
-  margin-left: 350px;
+  margin-left: 200px;
 }
 
 .first {
@@ -10,7 +10,7 @@ h1 {
   height: 50px;
   width: 200px;
   text-align: center;
-  left: 400px;
+  left: 250px;
   
 }
 
@@ -21,7 +21,7 @@ h1 {
   width: 300px;
   text-align: center;
   top: 110px;
-  left: 195px;
+  left: 47px;
 }
 
 .third {
@@ -31,7 +31,7 @@ h1 {
   width: 300px;
   text-align: center;
   top: 110px;
-  left: 500px;
+  left: 355px;
 }
 
 .podium-lista li {
@@ -44,6 +44,10 @@ h1 {
   top: 180px;
 }
 
-.premiacao-primeiro ul li {
+.premiacao-primeiro h3, .premiacao-segundo, .premiacao-terceiro {
+  text-align: center;
+}
+
+.premiacao-primeiro-lugar li, .premiacao-primeiro-segundo li, .premiacao-primeiro-terceiro li {
   display: inline;
 }
