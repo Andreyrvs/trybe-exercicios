@@ -30,7 +30,12 @@ h1 {
   left: 352px;
 }
 
-.podium-lista li {
+.podium ul li {
   position: absolute;
   display: inline-block;
+}
+
+.premiacao {
+  position: absolute;
+  top: 180px;
 }
