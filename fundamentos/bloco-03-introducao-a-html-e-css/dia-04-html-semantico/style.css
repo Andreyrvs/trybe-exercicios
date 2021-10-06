@@ -1,36 +1,40 @@
 h1 {
   text-align: center;
+  display: inline;
+  margin-left: 350px;
 }
 
 .first {
   background-color: rgb(235, 200, 84);
   font-size: 20px;
   height: 50px;
-  text-align: center;
   width: 200px;
-  left: 250px;
+  text-align: center;
+  left: 400px;
+  
 }
 
 .second {
   background-color: rgb(219, 219, 219);
   font-size: 20px;
   height: 50px;
-  text-align: center;
   width: 300px;
-  top: 130px;
+  text-align: center;
+  top: 110px;
+  left: 195px;
 }
 
 .third {
   background-color: rgb(170, 142, 106);
   font-size: 20px;
   height: 50px;
-  text-align: center;
   width: 300px;
-  top: 130px;
-  left: 352px;
+  text-align: center;
+  top: 110px;
+  left: 500px;
 }
 
-.podium ul li {
+.podium-lista li {
   position: absolute;
   display: inline-block;
 }
@@ -38,4 +42,8 @@ h1 {
 .premiacao {
   position: absolute;
   top: 180px;
+}
+
+.premiacao-primeiro ul li {
+  display: inline;
 }
