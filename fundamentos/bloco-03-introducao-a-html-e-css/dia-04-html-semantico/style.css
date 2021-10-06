@@ -8,6 +8,7 @@ h1 {
   height: 50px;
   text-align: center;
   width: 200px;
+  left: 250px;
 }
 
 .second {
@@ -16,6 +17,7 @@ h1 {
   height: 50px;
   text-align: center;
   width: 300px;
+  top: 130px;
 }
 
 .third {
@@ -24,4 +26,11 @@ h1 {
   height: 50px;
   text-align: center;
   width: 300px;
+  top: 130px;
+  left: 352px;
+}
+
+.podium-lista li {
+  position: absolute;
+  display: inline-block;
 }
