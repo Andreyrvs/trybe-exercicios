@@ -5,8 +5,8 @@ for (let index = 0; index < numbers.length; index+= 1 ) {
     soma += numbers[index] / numbers[index]; 
 }
   if (soma > 20){
-    console.log("valor maior que 20")
+    console.log('valor maior que 20')
   } else {
-    console.log("valor menor ou igual a 20")
+    console.log('valor menor ou igual a 20')
   }
 
