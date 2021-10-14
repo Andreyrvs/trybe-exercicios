@@ -31,5 +31,8 @@ if (entre parenteses pengunta se é verdade)
 vai do inicio ao fim sem podermos mudar a ordem
 ---
 
+### Métodos importantes
 
-
+Método | Funcionalidade
+------------ | -------------
+.push() | adiciona um novo item no final do array
