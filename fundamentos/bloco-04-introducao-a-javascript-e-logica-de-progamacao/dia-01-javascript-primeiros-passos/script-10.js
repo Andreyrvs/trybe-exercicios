@@ -12,3 +12,4 @@ if (custoProduto < 0 || valorDeVenda < 0 ) {
   lucro = valorDeVenda - valorCustoTotal;
   console.log(lucro * 1000);
 }
+// console.log(impostoProduto)
