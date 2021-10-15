@@ -14,7 +14,7 @@ Anotoções :grin:
 
 `if ()` entre parenteses pengunta se é verdade
 
----
+
 #### FOR 
 **CICLO DO LOOP**
 
@@ -24,13 +24,14 @@ Anotoções :grin:
 4. **ALTERAR** o valor dela
 
 - Voltar para o passo 2
----
+
 #### FOR OF
 
 Vai do inicio ao fim sem podermos mudar a ordem
 
 ---
 ## Course
+
 ### Métodos importantes
 
 Método | Funcionalidade
