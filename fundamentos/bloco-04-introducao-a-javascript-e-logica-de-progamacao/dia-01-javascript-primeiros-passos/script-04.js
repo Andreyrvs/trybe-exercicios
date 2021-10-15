@@ -1,9 +1,9 @@
 const a = -2;
 
 if (a > 0) {
-  console.log("positive");
+  console.log('positive');
 } else if (a < 0){
-  console.log("negative")
+  console.log('negative')
 } else {
-  console.log("zero")
+  console.log('zero')
 }
