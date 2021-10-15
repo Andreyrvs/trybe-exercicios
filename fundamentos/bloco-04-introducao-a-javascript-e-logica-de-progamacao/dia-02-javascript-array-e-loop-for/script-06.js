@@ -6,7 +6,6 @@ for (let index = 0; index < numbers.length; index+= 1) {
   if (numbers[index] % 2 == 0 ) {
     console.log('É par')
   } else {
-    numImpares 
     console.log('È impar')
   } 
 }
