@@ -51,3 +51,4 @@ if (inss <= 1903.98) {
   salarioLiquido = inss - ir;
   console.log(salarioLiquido);
 }
+
