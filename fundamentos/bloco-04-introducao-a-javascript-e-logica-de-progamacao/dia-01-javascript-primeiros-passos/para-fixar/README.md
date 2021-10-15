@@ -65,6 +65,9 @@ Essas ferramentas não vão te acompanhar apenas no JavaScript, mas em toda sua 
 ---
 ### Operador NOT
 
+```
+  console.log((2 + 2) === 4);
+```
 
 ---
 ### Switch e Case
