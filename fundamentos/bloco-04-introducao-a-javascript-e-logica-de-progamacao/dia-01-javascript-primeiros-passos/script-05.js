@@ -1,15 +1,13 @@
-const ladoA = 10;
-const ladoB = 120;
-const ladoC = 120;
+const ladoA = 60;
+const ladoB = 60;
+const ladoC = 60;
 
-let somaAB = ladoA, ladoB;
-let somaBC = ladoB, ladoC;
-let somaAC = ladoA, ladoC;
+let somaLados = ladoA + ladoB + ladoC;
 
-console.log(somaAB)
-
-if (ladoA + ladoB + ladoC == 180 ){
-  console.log("true")
+if (somaLados == 180 ){
+  console.log('true')
+} else if (ladoA < 0 || ladoB < 0 || ladoC < 0 ){
+  console.log('Invalido')
 } else {
-  console.log("false")
+  console.log('false')
 }
