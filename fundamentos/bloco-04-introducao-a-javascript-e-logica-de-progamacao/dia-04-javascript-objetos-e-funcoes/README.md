@@ -19,4 +19,4 @@
 - Se a função tiver 2 parametros ela espera ser **alimentado** com os 2 paramentros
 
 - `console.log` - mostra um conteudo em alguma tela ex: OUTPUT, navedagor
-- Return não é uma saida de dados, ele deixa o dado disponivel os dados no Meu codigo
+- Return não é uma saída de dados, ele deixa o dado disponível os dados no Meu código
