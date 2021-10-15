@@ -4,7 +4,7 @@
 
 ## Variaveis
 
-**Dica**: *Com o plugin code runner que vimos no vídeo você pode executar o seu código no VS Code com o atalho ctrl + alt + n. Confira mais dicas sobre o VS Code [aqui]*(https://app.betrybe.com/course/real-life-engineer/vscode) !
+**Dica**: *Com o plugin code runner que vimos no vídeo você pode executar o seu código no VS Code com o atalho ctrl + alt + n. Confira mais dicas sobre o VS Code* [aqui](https://app.betrybe.com/course/real-life-engineer/vscode) !
 
 1. Crie uma constante chamada **myName** e atribua a ela o seu nome (Exemplo: Carolina).
 2. Crie uma constante chamada **birthCity** e atribua a ela a sua cidade natal.
@@ -62,15 +62,44 @@ Essas ferramentas não vão te acompanhar apenas no JavaScript, mas em toda sua 
     - Se nossa variável "weekDay" for "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira" ou "sexta-feira", imprima "Oba, mais um dia de aprendizado na Trybe >:D".
     - Se for algum dia de fim de semana, imprima "FINALMENTE, descanso merecido UwU".
 
----
-### Operador NOT
-
-```
-  console.log((2 + 2) === 4);
-```
 
 ---
 ### Switch e Case
 
 1. Crie uma variável para armazenar o estado da pessoa candidata no processo seletivo, que pode ser: **'aprovada'** , **'lista'** ou **'reprovada'** ;
 2. Crie uma estrutura condicional com o **switch/case** que irá imprimir as mensagens do exercício anterior se o estado da pessoa candidata for **'aprovada'** , **'lista'** ou **'reprovada'** . Como **default** , imprima a mensagem de **'não se aplica'** .
+
+---
+### Operador NOT
+
+```
+  console.log((2 + 2) === 4);
+```
+Isso aqui deve nos retornar true , não é? Afinal, 2 + 2 resultar em 4 é uma declaração verdadeira. Agora, se adicionarmos o operador NOT antes dessa declaração?
+```
+  console.log(!(2 + 2) === 4);
+```
+Se você executar esse código, vai perceber que o valor impresso é o oposto do anterior. 🤔
+- Estamos diante de um operador muito poderoso. Ele pode **inverter** o valor booleano de um elemento. 
+- Então, sabendo que o resultado original da operação ali em cima é **true** , quando a gente insere o operador **NOT** antes da operação, teremos o valor contrário a nossa resposta final, que é **false** .
+- Vale lembrar que o conceito de **truthy** e **falsy** também se aplica aqui, por isso não estamos limitados apenas aos tipos primitivos booleanos. Podemos usar em:
+
+    - Strings...
+    ```
+    const squirtle = "melhor pokemon inicial";
+      console.log(!squirtle); // false
+    ```
+    - Números...
+    ```
+    console.log(!42); // false
+    console.log(!0); // true
+    // O número 0 tem o valor "falsy" no javascript. Logo, seu oposto é true.
+    ```
+    - Valores nulos...
+    ```
+    console.log(!null); // true
+    ```
+    - Valores indefinidos..
+    ```
+    console.log(!undefined); // true
+    ```
