@@ -1,6 +1,8 @@
 # PARA FIXAR
 
-### Objetos
+## Objetos
+
+### Exericicos
 
 1. Crie um objeto **player** contendo as variáveis listadas abaixo.
 
@@ -22,4 +24,46 @@ let medals = { golden: 2, silver: 3 };
 4. Acesse a chave **bestInTheWorld** e faça um `console.log` no seguinte formato: "A jogadora Marta Silva foi eleita a melhor do mundo por 6 vezes".
 
 5. Acesse a chave **medals** e faça um `console.log` no seguinte formato: "A jogadora possui 2 medalhas de ouro e 3 medalhas de prata".
+
+## For/in
+Um exemplo é a iteração nas chaves de um objeto:
+```
+let car = {
+  type: 'Fiat',
+  model: '500',
+  color: 'white',
+};
+
+for (let index in car) {
+  console.log(index, car[index]);
+}
+```
+O resultado do código acima é:
+```
+type Fiat
+model 500
+color white
+```
+
+### Exercicios
+
+1. Usando o objeto abaixo, utilize For/in e imprima no console a mensagem **'Olá xxxxx'** para cada nome, substituindo o **xxxxx** pelo nome em questão.
+
+```
+let names = {
+  person1: 'João',
+  person2: 'Maria',
+  person3: 'Jorge' 
+};
+```
+
+2. Usando o objeto abaixo, utilize For/in e imprima um console.log com as chaves e valores desse objeto.
+
+```
+let car = {
+  model: 'A3 Sedan',
+  manufacturer: 'Audi',
+  year: 2020
+};
+```
 
