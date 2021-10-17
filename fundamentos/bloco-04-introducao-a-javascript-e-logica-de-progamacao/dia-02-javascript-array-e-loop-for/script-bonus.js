@@ -1,9 +1,12 @@
-for (let index = 1; index < array.length; index += 1) {
-  for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
-    if (array[index] < array[secondIndex]) {
-      let position = array[index];
-      array[index] = array[secondIndex];
-      array[secondIndex] = position;
+let numbers = [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54];
+
+for (let i = 1; i < numbers.length; i += 1) {
+  for (let secondI = 0; secondI < i; secondI += 1) {
+    if (numbers[i] < numbers[secondI]) {
+      let position = numbers[i];
+      numbers[i] = numbers[secondI];
+      numbers[secondI] = position;
     }
   }
 }
+console.log(numbers)
