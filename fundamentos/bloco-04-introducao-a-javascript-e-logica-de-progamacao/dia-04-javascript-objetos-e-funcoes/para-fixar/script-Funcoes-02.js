@@ -1,4 +1,5 @@
 function area(base, height) {
   return base * height
 }
-console.log(area(5,8))
+area(5, 4)
+console.log(area)
