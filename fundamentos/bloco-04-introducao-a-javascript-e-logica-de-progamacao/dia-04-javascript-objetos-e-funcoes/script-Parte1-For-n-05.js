@@ -13,6 +13,6 @@ let complementary = {
 }
 
 for (let key in info){
-  info.recorrente = 'Ambos Recorrentes';
+  info.pop();
   console.log(info[key] + ' e ' + complementary[key]);
 }
