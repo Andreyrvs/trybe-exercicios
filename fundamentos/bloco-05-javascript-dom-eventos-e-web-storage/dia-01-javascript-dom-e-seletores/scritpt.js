@@ -25,10 +25,13 @@ fixTextH1('title')
 
 // 05 Não consegui fazer =(
 function upperCaseofP(p) {
-  let text = document.getElementsByClassName(p)[0].innerText;
-  document.getElementsByClassName(p)[0].innerText = text.toUpperCase();
+  let text = document.getElementsByTagName(p);
+  for (let index = 0; index < text.length; index += 1) {
+    text[index].innerText = text[index].innerText.toUpperCase();
+  }
+  console.log(text[0].innerText.toUpperCase())
 }
-upperCaseofP('texto-paragrafo')
+upperCaseofP('p')
 
 // 06
 function showP(allp) {
