@@ -29,3 +29,9 @@ function upperCaseofP(p) {
   document.getElementsByClassName(p)[0].innerText = text.toUpperCase();
 }
 upperCaseofP('texto-paragrafo')
+
+// 06
+function showP(allp) {
+  console.log(document.getElementsByTagName(allp))
+}
+showP('p')
