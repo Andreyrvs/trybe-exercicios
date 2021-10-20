@@ -1,12 +1,17 @@
-function tagP(tag) {
-  document.getElementsByClassName(tag)[0].innerText = 'Me vejo Trabalhando com progamação em uma empresa brasileira talvez';
-  console.log(tagP.length);
+function tagId(tag) {
+  document.getElementsByClassName(tag).innerText = 'Me vejo Trabalhando com progamação em uma empresa brasileira talvez';
+  console.log(tagId.length);
 }
-tagP('texto-paragrafo')
+tagId('texto-paragrafo');
 
-function yellowSquare(trybeColor) {
+function greenSquare(trybeColor) {
   document.getElementsByClassName('main-content')[0].style.backgroundColor = trybeColor;
 
-  console.log(yellowSquare.length);
+  console.log(greenSquare.length);
 }
-yellowSquare('rgb(76,164,109')
+greenSquare('rgb(76,164,109');
+
+function whiteSquare(bgColor) {
+  document.getElementsByClassName(bgColor)[0].style.backgroundColor = 'white';
+}
+whiteSquare('center-content')
