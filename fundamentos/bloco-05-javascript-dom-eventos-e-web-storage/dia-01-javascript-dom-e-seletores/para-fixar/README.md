@@ -37,4 +37,48 @@ Utilizando o mesmo template de exercício anterior:
 4. Recupere o subtítulo e altere a cor dele usando a função getElementsByTagName .
 
 ## Parte III - Qual seletor usar?
+`getElementById(id), querySelector('#id')`
+`getElementsByClassName('ClassName'), querySelectorAll('.ClassName')`
+`getElementsByTagName('TagName'), querySelectorAll('TagName') `
+![imagem](Parte3.png 'Exemplo')
 
+copie o código abaixo:
+```
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Administrador do Tempo</title>
+  </head>
+  <body id="container">
+    <header id="header-container">
+      <h1>Administrador do Tempo da Trybe</h1>
+    </header>
+
+    <section class="emergency-tasks">
+      <div>
+        <h3>Urgente e Importante</h3>
+      </div>
+      <div>
+        <h3>Urgente e Não-Importante</h3>
+      </div>
+    </section>
+
+    <section class="no-emergency-tasks">
+      <div>
+        <h3>Não-Urgente e Importante</h3>
+      </div>
+      <div>
+        <h3>Não-Urgente e Não-Importante</h3>
+      </div>
+    </section>
+
+    <footer id="footer-container">
+      <div>&copy; Trybe</div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+```
