@@ -23,7 +23,7 @@ function fixTextH1(h1) {
 }
 fixTextH1('title')
 
-// 05 Não consegui fazer =(
+// 05 
 function upperCaseofP(p) {
   let text = document.getElementsByTagName(p);
   for (let index = 0; index < text.length; index += 1) {
@@ -35,6 +35,9 @@ upperCaseofP('p')
 
 // 06
 function showP(allp) {
-  console.log(document.getElementsByTagName(allp))
+  let text = document.getElementsByTagName(allp);
+  for (let index = 0; index < text.length; index += 1) {
+    console.log(text[index].innerText)
+  }
 }
 showP('p')
