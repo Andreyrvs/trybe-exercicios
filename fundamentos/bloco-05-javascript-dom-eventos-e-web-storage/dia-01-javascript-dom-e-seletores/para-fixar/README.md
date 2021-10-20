@@ -35,3 +35,6 @@ Utilizando o mesmo template de exercício anterior:
 2. Recupere os seus parágrafos via código JavaScript , usando a função getElementsByClassName ;
 3 .Altere algum estilo do primeiro deles.
 4. Recupere o subtítulo e altere a cor dele usando a função getElementsByTagName .
+
+## Parte III - Qual seletor usar?
+
