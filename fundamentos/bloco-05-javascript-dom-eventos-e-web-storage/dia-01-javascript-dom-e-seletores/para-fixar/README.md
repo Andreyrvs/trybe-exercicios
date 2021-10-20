@@ -40,9 +40,12 @@ Utilizando o mesmo template de exercício anterior:
 `getElementById(id), querySelector('#id')`
 `getElementsByClassName('ClassName'), querySelectorAll('.ClassName')`
 `getElementsByTagName('TagName'), querySelectorAll('TagName') `
+`Cor da Trybe #2FC18C`
 ![imagem](Parte3.png 'Exemplo')
 
-copie o código abaixo:
+Copie o código abaixo:
+
+
 ```
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -81,4 +84,60 @@ copie o código abaixo:
     <script src="script.js"></script>
   </body>
 </html>
+```
+
+CSS - 
+```
+* {
+  margin: 0;
+}
+
+#container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+#header-container {
+  color: white;
+  padding: 20px;
+}
+
+.emergency-tasks {
+  display: inline-block;
+  height: 400px;
+  margin: 56px 0;
+  width: 400px;
+}
+
+.emergency-tasks div {
+  height: 198px;
+}
+.emergency-tasks h3 {
+  color: white;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.no-emergency-tasks {
+  display: inline-block;
+  height: 400px;
+  width: 400px;
+}
+
+.no-emergency-tasks div {
+  height: 198px;
+}
+
+.no-emergency-tasks h3 {
+  color: white;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#footer-container {
+  color: white;
+  font-weight: 700;
+  padding: 15px;
+  text-align: center;
+}
 ```

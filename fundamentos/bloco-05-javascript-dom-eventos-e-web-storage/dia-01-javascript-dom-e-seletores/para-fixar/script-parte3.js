@@ -1,5 +1,5 @@
 const headerH1 = document.querySelector('header')
-headerH1.style.backgroundColor = 'green'
+headerH1.style.backgroundColor = '#2FC18C'
 // cor de funde da section
 const urgente = document.querySelector('.emergency-tasks');
 urgente.style.backgroundColor = "salmon";
