@@ -1,11 +1,11 @@
 let n = 5;
 let asterisco = '';
 
-for (let i = 1; i <= n; i++) {
-  asterisco += '*';
-  for(let j = 1; j <= i; j++){
+for (let i = 1; i < n; i += 1) {
+  asterisco += '.';
+  for(let j = 1; j < n - i; j ++){
 
-    asterisco += '_';
+    asterisco += '*';
   }
   console.log(asterisco)
 }
