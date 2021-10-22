@@ -6,3 +6,10 @@
 // }
 
 // console.log(fatherUp);
+
+// PARTE 3
+// NAO CONSEGUI FAZER =(-
+// let fatherUp = document.querySelectorAll('#pai');
+// let fatherDown = document.getElementById('#paiDoPai')
+// let noRemovido = fatherUp.removeChild(fatherDown)
+// console.log(fatherUp);

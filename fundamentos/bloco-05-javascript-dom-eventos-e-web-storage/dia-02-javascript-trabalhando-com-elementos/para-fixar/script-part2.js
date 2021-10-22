@@ -53,17 +53,3 @@ console.log(secitonFatherY);
 
 // 04 A partir desse filho criado, acesse terceiroFilho .
 console.log(secitonFatherY.parentElement.nextElementSibling);
-
-
-// PARTE 3
-// NAO CONSEGUI FAZER =(
-// let fatherUp = document.querySelectorAll('#paiDoPai');
-
-// for (let index = 0; index < fatherUp.length; index += 1) {
-//   let element = fatherUp[index];
-//   if (element.innerHTML.includes('section')) {
-//    fatherUp.removeChild(element);
-//   } 
-// }
-
-// console.log(fatherUp);
