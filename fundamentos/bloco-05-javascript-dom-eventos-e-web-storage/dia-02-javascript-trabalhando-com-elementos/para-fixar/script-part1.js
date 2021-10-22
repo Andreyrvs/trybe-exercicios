@@ -36,4 +36,4 @@
 // console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
 
 // 08 Agora acesse o terceiroFilho a partir de pai .
-console.log(document.querySelector('#pai').lastElementChild.previousElementSibling)
+// console.log(document.querySelector('#pai').lastElementChild.previousElementSibling)
