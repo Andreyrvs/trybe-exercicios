@@ -28,7 +28,6 @@ secitonFather.appendChild(creatSectionItem)
 console.log(secitonFather);
 
 // 02 Crie um filho para elementoOndeVoceEsta .
-
 let textItem2 = ['eu sou e filho criado de elementoOndeVoceEsta'];
 
 let secitonFatherHere = document.querySelector('#elementoOndeVoceEsta');
@@ -41,7 +40,6 @@ secitonFatherHere.appendChild(creatSonSectionItem);
 console.log(secitonFatherHere);
 
 // 03 Crie um filho para primeiroFilhoDoFilho .
-
 let textItem3 = ['eu sou e filho criado de primeiroFilhoDoFilho'];
 
 let secitonFatherY = document.querySelector('#primeiroFilhoDoFilho');
@@ -53,4 +51,5 @@ secitonFatherY.appendChild(creatSonSectionItemY);
 
 console.log(secitonFatherY);
 
-// 
+// 04 A partir desse filho criado, acesse terceiroFilho .
+console.log(secitonFatherY.parentElement.nextElementSibling);
