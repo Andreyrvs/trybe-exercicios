@@ -88,3 +88,15 @@ for (let index = 0; index < loArrayNumbers.length; index += 1) {
 
   liNumbersItem.appendChild(createLoElement)
 }
+
+// 09 Adicione 3 tags h3 filhas do main ;
+function createTagH() {
+  let hOneItem = document.querySelector('main')
+
+  let createH3Element = document.createElement('h3');
+
+  hOneItem.appendChild(createH3Element);
+}
+createTagH('h3');
+createTagH('h3');
+createTagH('h3');
