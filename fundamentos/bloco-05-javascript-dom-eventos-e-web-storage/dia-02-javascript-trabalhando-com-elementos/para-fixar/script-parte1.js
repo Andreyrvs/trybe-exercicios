@@ -9,4 +9,12 @@
 // }
 // ondeEstou()
 
-// 
+// 03 Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+function firstChild() {
+  let pathFirstChild = document.querySelector('#elementoOndeVoceEsta').firstElementChild;
+
+  pathFirstChild.innerText = 'Eu sou o primeiro filho'
+  console.log(pathFirstChild);
+}
+firstChild()
+
