@@ -43,7 +43,7 @@ let sectionLeftItem = document.querySelector('main');
 
 let createSectionLeftElement = document.createElement('section');
 createSectionLeftElement.innerText = sectionLeftText;
-createSectionLeftElement.className = 'letf-content'
+createSectionLeftElement.className = 'left-content'
 
 sectionLeftItem.appendChild(createSectionLeftElement);
 
@@ -56,3 +56,14 @@ createSectionRightElement.innerText = sectionRigtText;
 createSectionRightElement.className = 'right-content';
 
 sectionRigtItem.appendChild(createSectionRightElement);
+
+// 07 Adicione uma imagem com src e classe e filha do section de passo 05
+let imageItem = document.querySelector('.left-content')
+
+let createImageElement = document.createElement('img');
+createImageElement.src = 'https://picsum.photos/200'
+createImageElement.className = 'small-image';
+
+imageItem.appendChild(createImageElement);
+
+// 08
