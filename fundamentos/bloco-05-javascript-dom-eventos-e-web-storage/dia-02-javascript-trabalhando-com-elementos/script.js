@@ -90,13 +90,18 @@ for (let index = 0; index < loArrayNumbers.length; index += 1) {
 }
 
 // 09 Adicione 3 tags h3 filhas do main ;
-function createTagH() {
+function createTagH(text) {
+  let createText = text;
   let hOneItem = document.querySelector('main')
 
   let createH3Element = document.createElement('h3');
-
+  createH3Element.innerText = createText
   hOneItem.appendChild(createH3Element);
 }
-createTagH('h3');
-createTagH('h3');
-createTagH('h3');
+
+let h3Text = 'Eu sou a primeira h3'
+createTagH(h3Text);
+let h3Text2 = 'Eu sou a segundo h3'
+createTagH(h3Text2);
+let h3Text3 = 'Eu sou a terceica h3'
+createTagH(h3Text3);
