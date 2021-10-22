@@ -31,7 +31,7 @@ sectionItem.appendChild(createSectionElement);
 // 04 Adicione a tag p como filho do section
 let pText = 'eu sou a tag p filha da section'
 let pItem = document.querySelector('section');
-// EU PODERIA TER CRIADO UMA FUNCTION PARA GERAR AS SECTION E ODER REAPROVEITAR
+
 let createElementP = document.createElement('p');
 createElementP.innerText = pText;
 
@@ -40,7 +40,7 @@ pItem.appendChild(createElementP);
 //  05 dicione a tag section com a classe como filha da main
 let sectionLeftText = 'Eu sou a tag section com classe let-content filha da main';
 let sectionLeftItem = document.querySelector('main');
-// EU PODERIA TER CRIADO UMA FUNCTION PARA GERAR AS SECTION E ODER REAPROVEITAR
+
 let createSectionLeftElement = document.createElement('section');
 createSectionLeftElement.innerText = sectionLeftText;
 createSectionLeftElement.className = 'left-content'
@@ -50,16 +50,17 @@ sectionLeftItem.appendChild(createSectionLeftElement);
 // 06 Adicione a tag section com a classe como filho da tag main
 let sectionRigtText = 'Eu sou a tag section com classe right-content filha da main';
 let sectionRigtItem = document.querySelector('main');
-// EU PODERIA TER CRIADO UMA FUNCTION PARA GERAR AS SECTION E ODER REAPROVEITAR
+
 let createSectionRightElement = document.createElement('section');
 createSectionRightElement.innerText = sectionRigtText;
 createSectionRightElement.className = 'right-content';
+createSectionRightElement.style = 'margin-right: auto'
 
 sectionRigtItem.appendChild(createSectionRightElement);
 
 // 07 Adicione uma imagem com src e classe e filha do section de passo 05
 let imageItem = document.querySelector('.left-content')
-// EU PODERIA TER CRIADO UMA FUNCTION PARA GERAR AS SECTION E ODER REAPROVEITAR
+
 let createImageElement = document.createElement('img');
 createImageElement.src = 'https://picsum.photos/200'
 createImageElement.className = 'small-image';
@@ -70,7 +71,7 @@ imageItem.appendChild(createImageElement);
 
 // cria a tag <ul> 
 let ulItem = document.querySelector('.right-content')
-// EU PODERIA TER CRIADO UMA FUNCTION PARA GERAR A UL E ODER REAPROVEITAR
+
 let createUlElement = document.createElement('ul');
 
 ulItem.appendChild(createUlElement)
@@ -110,6 +111,10 @@ createTagH(h3Text3);
 
 // vamos fazer algumas alterações e remoções:
 // VIDE  READEME
-let selecFather = document.querySelector('main')
-let removeSectionLeft = document.querySelector('.left-content')
-let removeNode = selecFather.removeChild(removeSectionLeft)
+
+// 03 Remove a section criada do passo 05
+let selecFather = document.querySelector('main');
+let selectSectionLeft = document.querySelector('.left-content');
+let removeNode = selecFather.removeChild(selectSectionLeft);
+
+// 04  Centralize a section criado no passo 6 
