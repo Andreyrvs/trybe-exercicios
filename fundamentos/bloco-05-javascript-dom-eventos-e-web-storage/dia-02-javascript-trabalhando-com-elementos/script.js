@@ -54,9 +54,9 @@ let sectionRigtItem = document.querySelector('main');
 let createSectionRightElement = document.createElement('section');
 createSectionRightElement.innerText = sectionRigtText;
 createSectionRightElement.className = 'right-content';
-createSectionRightElement.style = 'margin-right: auto'
 
 sectionRigtItem.appendChild(createSectionRightElement);
+
 
 // 07 Adicione uma imagem com src e classe e filha do section de passo 05
 let imageItem = document.querySelector('.left-content')
@@ -99,6 +99,7 @@ function createTagH(text) {
   let createH3Element = document.createElement('h3');
   createH3Element.innerText = createText
   createH3Element.className = 'description'
+
   hOneItem.appendChild(createH3Element);
 }
 
@@ -118,3 +119,7 @@ let selectSectionLeft = document.querySelector('.left-content');
 let removeNode = selecFather.removeChild(selectSectionLeft);
 
 // 04  Centralize a section criado no passo 6 
+createSectionRightElement.style = 'margin-right: auto'
+
+// 05 Troque a cor de fundo do elemento pai da section (center-content);
+createSectionElement.parentElement.style.backgroundColor = 'green'
