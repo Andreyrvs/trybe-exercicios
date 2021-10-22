@@ -9,7 +9,6 @@
 
 // PARTE 3
 // NAO CONSEGUI FAZER =(-
-// let fatherUp = document.querySelectorAll('#pai');
-// let fatherDown = document.getElementById('#paiDoPai')
-// let noRemovido = fatherUp.removeChild(fatherDown)
+
+// let fatherDown = document.getElementById('#paiDoPai').firstElementChild.remove()
 // console.log(fatherUp);
