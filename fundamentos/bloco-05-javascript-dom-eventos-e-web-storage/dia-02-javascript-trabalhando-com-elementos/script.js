@@ -38,12 +38,21 @@ createElementP.innerText = pText;
 pItem.appendChild(createElementP);
 
 //  05 dicione a tag section com a classe como filha da main
-let sectionTwoText = 'Eu sou a segunda tag section com classe filha da main';
-let sectionTwoItem = document.querySelector('main');
+let sectionLeftText = 'Eu sou a tag section com classe let-content filha da main';
+let sectionLeftItem = document.querySelector('main');
 
-let createSectionTwoElement = document.createElement('section');
-createSectionTwoElement.innerText = sectionTwoText;
+let createSectionLeftElement = document.createElement('section');
+createSectionLeftElement.innerText = sectionLeftText;
+createSectionLeftElement.className = 'letf-content'
 
-sectionTwoItem.appendChild(createSectionTwoElement);
+sectionLeftItem.appendChild(createSectionLeftElement);
 
-//
+// 06 Adicione a tag section com a classe como filho da tag main
+let sectionRigtText = 'Eu sou a tag section com classe right-content filha da main';
+let sectionRigtItem = document.querySelector('main');
+
+let createSectionRightElement = document.createElement('section');
+createSectionRightElement.innerText = sectionRigtText;
+createSectionRightElement.className = 'right-content';
+
+sectionRigtItem.appendChild(createSectionRightElement);
