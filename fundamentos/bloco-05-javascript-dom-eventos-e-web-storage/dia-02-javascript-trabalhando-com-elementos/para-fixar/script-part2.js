@@ -35,9 +35,22 @@ let secitonFatherHere = document.querySelector('#elementoOndeVoceEsta');
 let sonElementoOndeVoceEsta = textItem2;
 
 let creatSonSectionItem = document.createElement('section');
-creatSonSectionItem.innerHTML = sonElementoOndeVoceEsta;
+creatSonSectionItem.innerText = sonElementoOndeVoceEsta;
 secitonFatherHere.appendChild(creatSonSectionItem);
 
 console.log(secitonFatherHere);
 
-//
+// 03 Crie um filho para primeiroFilhoDoFilho .
+
+let textItem3 = ['eu sou e filho criado de primeiroFilhoDoFilho'];
+
+let secitonFatherY = document.querySelector('#primeiroFilhoDoFilho');
+let sonYOndeEsta = textItem3;
+
+let creatSonSectionItemY = document.createElement('section');
+creatSonSectionItemY.innerText = sonYOndeEsta;
+secitonFatherY.appendChild(creatSonSectionItemY);
+
+console.log(secitonFatherY);
+
+// 
