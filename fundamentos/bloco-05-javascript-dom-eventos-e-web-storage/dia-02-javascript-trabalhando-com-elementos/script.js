@@ -123,3 +123,18 @@ createSectionRightElement.style = 'margin-right: auto'
 
 // 05 Troque a cor de fundo do elemento pai da section (center-content);
 createSectionElement.parentElement.style.backgroundColor = 'green'
+
+// 06 Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+let selectLiFather = document.querySelectorAll('.right-content ul li');
+console.log(selectLiFather);
+
+for (let index = 0; index < loArrayNumbers.length; index += 1) {
+  let guardaPosition = selectLiFather[index];
+  
+  if (guardaPosition.innerText.includes('nove')) {
+    liNumbersItem.removeChild(guardaPosition);
+  }
+  if (guardaPosition.innerText.includes('dez')) {
+    liNumbersItem.removeChild(guardaPosition);
+  }
+}
