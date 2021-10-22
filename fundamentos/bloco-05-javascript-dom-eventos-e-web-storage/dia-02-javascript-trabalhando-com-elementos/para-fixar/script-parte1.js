@@ -30,4 +30,7 @@
 // console.log(document.querySelector('#elementoOndeVoceEsta').firstElementChild);
 
 // 06 Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
-console.log(document.querySelector('#elementoOndeVoceEsta').nextSibling);
+// console.log(document.querySelector('#elementoOndeVoceEsta').nextSibling);
+
+// 07 Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
