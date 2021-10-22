@@ -27,5 +27,7 @@
 // fatherToSon()
 
 // 05 Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
-console.log(document.querySelector('#elementoOndeVoceEsta').firstElementChild);
+// console.log(document.querySelector('#elementoOndeVoceEsta').firstElementChild);
 
+// 06 Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+console.log(document.querySelector('#elementoOndeVoceEsta').nextSibling);
