@@ -66,4 +66,25 @@ createImageElement.className = 'small-image';
 
 imageItem.appendChild(createImageElement);
 
-// 08
+// 08 dicione uma lista não ordenada com os valores de 1 a 10por extenso. filha do section criado no passo 6;
+
+// cria a tag <ul> 
+let ulItem = document.querySelector('.right-content')
+
+let createUlElement = document.createElement('ul');
+
+ulItem.appendChild(createUlElement)
+
+// adiciona as tags <li>
+let loArrayNumbers = ['um', 'dois', 'tres', 'quatro', 'cinco','seis',
+'sete', 'oito', 'nove', 'dez'];
+let liNumbersItem = document.querySelector('.right-content ul')
+
+for (let index = 0; index < loArrayNumbers.length; index += 1) {
+  let passPeloArray = loArrayNumbers[index];
+
+  let createLoElement = document.createElement('li');
+  createLoElement.innerText = passPeloArray;
+
+  liNumbersItem.appendChild(createLoElement)
+}
