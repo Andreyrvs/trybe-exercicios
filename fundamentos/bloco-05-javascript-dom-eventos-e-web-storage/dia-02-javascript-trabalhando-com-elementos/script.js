@@ -110,3 +110,6 @@ createTagH(h3Text3);
 
 // vamos fazer algumas alterações e remoções:
 // VIDE  READEME
+let selecFather = document.querySelector('main')
+let removeSectionLeft = document.querySelector('.left-content')
+let removeNode = selecFather.removeChild(removeSectionLeft)
