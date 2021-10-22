@@ -33,4 +33,7 @@
 // console.log(document.querySelector('#elementoOndeVoceEsta').nextSibling);
 
 // 07 Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
-console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
+// console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
+
+// 08 Agora acesse o terceiroFilho a partir de pai .
+console.log(document.querySelector('#pai').lastElementChild.previousElementSibling)
