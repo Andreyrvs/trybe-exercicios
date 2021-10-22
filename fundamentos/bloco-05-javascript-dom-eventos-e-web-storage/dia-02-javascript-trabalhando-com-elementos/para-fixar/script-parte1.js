@@ -19,9 +19,13 @@
 // firstChild()
 
 // 04 Acesse o primeiroFilho a partir de pai .
-function fatherToSon() {
-  let fatherToSon = document.querySelector('#pai').firstElementChild;
+// function fatherToSon() {
+//   let fatherToSon = document.querySelector('#pai').firstElementChild;
 
-  console.log(fatherToSon);
-}
-fatherToSon()
+//   console.log(fatherToSon);
+// }
+// fatherToSon()
+
+// 05 Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+console.log(document.querySelector('#elementoOndeVoceEsta').firstElementChild);
+
