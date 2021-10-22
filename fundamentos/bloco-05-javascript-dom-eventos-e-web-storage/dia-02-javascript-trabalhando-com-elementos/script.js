@@ -37,4 +37,13 @@ createElementP.innerText = pText;
 
 pItem.appendChild(createElementP);
 
-// 
+//  05 dicione a tag section com a classe como filha da main
+let sectionTwoText = 'Eu sou a segunda tag section com classe filha da main';
+let sectionTwoItem = document.querySelector('main');
+
+let createSectionTwoElement = document.createElement('section');
+createSectionTwoElement.innerText = sectionTwoText;
+
+sectionTwoItem.appendChild(createSectionTwoElement);
+
+//
