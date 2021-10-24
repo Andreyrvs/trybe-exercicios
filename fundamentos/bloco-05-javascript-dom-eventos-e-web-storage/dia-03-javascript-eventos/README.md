@@ -3,7 +3,7 @@
 ## Exericicos 
 
 
-Crie arquivos index.html, style.css e main.js e copie o codigo abaixo :
+Crie arquivos index.html, style.css e script.js e copie o codigo abaixo :
 
 1. O array dezDaysList contém os dois últimos dias de novembro e os dias do mês de dezembro. Desenvolva uma função que crie dinamicamente cada dia do calendário e os adicione como filhos/filhas da tag `<ul>` com ID "days" . Note que os dias 29 e 30 de novembro estão no array pois representam respectivamente Domingo e Segunda-feira.
 
