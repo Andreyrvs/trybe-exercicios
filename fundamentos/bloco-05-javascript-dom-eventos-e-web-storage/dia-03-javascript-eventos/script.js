@@ -31,13 +31,13 @@ function createDays() {
     if (savePosition === 24
         || savePosition === 25
         || savePosition === 31) {
-      createLiDaysList.className = 'day holiday'
+          createLiDaysList.className += ' holiday'
     }
     if (savePosition === 4
       || savePosition === 11
       || savePosition === 18
       || savePosition === 25) {
-        createLiDaysList.className = 'day friday'
+        createLiDaysList.className += ' friday'
 
     }
     
