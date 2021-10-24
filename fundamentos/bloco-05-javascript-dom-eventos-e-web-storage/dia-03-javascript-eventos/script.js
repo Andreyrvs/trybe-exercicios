@@ -17,25 +17,32 @@ createDaysOfTheWeek();
 
 // Exericico 01 :
 
+
 function createDays() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   
-  // let daysList = document.getElementById('days')
+  
+  for (let index = 0; index < dezDaysList.length; index += 1) {
+    const savePosition = dezDaysList[index];
+    let daysList = document.getElementById('days')
+    let createLiDaysList = document.createElement('li');
+    createLiDaysList.className = 'day'
+    createLiDaysList.innerText = savePosition;
+    if (savePosition === 24
+        || savePosition === 25
+        || savePosition === 31) {
+      createLiDaysList.className = 'day holiday'
+    }
+    if (savePosition === 4
+      || savePosition === 11
+      || savePosition === 18
+      || savePosition === 25) {
+        createLiDaysList.className = 'day friday'
 
-  // for (let index = 0; index < dezDaysList.length; index += 1) {
-  //   const savePosition = dezDaysList[index];
-  //   let daysNumberList = document.createElement('li');
-  //   // daysList.className = 'day'
-  //   daysNumberList.innerHTML = savePosition;
-
-  //   daysList.appendChild('daysNumberList');
-  // }
-
-  let pegaId = document.querySelector('.days-container')
-  let criaLi = document.createElement('li')
-  criaLi.innerHTML = 'Eu nasci';
-
-  pegaId.appendChild('criaLi')
-
+    }
+    
+    daysList.appendChild(createLiDaysList);
+  }
+  
 }
 createDays();
