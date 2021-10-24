@@ -1,10 +1,10 @@
-function verificaPalindrome(a) {
-  if (a == a.split('').reverse().join('')) {
-    console.log(a + ' True')
+function verificaPalindrome(string) {
+  if (string == string.split('').reverse().join('')) {
+    console.log(string + ' True')
   } else {
     console.log('False')
   }
   
 }
 
-verificaPalindrome('natan')
+verificaPalindrome('desenvolvimento')
