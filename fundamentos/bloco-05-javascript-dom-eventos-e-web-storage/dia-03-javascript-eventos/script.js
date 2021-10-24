@@ -46,3 +46,17 @@ function createDays() {
   
 }
 createDays();
+
+// Exercicio 02 :
+
+function createHolidayBtn(Feriados) {
+  
+  let pegaDiv = document.querySelector('.buttons-container')
+  let creatButtonHoliday = document.createElement('button')
+  creatButtonHoliday.id = 'btn-holiday'
+  creatButtonHoliday.innerText = Feriados;
+  pegaDiv.appendChild(creatButtonHoliday)
+}
+createHolidayBtn('Feriados');
+
+// 03
