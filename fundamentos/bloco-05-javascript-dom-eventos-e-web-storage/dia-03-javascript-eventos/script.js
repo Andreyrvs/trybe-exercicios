@@ -76,8 +76,11 @@ function changeHolidayColor() {
     const element = saveHoly[index];
 
     element.style.backgroundColor = 'rgb(2,238,238)';
-    console.log(element);
+  
   }
+  // if (element.style.backgroundColor === 'rgb(2,238,238)') {
+  
+  // }
 }
 
 // Exercicio 04 :
