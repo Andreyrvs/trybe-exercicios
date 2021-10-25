@@ -1,18 +1,18 @@
 function createDaysOfTheWeek() {
   const weekDays = [
-    "Domingo",
-    "Segunda",
-    "Terça",
-    "Quarta",
-    "Quinta",
-    "Sexta",
-    "Sábado",
+    'Domingo',
+    'Segunda',
+    'Terça',
+    'Quarta',
+    'Quinta',
+    'Sexta',
+    'Sábado',
   ];
-  const weekDaysList = document.querySelector(".week-days");
+  const weekDaysList = document.querySelector('.week-days');
 
   for (let index = 0; index < weekDays.length; index += 1) {
     const days = weekDays[index];
-    const dayListItem = document.createElement("li");
+    const dayListItem = document.createElement('li');
     dayListItem.innerHTML = days;
 
     weekDaysList.appendChild(dayListItem);
@@ -32,12 +32,12 @@ function createDays() {
 
   for (let index = 0; index < dezDaysList.length; index += 1) {
     const savePosition = dezDaysList[index];
-    let daysList = document.getElementById("days");
-    let createLiDaysList = document.createElement("li");
-    createLiDaysList.className = "day";
+    let daysList = document.getElementById('days');
+    let createLiDaysList = document.createElement('li');
+    createLiDaysList.className = 'day';
     createLiDaysList.innerText = savePosition;
     if (savePosition === 24 || savePosition === 25 || savePosition === 31) {
-      createLiDaysList.className += " holiday";
+      createLiDaysList.className += ' holiday';
     }
     if (
       savePosition === 4 ||
@@ -45,7 +45,7 @@ function createDays() {
       savePosition === 18 ||
       savePosition === 25
     ) {
-      createLiDaysList.className += " friday";
+      createLiDaysList.className += ' friday';
     }
 
     daysList.appendChild(createLiDaysList);
@@ -55,35 +55,35 @@ createDays();
 
 // Exercicio 02 :
 function createBtnHoliday() {
-  let pegaDiv = document.querySelector(".buttons-container");
-  let creatButtonHoliday = document.createElement("button");
-  creatButtonHoliday.id = "btn-holiday";
-  creatButtonHoliday.innerText = "Feriados";
+  let pegaDiv = document.querySelector('.buttons-container');
+  let creatButtonHoliday = document.createElement('button');
+  creatButtonHoliday.id = 'btn-holiday';
+  creatButtonHoliday.innerText = 'Feriados';
 
   pegaDiv.appendChild(creatButtonHoliday);
 }
-createBtnHoliday("Feriados");
+createBtnHoliday('Feriados');
 
 // Exercicio 03 :
 function changeColor(event) {
-  let saveHoly = document.querySelectorAll(".holiday");
+  let saveHoly = document.querySelectorAll('.holiday');
 
   for (let index = 0; index < saveHoly.length; index += 1) {
     const element = saveHoly[index];
 
-    element.style.backgroundColor = "pink";
+    element.style.backgroundColor = 'pink';
   }
 }
 
-let pickUpButton = document.getElementById("btn-holiday");
-pickUpButton.addEventListener("click", changeColor);
+let pickUpButton = document.getElementById('btn-holiday');
+pickUpButton.addEventListener('click', changeColor);
 
 // Exercicio 04 :
 function createBtnFriday() {
-  let pegaDiv = document.querySelector(".buttons-container");
-  let createBtnFriday = document.createElement("button");
-  createBtnFriday.id = "btn-friday";
-  createBtnFriday.innerText = "Sexta-feira";
+  let pegaDiv = document.querySelector('.buttons-container');
+  let createBtnFriday = document.createElement('button');
+  createBtnFriday.id = 'btn-friday';
+  createBtnFriday.innerText = 'Sexta-feira';
 
   pegaDiv.appendChild(createBtnFriday);
 }
@@ -91,24 +91,52 @@ createBtnFriday();
 
 // Exercicio 05 :
 function changeTextOnFriday() {
-  let saveFriday = document.querySelectorAll(".friday");
+  let saveFriday = document.querySelectorAll('.friday');
 
   for (let index = 0; index < saveFriday.length; index += 1) {
     const element = saveFriday[index];
 
-    element.innerText = "Sexta-feira";
+    element.innerText = 'Sexta-feira';
   }
 }
-let saveButton = document.getElementById("btn-friday");
-saveButton.addEventListener("click", changeTextOnFriday);
+let saveButton = document.getElementById('btn-friday');
+saveButton.addEventListener('click', changeTextOnFriday);
 
 // Exercicio 06 :
 // Zoom quando passa por cima
-let catchWeeDays = document.querySelector(".week-days");
-catchWeeDays.addEventListener("mouseover", (e) => {
-  e.target.style = "font-size:30px";
+let catchWeeDays = document.querySelector('.week-days');
+catchWeeDays.addEventListener('mouseover', (e) => {
+  e.target.style = 'font-size:30px';
 });
 // Sai o zoom
-catchWeeDays.addEventListener("mouseout", (e) => {
-  e.target.style = "font-size:20px";
+catchWeeDays.addEventListener('mouseout', (e) => {
+  e.target.style = 'font-size:20px';
+});
+
+// Exericico 07 :
+// function addTasks() {
+//   let catchDiv = document.querySelector('.my-tasks');
+//   let createSpan = document.createElement('span');
+//   createSpan.innerText = 'oi'
+//   catchDiv.appendChild(createSpan);
+//   console.log(catchDiv);
+// }
+// addTasks();
+
+let catchDiv = document.querySelector('.my-tasks');
+let catchBtnAdd = document.getElementById('btn-add');
+
+catchBtnAdd.addEventListener('click', (e) => {
+  let catchInput = document.getElementById('task-input');
+  let textinput = catchInput.value;
+  
+  let createSpan = document.createElement('span');
+  createSpan.innerText = textinput
+  // createSpan.style.
+  catchDiv.appendChild(createSpan);
+
+
+  console.log(textinput);
+  // createSpan.innerText = catchInput.type;
+  console.log(catchDiv);
 });
