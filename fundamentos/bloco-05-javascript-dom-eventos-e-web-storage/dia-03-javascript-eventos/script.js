@@ -16,8 +16,6 @@ createDaysOfTheWeek();
 // Escreva seu código abaixo.
 
 // Exericico 01 :
-
-
 function createDays() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   
@@ -48,8 +46,7 @@ function createDays() {
 createDays();
 
 // Exercicio 02 :
-
-function createHolidayBtn(Feriados) {
+function createBtnHoliday(Feriados) {
   
   let pegaDiv = document.querySelector('.buttons-container')
   let creatButtonHoliday = document.createElement('button')
@@ -57,6 +54,24 @@ function createHolidayBtn(Feriados) {
   creatButtonHoliday.innerText = Feriados;
   pegaDiv.appendChild(creatButtonHoliday)
 }
-createHolidayBtn('Feriados');
+createBtnHoliday('Feriados');
 
-// 03
+// Exercicio 03 :
+function changeColor(event) {
+  let saveHoly = document.querySelectorAll('.holiday')
+
+  for (let index = 0; index < saveHoly.length; index += 1) {
+    const element = saveHoly[index];
+
+    element.style.backgroundColor = 'pink'  
+  }
+  event.target.style.backgroundColor = 'green'
+}
+
+let text = document.getElementById('btn-holiday');
+text.addEventListener('click', changeColor);
+
+// Exercicio 04 :
+function createBtnFriday() {
+  
+}
