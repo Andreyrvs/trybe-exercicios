@@ -54,40 +54,40 @@ function createDays() {
 createDays();
 
 // Exercicio 02 :
-function createBtnHoliday() {
+function createBtnHoliday(feriados) {
   let pegaDiv = document.querySelector('.buttons-container');
   let creatButtonHoliday = document.createElement('button');
   creatButtonHoliday.id = 'btn-holiday';
-  creatButtonHoliday.innerText = 'Feriados';
+  creatButtonHoliday.innerText = feriados;
 
   pegaDiv.appendChild(creatButtonHoliday);
 }
 createBtnHoliday('Feriados');
 
 // Exercicio 03 :
-function changeColor(event) {
+function changeHolidayColor() {
   let saveHoly = document.querySelectorAll('.holiday');
 
   for (let index = 0; index < saveHoly.length; index += 1) {
     const element = saveHoly[index];
 
-    element.style.backgroundColor = 'pink';
+    element.style.backgroundColor = 'blue';
   }
 }
 
 let pickUpButton = document.getElementById('btn-holiday');
-pickUpButton.addEventListener('click', changeColor);
+pickUpButton.addEventListener('click', changeHolidayColor);
 
 // Exercicio 04 :
-function createBtnFriday() {
+function createBtnFriday(stringFriday) {
   let pegaDiv = document.querySelector('.buttons-container');
   let createBtnFriday = document.createElement('button');
   createBtnFriday.id = 'btn-friday';
-  createBtnFriday.innerText = 'Sexta-feira';
+  createBtnFriday.innerText = stringFriday;
 
   pegaDiv.appendChild(createBtnFriday);
 }
-createBtnFriday();
+createBtnFriday('Sexta-feira');
 
 // Exercicio 05 :
 function changeTextOnFriday() {
@@ -114,29 +114,31 @@ catchWeeDays.addEventListener('mouseout', (e) => {
 });
 
 // Exericico 07 :
-// function addTasks() {
-//   let catchDiv = document.querySelector('.my-tasks');
-//   let createSpan = document.createElement('span');
-//   createSpan.innerText = 'oi'
-//   catchDiv.appendChild(createSpan);
-//   console.log(catchDiv);
-// }
-// addTasks();
-
 let catchDiv = document.querySelector('.my-tasks');
 let catchBtnAdd = document.getElementById('btn-add');
 
 catchBtnAdd.addEventListener('click', (e) => {
   let catchInput = document.getElementById('task-input');
   let textinput = catchInput.value;
-  
+
   let createSpan = document.createElement('span');
-  createSpan.innerText = textinput
-  // createSpan.style.
+  createSpan.innerText = textinput;
+  createSpan.style.display = 'block';
   catchDiv.appendChild(createSpan);
 
-
   console.log(textinput);
-  // createSpan.innerText = catchInput.type;
+
   console.log(catchDiv);
 });
+
+// Exericico 08 :
+function legenda(cor) {
+  let catchDiv = document.querySelector('.my-tasks');
+
+  let creatDiv = document.createElement('div');
+  // creatDiv.innerText = 'Sou uma div';
+  creatDiv.style.backgroundColor = cor;
+
+  catchDiv.appendChild(creatDiv);
+}
+legenda('blue');
