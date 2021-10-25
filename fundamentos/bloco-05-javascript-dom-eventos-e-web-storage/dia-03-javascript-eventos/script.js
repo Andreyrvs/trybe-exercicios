@@ -65,18 +65,20 @@ function createBtnHoliday(feriados) {
 createBtnHoliday('Feriados');
 
 // Exercicio 03 :
+
+let pickUpButton = document.getElementById('btn-holiday');
+pickUpButton.addEventListener('click', changeHolidayColor);
+
 function changeHolidayColor() {
   let saveHoly = document.querySelectorAll('.holiday');
 
   for (let index = 0; index < saveHoly.length; index += 1) {
     const element = saveHoly[index];
 
-    element.style.backgroundColor = 'blue';
+    element.style.backgroundColor = 'rgb(2,238,238)';
+    console.log(element);
   }
 }
-
-let pickUpButton = document.getElementById('btn-holiday');
-pickUpButton.addEventListener('click', changeHolidayColor);
 
 // Exercicio 04 :
 function createBtnFriday(stringFriday) {
@@ -123,7 +125,7 @@ catchBtnAdd.addEventListener('click', (e) => {
 
   let createSpan = document.createElement('span');
   createSpan.innerText = textinput;
-  createSpan.style.display = 'block';
+  // createSpan.style.display = 'inline-block';
   catchDiv.appendChild(createSpan);
 
   console.log(textinput);
