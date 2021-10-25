@@ -78,9 +78,10 @@ function changeHolidayColor() {
     element.style.backgroundColor = 'rgb(2,238,238)';
   
   }
-  // if (element.style.backgroundColor === 'rgb(2,238,238)') {
-  
+  // if (element.style.backgroundColor === 'rgb(2,238,238)') 
   // }
+
+  // usar uma funcao anonima para dar a cor e outra para tirar a cor usando if;
 }
 
 // Exercicio 04 :
