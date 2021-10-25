@@ -73,11 +73,10 @@ function changeColor(event) {
 
     element.style.backgroundColor = "pink";
   }
-  event.target.style.backgroundColor = "green";
 }
 
-let text = document.getElementById("btn-holiday");
-text.addEventListener("click", changeColor);
+let pickUpButton = document.getElementById("btn-holiday");
+pickUpButton.addEventListener("click", changeColor);
 
 // Exercicio 04 :
 function createBtnFriday() {
@@ -86,8 +85,19 @@ function createBtnFriday() {
   createBtnFriday.id = "btn-friday";
   createBtnFriday.innerText = "Sexta-feira";
 
-  pegaDiv.appendChild(createBtnFriday)
+  pegaDiv.appendChild(createBtnFriday);
 }
 createBtnFriday();
 
 // Exercicio 05
+function changeTextOnFriday() {
+  let saveFriday = document.querySelectorAll(".friday");
+
+  for (let index = 0; index < saveFriday.length; index += 1) {
+    const element = saveFriday[index];
+
+    element.innerText = "Sexta-feira";
+  }
+}
+let saveButton = document.getElementById("btn-friday");
+saveButton.addEventListener("click", changeTextOnFriday);
