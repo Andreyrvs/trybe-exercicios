@@ -89,7 +89,7 @@ function createBtnFriday() {
 }
 createBtnFriday();
 
-// Exercicio 05
+// Exercicio 05 :
 function changeTextOnFriday() {
   let saveFriday = document.querySelectorAll(".friday");
 
@@ -101,3 +101,14 @@ function changeTextOnFriday() {
 }
 let saveButton = document.getElementById("btn-friday");
 saveButton.addEventListener("click", changeTextOnFriday);
+
+// Exercicio 06 :
+// Zoom quando passa por cima
+let catchWeeDays = document.querySelector(".week-days");
+catchWeeDays.addEventListener("mouseover", (e) => {
+  e.target.style = "font-size:30px";
+});
+// Sai o zoom
+catchWeeDays.addEventListener("mouseout", (e) => {
+  e.target.style = "font-size:20px";
+});
