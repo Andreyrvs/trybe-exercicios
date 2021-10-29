@@ -1,4 +1,4 @@
-let btnPreventDefault = document.querySelector('#prevent-default');
+const btnPreventDefault = document.querySelector('#prevent-default');
 const todosEstados = document.querySelector('#option-estados');
 
 
