@@ -4,92 +4,119 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Exercícios</title>
   </head>
   <body>
     <fieldset>
-      <label for="input-name"
-        >Nome :
-        <input type="text" id="input-name" required maxlength="40" />
-      </label>
-      <br /><br />
-      <label for="input-email"
-        >Email :
-        <input
-          type="email"
-          name="email"
-          id="input-email"
-          maxlength="50"
-          required
-        />
-      </label>
-      <br /><br />
-      <label for="input-cpf"
-        >CPF :
-        <input type="text" name="cpf" id="input-cpf" maxlength="11" required />
-      </label>
-      <br /><br />
-      <label for="input-cidade"
-        >Cidade :
-        <input
-          type="text"
-          name="cidade"
-          id="input-cidade"
-          maxlength="200"
-          required
-        />
-      </label>
-      <br /><br />
-      <label for="select-estado"
-        >Estado :
-        <select name="estado" id="select-estado" required>
-        </select>
-      </label>
-      <br /><br />
-      <p>Tipo :</p>
-      <label for="input-casa">
-        <input type="radio" name="tipo" id="input-casa" />Casa
-      </label>
-      <label for="input-apart">
-        <input type="radio" name="tipo" id="input-apart" />Apartamento
-      </label>
+      <section>
+        <label for="input-name"
+          >Nome
+          <input type="text" id="input-name" required maxlength="40" />
+        </label>
+      </section>
+      <section>
+        <label for="input-email"
+          >Email
+          <input
+            type="email"
+            name="email"
+            id="input-email"
+            maxlength="50"
+            required
+          />
+        </label>
+      </section>
+      <section>
+        <label for="input-cpf"
+          >CPF
+          <input
+            type="text"
+            name="cpf"
+            id="input-cpf"
+            maxlength="11"
+            required
+          />
+        </label>
+      </section>
+      <section>
+        <label for="input-cidade"
+          >Cidade
+          <input
+            type="text"
+            name="cidade"
+            id="input-cidade"
+            maxlength="200"
+            required
+          />
+        </label>
+      </section>
+      <section>
+        <label for="select-estado"
+          >Estado
+          <select name="estado" id="select-estado" required>
+            <option id="option-estados" value="">Selecione</option>
+          </select>
+        </label>
+      </section>
+      <section>
+        <p>Tipo</p>
+        <label for="input-casa">
+          <input type="radio" name="tipo" id="input-casa" />Casa
+        </label>
+        <label for="input-apart">
+          <input type="radio" name="tipo" id="input-apart" />Apartamento
+        </label>
+      </section>
     </fieldset>
+
     <fieldset>
-      <p>Resumo do currículo</p>
-      <textarea
-        name="curriculo"
-        id="textarea-cv"
-        cols="30"
-        rows="10"
-        maxlength="1000"
-        required
-      ></textarea>
-      <br /><br />
-      <label for="input-cargo"
-        >Cargo
-        <input
-          type="text"
-          name="cargo"
-          id="input-cargo"
-          maxlength="40"
+      <section>
+        <p>Resumo do currículo</p>
+        <textarea
+          name="curriculo"
+          id="textarea-cv"
+          cols="30"
+          rows="10"
+          maxlength="1000"
           required
-        />
-      </label>
-      <br /><br />
-      <label for="input-descriçao-cargo"
-        >Descrição do cargo
-        <input
-          type="text"
-          name=""
-          id="input-descriçao-cargo"
-          maxlength="500"
-          required
-        />
-      </label>
-      <br /><br />
-      <label for="input-data-inicio">Data de início
-        <input type="text" name="data-inicio" id="input-data-inicio">
-      </label>
+        ></textarea>
+      </section>
+      <section>
+        <label for="input-cargo"
+          >Cargo
+          <input
+            type="text"
+            name="cargo"
+            id="input-cargo"
+            maxlength="40"
+            required
+          />
+        </label>
+      </section>
+      <section>
+        <label for="input-descriçao-cargo"
+          >Descrição do cargo
+          <input
+            type="text"
+            name=""
+            id="input-descriçao-cargo"
+            maxlength="500"
+            required
+          />
+        </label>
+      </section>
+      <section>
+        <label for="input-data-inicio"
+          >Data de início
+          <input type="text" name="data-inicio" id="input-data-inicio" />
+        </label>
+      </section>
+      <button id="prevent-default">Previne</button>
     </fieldset>
   </body>
+  <script src="script.js"></script>
+  <script a>
+    
+  </script>
 </html>
