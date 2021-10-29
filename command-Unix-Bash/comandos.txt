@@ -1,0 +1,29 @@
+rm -rf = DELETAR TUDO SEM DÓ 
+
+grep -i '' nome-do-arquivo = Procura Sem utilizar Lower case
+grep -v '' nome-do-arquivo = Procura Tudo exeto o que estiver entre Aspas ''
+grep -c '' nome-do-arquivo = Conta o numero de palavras
+
+[ echo ] Trata de somente 1 item por vez
+
+echo 'exemplo' > arquivo.txt = substitui tudo
+
+echo 'exemplo' >> arquivo.txt = adiciona ao arquivo
+
+[ cat ] Trata de varios Itens por vez
+
+ a mesma coisa que o [ echo ] > | >>a
+ 
+ 
+ chmod :
+ 
+ u = apenas para  o usuario
+ g = para o grupo de usuarios
+ o = outros usuarios				
+ a = todos 				
+ 
+ + = acrescentar permissoes
+ - = tirar permissoes
+ 
+ chmod a+rw - todos tem acesso
+ chmod a-rw - ninguém tem acesso
