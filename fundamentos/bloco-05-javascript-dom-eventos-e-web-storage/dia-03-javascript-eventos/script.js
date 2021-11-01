@@ -22,6 +22,7 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
+let selecionaBtnsContainer = document.querySelector('.buttons-container');
 
 // Exericico 01 :
 function createDays() {
@@ -55,35 +56,33 @@ createDays();
 
 // Exercicio 02 :
 function createBtnHoliday(feriados) {
-  let pegaDiv = document.querySelector('.buttons-container');
   let creatButtonHoliday = document.createElement('button');
   creatButtonHoliday.id = 'btn-holiday';
   creatButtonHoliday.innerText = feriados;
 
-  pegaDiv.appendChild(creatButtonHoliday);
+  selecionaBtnsContainer.appendChild(creatButtonHoliday);
 }
 createBtnHoliday('Feriados');
 
 // Exercicio 03 :
 
 let pickUpButton = document.getElementById('btn-holiday');
-pickUpButton.addEventListener('click', changeHolidayColor);
+pickUpButton.addEventListener('click', () => {
 
-function changeHolidayColor() {
   let saveHoly = document.querySelectorAll('.holiday');
-
-  for (let index = 0; index < saveHoly.length; index += 1) {
-    const element = saveHoly[index];
-
-    element.style.backgroundColor = 'rgb(2,238,238)';
   
+  // for (let index = 0; index < saveHoly.length; index += 1) {
+    
+    if (saveHoly) {
+      saveHoly.classList.remove('holidayColor')
+    } 
+    saveHoly.classList.add('holidayColor')
   }
-  // if (element.style.backgroundColor === 'rgb(2,238,238)') 
-  // }
 
-  // usar uma funcao anonima para dar a cor e outra para tirar a cor usando if;
-}
+);
 
+// function changeHolidayColor() {
+// }
 // Exercicio 04 :
 function createBtnFriday(stringFriday) {
   let pegaDiv = document.querySelector('.buttons-container');
@@ -101,8 +100,9 @@ function changeTextOnFriday() {
 
   for (let index = 0; index < saveFriday.length; index += 1) {
     const element = saveFriday[index];
-
-    element.innerText = 'Sexta-feira';
+    if (element) {
+      element.innerText = 'Sexta-feira';
+    }
   }
 }
 let saveButton = document.getElementById('btn-friday');
