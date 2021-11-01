@@ -42,9 +42,9 @@ function alertColor(event) {
   event.target.style.color = 'red';
 }
 myWebpage.addEventListener('mouseover', alertColor);
-myWebpage.addEventListener('mouseout', function(event){
-  event.target.style.color = 'white'
-})
+myWebpage.addEventListener('mouseout', function (event) {
+  event.target.style.color = 'white';
+});
 
 // Segue abaixo um exemplo do uso de event.target:
 
