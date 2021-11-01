@@ -11,8 +11,7 @@ let complementary = {
   nota: 'O último MacPatinhas',
   recorrente: 'Sim',
 }
-
 for (let key in info){
-  info.pop();
   console.log(info[key] + ' e ' + complementary[key]);
+  
 }

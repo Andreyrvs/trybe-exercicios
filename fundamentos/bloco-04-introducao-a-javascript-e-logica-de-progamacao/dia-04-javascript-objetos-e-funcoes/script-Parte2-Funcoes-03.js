@@ -4,7 +4,7 @@ function highestNumber(array) {
   let saveIndex;
   for (let index = 0; index < array.length; index += 1) {
     
-    if (array[index] > biggerNumber) {
+    if (array[index] < biggerNumber) {
       biggerNumber = array[index];
       saveIndex = index;
     }
@@ -12,4 +12,4 @@ function highestNumber(array) {
   console.log(saveIndex);
 }
 
-highestNumber([2, 3, 6, 7, 10, 1]);
+highestNumber([2, 4, 6, 7, 10, 0, -3]);
