@@ -1,11 +1,11 @@
 function largerInQuantity(array) {
   let biggerName;
-  let split = array.split(' ');
+  array.split(',');
   
-  for (let index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < split.length; index += 1) {
     
-    if (array[index] < biggerName) {
-      biggerName = array[index];
+    if (split[index] < biggerName) {
+      biggerName = split[index];
  
     }
   }
