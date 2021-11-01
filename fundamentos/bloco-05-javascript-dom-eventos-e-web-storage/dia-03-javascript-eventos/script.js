@@ -1,3 +1,6 @@
+let selectBtnsContainer = document.querySelector('.buttons-container');
+
+// Cria os dias da semana Dinamicamente
 function createDaysOfTheWeek() {
   const weekDays = [
     'Domingo',
@@ -18,11 +21,8 @@ function createDaysOfTheWeek() {
     weekDaysList.appendChild(dayListItem);
   }
 }
-
 createDaysOfTheWeek();
-
 // Escreva seu código abaixo.
-let selecionaBtnsContainer = document.querySelector('.buttons-container');
 
 // Exericico 01 :
 function createDays() {
@@ -55,34 +55,27 @@ function createDays() {
 createDays();
 
 // Exercicio 02 :
-function createBtnHoliday(feriados) {
+function createBtnHoliday(stringParam) {
   let creatButtonHoliday = document.createElement('button');
   creatButtonHoliday.id = 'btn-holiday';
-  creatButtonHoliday.innerText = feriados;
+  creatButtonHoliday.innerText = stringParam;
 
-  selecionaBtnsContainer.appendChild(creatButtonHoliday);
+  selectBtnsContainer.appendChild(creatButtonHoliday);
 }
 createBtnHoliday('Feriados');
 
 // Exercicio 03 :
-
 let pickUpButton = document.getElementById('btn-holiday');
-pickUpButton.addEventListener('click', () => {
 
+pickUpButton.addEventListener('click', function () {
   let saveHoly = document.querySelectorAll('.holiday');
-  
-  // for (let index = 0; index < saveHoly.length; index += 1) {
-    
-    if (saveHoly) {
-      saveHoly.classList.remove('holidayColor')
-    } 
-    saveHoly.classList.add('holidayColor')
+  for (let index = 0; index < saveHoly.length; index += 1) {
+    const cor = saveHoly[index]
+    cor.classList.toggle('hCor');
+    console.log(saveHoly)
   }
+});
 
-);
-
-// function changeHolidayColor() {
-// }
 // Exercicio 04 :
 function createBtnFriday(stringFriday) {
   let pegaDiv = document.querySelector('.buttons-container');
