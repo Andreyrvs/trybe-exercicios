@@ -66,13 +66,11 @@ createBtnHoliday('Feriados');
 
 // Exercicio 03 :
 let pickUpButton = document.getElementById('btn-holiday');
-
 pickUpButton.addEventListener('click', function () {
   let saveHoly = document.querySelectorAll('.holiday');
   for (let index = 0; index < saveHoly.length; index += 1) {
-    const cor = saveHoly[index]
+    const cor = saveHoly[index];
     cor.classList.toggle('hCor');
-    console.log(saveHoly)
   }
 });
 
@@ -88,18 +86,16 @@ function createBtnFriday(stringFriday) {
 createBtnFriday('Sexta-feira');
 
 // Exercicio 05 :
-function changeTextOnFriday() {
-  let saveFriday = document.querySelectorAll('.friday');
+let saveFriday = document.querySelectorAll('.friday');
+let saveButton = document.getElementById('btn-friday');
 
+saveButton.addEventListener('click', function () {
   for (let index = 0; index < saveFriday.length; index += 1) {
     const element = saveFriday[index];
-    if (element) {
-      element.innerText = 'Sexta-feira';
-    }
+
+    element.innerText = 'Sexxtou';
   }
-}
-let saveButton = document.getElementById('btn-friday');
-saveButton.addEventListener('click', changeTextOnFriday);
+});
 
 // Exercicio 06 :
 // Zoom quando passa por cima
@@ -116,18 +112,13 @@ catchWeeDays.addEventListener('mouseout', (e) => {
 let catchDiv = document.querySelector('.my-tasks');
 let catchBtnAdd = document.getElementById('btn-add');
 
-catchBtnAdd.addEventListener('click', (e) => {
+catchBtnAdd.addEventListener('click', () => {
   let catchInput = document.getElementById('task-input');
-  let textinput = catchInput.value;
 
   let createSpan = document.createElement('span');
-  createSpan.innerText = textinput;
-  // createSpan.style.display = 'inline-block';
+  createSpan.innerText = catchInput.value;
+
   catchDiv.appendChild(createSpan);
-
-  console.log(textinput);
-
-  console.log(catchDiv);
 });
 
 // Exericico 08 :
@@ -135,7 +126,7 @@ function legenda(cor) {
   let catchDiv = document.querySelector('.my-tasks');
 
   let creatDiv = document.createElement('div');
-  // creatDiv.innerText = 'Sou uma div';
+  creatDiv.className = 'LegendaCor'
   creatDiv.style.backgroundColor = cor;
 
   catchDiv.appendChild(creatDiv);
