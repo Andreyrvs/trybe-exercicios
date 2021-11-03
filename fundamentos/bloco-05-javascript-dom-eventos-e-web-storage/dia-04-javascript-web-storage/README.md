@@ -7,3 +7,5 @@ transformar objeto em string -` JSON.stringify()`
 string estruturada
 
 `JSON.parse()` transforma uma string em um Objeto
+
+/ 

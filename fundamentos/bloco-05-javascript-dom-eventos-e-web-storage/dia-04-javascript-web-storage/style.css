@@ -1,0 +1,25 @@
+main {
+  display: block;
+  margin: 20px 40px;
+}
+
+h1 {
+  margin: 20px 40px;
+}
+
+.conteudo {
+  display: inline-block;
+}
+
+#lorem {
+  border: 2px solid #d6d6d6;
+}
+
+#bgColor,
+#fontSize,
+#textColor,
+#LineHeight,
+#fontFamily {
+  display: block;
+  margin: 10px 10px;
+}
