@@ -1,3 +1,4 @@
+/* Mobile First  */
 body {
   font-size: 18px;
   margin: 10px;
@@ -25,6 +26,7 @@ figure {
 
 }
 
+/* Tamanho Médio  */
 @media screen and (min-width: 1000px) {
   body {
     background-color: red;
@@ -45,6 +47,7 @@ figure {
   }
 }
 
+/* Tamanho Grande ao infinito */
 @media screen and (min-width: 1435px) {
   body {
     background-color: green;
