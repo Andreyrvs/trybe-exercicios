@@ -18,11 +18,18 @@ figure {
   margin: 0;
 }
 
-@media screen and (min-width: 700px) {
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+@media screen and (min-width: 800px) {
   body {
     background-color: red;
     font-size: 30px;
-    margin: 40px;
+    margin: 30px;
   }
 
   .container {
@@ -32,4 +39,9 @@ figure {
     justify-content: space-between;
     width: 100%;
   }
+
+  img {
+    padding-right: 20px;
+  }
 }
+
