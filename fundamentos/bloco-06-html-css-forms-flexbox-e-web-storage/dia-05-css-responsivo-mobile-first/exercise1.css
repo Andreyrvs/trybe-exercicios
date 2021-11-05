@@ -51,6 +51,7 @@ figure {
 @media screen and (min-width: 1435px) {
   body {
     background-color: green;
-    font-size: 30px;
+    font-size: 35px;
+    margin: 50px;
   }
 }
