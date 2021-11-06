@@ -81,6 +81,7 @@
   height: 1%;
 }
 
+/* Quando Imprimir tera essa dispasição dos elementos */
 @media print {
   #header,
   #navigation,
@@ -94,6 +95,7 @@
   }
 }
 
+/* Tamanho de Tela pequena 240px */
 @media screen and (max-width: 240px) {
   #aside {
     display: none;
@@ -104,11 +106,21 @@
   }
 
   img {
-    max-width: 100%;
+   max-width: 220px;
   }
 
   #navigation ul li{
     display: flex;
     flex-flow: column;
+  }
+
+  #navigation {
+    margin-top: 88px;
+  }
+
+  #header {
+    position: fixed;
+    margin: 0px;
+    width: 100%;
   }
 }
