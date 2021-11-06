@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: aliceblue;
+  margin: 15px;
+}
+
+header p{
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu-container ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+}
+
+aside h2 {
+  margin-left: 20px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
