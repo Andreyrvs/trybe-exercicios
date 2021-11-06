@@ -1,7 +1,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -10,7 +12,7 @@ body {
   margin: 15px;
 }
 
-header p{
+header p {
   display: flex;
   justify-content: center;
 }
@@ -33,10 +35,33 @@ footer {
 }
 
 /* Tamanho de Tela Media */
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   body {
+    background-color: aquamarine;
     margin: 30px;
     font-size: 20px;
+  }
+
+  .aside-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Tamanho de Tela Grande ao infinito */
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: blanchedalmond;
+    font-size: 27px;
+    margin: 50px;
   }
 
   .aside-container {
