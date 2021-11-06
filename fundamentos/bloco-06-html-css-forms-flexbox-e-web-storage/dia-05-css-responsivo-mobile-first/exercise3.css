@@ -96,7 +96,7 @@
 }
 
 /* Tamanho de Tela pequena 240px */
-@media screen and (max-width: 240px) {
+@media screen and (max-width: 240px)  {
   #aside {
     display: none;
   }
