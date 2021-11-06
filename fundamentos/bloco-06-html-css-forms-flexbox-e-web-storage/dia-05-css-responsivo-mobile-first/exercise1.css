@@ -1,0 +1,70 @@
+/* Mobile First  */
+body {
+  font-size: 18px;
+  margin: 10px;
+}
+h1 {
+  font-size: 28px;
+}
+h2 {
+  font-size: 28px;
+}
+
+img {
+  max-width: 100%;
+  padding-bottom: 35px;
+}
+
+figure {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+/* Tamanho Médio  */
+@media screen and (min-width: 1000px)and (max-width: 1434px)   {
+  body {
+    background-color: red;
+    font-size: 25px;
+    margin: 30px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  img {
+    padding-right: 20px;
+  }
+}
+
+/* Tamanho Grande ao infinito */
+@media screen and (min-width: 1435px) and (max-width: 1920px) {
+  body {
+    background-color: green;
+    font-size: 35px;
+    margin: 50px;
+  }
+
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  img {
+    padding-right: 40px;
+  }
+}

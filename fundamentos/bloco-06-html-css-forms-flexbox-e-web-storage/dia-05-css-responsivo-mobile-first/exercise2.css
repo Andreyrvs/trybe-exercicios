@@ -1,0 +1,79 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: aliceblue;
+  margin: 15px;
+}
+
+header p {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu-container ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+}
+
+aside h2 {
+  margin-left: 20px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Tamanho de Tela Media */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background-color: aquamarine;
+    margin: 30px;
+    font-size: 20px;
+  }
+
+  .aside-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Tamanho de Tela Grande ao infinito */
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: blanchedalmond;
+    font-size: 37px;
+    margin: 50px;
+  }
+
+  .aside-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
