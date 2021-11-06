@@ -85,4 +85,9 @@
   #header, #navigation, #footer {
     display: none;
   }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
 }
