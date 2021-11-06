@@ -45,7 +45,7 @@
 #content-container {
   float: left;
   width: 100%;
-  background: #FFF;
+  background: #fff;
 }
 
 #content {
@@ -82,7 +82,9 @@
 }
 
 @media print {
-  #header, #navigation, #footer {
+  #header,
+  #navigation,
+  #footer {
     display: none;
   }
 
@@ -95,5 +97,18 @@
 @media screen and (max-width: 240px) {
   #aside {
     display: none;
+  }
+
+  body {
+    padding: 0px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  #navigation ul li{
+    display: flex;
+    flex-flow: column;
   }
 }
