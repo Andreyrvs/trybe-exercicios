@@ -1,13 +1,19 @@
 let n = 5;
-let asterisco = '';
+let asterisco = '*';
+let inputLine = '';
+let inputPosition = n;
 
-for (let i = 1; i < n; i += 1) {
-  asterisco += '.';
-  for(let j = 1; j < n - i; j ++){
-
-    asterisco += '*';
+for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
+  for (let columnIndex = 0; columnIndex <= n; columnIndex += 1) {
+    if (columnIndex < inputPosition) {
+      inputLine = inputLine + ' ';
+    } else {
+      inputLine = inputLine + asterisco;
+    }
   }
-  console.log(asterisco)
+  console.log(inputLine);
+  inputLine = '';
+  inputPosition -= 1;
 }
 
 // console.log('    *')
