@@ -36,9 +36,17 @@ console.log(listaKeys(lesson2));
 
 
 // ------ Exercicio 03 ------
-const retornaTamanho = (ParamObject) => Object.keys(ParamObject).length
+/* const retornaTamanho = (ParamObject) => Object.keys(ParamObject).length
 
 retornaTamanho(lesson1)
-console.log(retornaTamanho(lesson1));
+console.log(retornaTamanho(lesson1)); 
+*/
+
+// ------ Exercicio 04 ------
+
+const listarValores = (ParamObject) => Object.values(ParamObject)
+
+listarValores(lesson1);
+console.log(listarValores(lesson1));
 
 // ------ Exercicio 0 ------
