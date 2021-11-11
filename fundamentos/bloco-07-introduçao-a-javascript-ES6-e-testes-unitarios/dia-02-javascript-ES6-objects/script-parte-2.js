@@ -26,12 +26,13 @@ const lesson3 = {
 // console.log(lesson2);
 
 // ------ Exercicio 02 ------
-const listaKeys = (ParamObject) => {
-  console.log(
-  Object.keys(ParamObject)
-  );
-};
+const listaKeys = (ParamObject) => Object.keys(ParamObject)
 
 listaKeys(lesson2);
+console.log(listaKeys(lesson2));
+
+// ------ Exercicio 03 ------
+
+
 
 // ------ Exercicio 0 ------
