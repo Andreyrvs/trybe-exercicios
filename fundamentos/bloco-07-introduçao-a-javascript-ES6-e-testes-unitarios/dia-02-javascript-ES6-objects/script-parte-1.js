@@ -34,21 +34,21 @@ const order = {
   },
 };
 
-const customerInfo = (order) => {
-  // Adicione abaixo as informações necessárias.
-  console.log(
-  `Olá ${order.name}, entrega para: ${order.order.delivery.deliveryPerson}, Telefone: ${order.phoneNumber}, R. ${order.address.street}, Nº: ${order.address.number}, AP: ${order.address.apartment}`
-  );
-};
+// const customerInfo = (order) => {
+//   // Adicione abaixo as informações necessárias.
+//   console.log(
+//   `Olá ${order.name}, entrega para: ${order.order.delivery.deliveryPerson}, Telefone: ${order.phoneNumber}, R. ${order.address.street}, Nº: ${order.address.number}, AP: ${order.address.apartment}`
+//   );
+// };
 
-customerInfo(order);
+// customerInfo(order);
 
 const orderModifier = (order) => {
   // console.table(order)
-  // // Adicione abaixo as informações necessárias.
-  // console.log(
-  //   `Olá ${order.name}, o total do seu pedido de ${order.order.pizza.marguerita}, ${order.order.pizza.pepperoni} e ${order.order.drinks.coke} é R$ ${order.payment}.`
-  //   );
+  // Adicione abaixo as informações necessárias.
+  console.log(
+    `Olá ${order.name}, o total do seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ .`
+    );
 };
 
 orderModifier(order);
