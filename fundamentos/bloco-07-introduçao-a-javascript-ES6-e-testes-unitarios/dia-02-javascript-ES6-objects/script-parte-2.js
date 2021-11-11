@@ -18,10 +18,20 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const turnoNoite = (Object, chave, valor) => {
-  Object[chave] = valor
-}
+// ------ Exercicio 01 ------
+// const addTurno = (Object, chave, valor) => {
+//   Object[chave] = valor;
+// };
+// addTurno(lesson2, 'turno', 'noite');
+// console.log(lesson2);
 
-turnoNoite(lesson2, 'turno', 'noite');
+// ------ Exercicio 02 ------
+const listaKeys = (ParamObject) => {
+  console.log(
+  Object.keys(ParamObject)
+  );
+};
 
-console.log(lesson2)
+listaKeys(lesson2);
+
+// ------ Exercicio 0 ------
