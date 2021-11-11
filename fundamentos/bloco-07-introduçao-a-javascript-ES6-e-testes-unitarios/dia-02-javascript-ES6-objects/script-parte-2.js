@@ -19,20 +19,26 @@ const lesson3 = {
 };
 
 // ------ Exercicio 01 ------
-// const addTurno = (Object, chave, valor) => {
-//   Object[chave] = valor;
-// };
-// addTurno(lesson2, 'turno', 'noite');
-// console.log(lesson2);
+/* const addTurno = (Object, chave, valor) => {
+  Object[chave] = valor;
+};
+addTurno(lesson2, 'turno', 'noite');
+console.log(lesson2); 
+*/
+
 
 // ------ Exercicio 02 ------
-const listaKeys = (ParamObject) => Object.keys(ParamObject)
+/* const listaKeys = (ParamObject) => Object.keys(ParamObject)
 
 listaKeys(lesson2);
 console.log(listaKeys(lesson2));
+ */
+
 
 // ------ Exercicio 03 ------
+const retornaTamanho = (ParamObject) => Object.keys(ParamObject).length
 
-
+retornaTamanho(lesson1)
+console.log(retornaTamanho(lesson1));
 
 // ------ Exercicio 0 ------
