@@ -47,7 +47,7 @@ const orderModifier = (order) => {
   // console.table(order)
   // Adicione abaixo as informações necessárias.
   console.log(
-    `Olá ${order.name}, o total do seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ .`
+    `Olá ${order.name}, o total do seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ ${order.payment.total}.`
     );
 };
 
