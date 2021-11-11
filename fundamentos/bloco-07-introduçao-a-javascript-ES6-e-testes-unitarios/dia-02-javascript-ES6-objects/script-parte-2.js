@@ -44,9 +44,15 @@ console.log(retornaTamanho(lesson1));
 
 // ------ Exercicio 04 ------
 
-const listarValores = (ParamObject) => Object.values(ParamObject)
+// const listarValores = (ParamObject) => Object.values(ParamObject)
 
-listarValores(lesson1);
-console.log(listarValores(lesson1));
+// listarValores(lesson1);
+// console.log(listarValores(lesson1));
+
+// ------ Exercicio 05 ------
+
+
+
+
 
 // ------ Exercicio 0 ------
