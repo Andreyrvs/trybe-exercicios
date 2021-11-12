@@ -48,7 +48,7 @@ console.log(retornaTamanho(lesson1));
 // console.log(listarValores(lesson1));
 
 // ------ Exercicio 05 ------
-
+/* 
 const allLessons = {
   lesson1: {},
   lesson2: {},
@@ -58,8 +58,11 @@ const allLessons = {
 Object.assign(allLessons.lesson1, lesson1);
 Object.assign(allLessons.lesson2, lesson2);
 Object.assign(allLessons.lesson3, lesson3);
+ */
 
-// console.log(allLessons);
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3})
+
+console.log(allLessons);
 
 // ------ Exercicio 06 ------
 
