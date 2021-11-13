@@ -76,16 +76,20 @@ pickUpButton.addEventListener('click', function () {
 
 // Exercicio 04 :
 function createBtnFriday(stringFriday) {
-  let pegaDiv = document.querySelector('.buttons-container');
   let createBtnFriday = document.createElement('button');
   createBtnFriday.id = 'btn-friday';
   createBtnFriday.innerText = stringFriday;
 
-  pegaDiv.appendChild(createBtnFriday);
+  selectBtnsContainer.appendChild(createBtnFriday);
 }
 createBtnFriday('Sexta-feira');
 
 // Exercicio 05 :
+/**
+ * 
+ * Nesse exericico Não consegui fazer a lógica inversa de Retirar o texto sexta-feira
+ * 
+ */
 let saveFriday = document.querySelectorAll('.friday');
 let saveButton = document.getElementById('btn-friday');
 
@@ -93,7 +97,7 @@ saveButton.addEventListener('click', function () {
   for (let index = 0; index < saveFriday.length; index += 1) {
     const element = saveFriday[index];
 
-    element.innerText = 'Sexxtou';
+    element.innerHTML = 'Sexxtou';
   }
 });
 
