@@ -87,5 +87,16 @@ const pegaValorPeloNumero = (object, number) => Object.values(object)[number];
 
 console.log(pegaValorPeloNumero(lesson1, 0));
 
+// ------ Exercicio 08 ------
 
-// ------ Exercicio 0 ------
+const verificaExistencia = (object, key, value) => {
+  const array = Object.entries(object);
+  let existe = false;
+
+  for (let index in array) {
+    if (array[index][0] === key && array[index][1] === value) existe = true;
+  }
+  return existe;
+};
+
+console.log(verificaExistencia(lesson1, 'materia', 'matematica'));
