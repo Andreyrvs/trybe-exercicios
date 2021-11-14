@@ -23,8 +23,7 @@ const addTurno = (Object, chave, valor) => {
   Object[chave] = valor;
 };
 addTurno(lesson2, 'turno', 'noite');
-// console.log(lesson2); 
-
+// console.log(lesson2);
 
 // ------ Exercicio 02 ------
 /* const listaKeys = (ParamObject) => Object.keys(ParamObject)
@@ -60,11 +59,26 @@ Object.assign(allLessons.lesson2, lesson2);
 Object.assign(allLessons.lesson3, lesson3);
  */
 
-const allLessons = Object.assign({}, {lesson1, lesson2, lesson3})
+const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
 
-console.log(allLessons);
+// console.log(allLessons);
 
 // ------ Exercicio 06 ------
 
+const totalEstudantes = (lessonsParam) => {
+  const keys = Object.keys(lessonsParam);
+
+  let total = 0;
+
+  for (let index = 0; index < keys.length; index += 1) {
+    const currentKey = keys[index];
+    total += lessonsParam[currentKey].numeroEstudantes;
+  }
+
+  return total;
+
+};
+
+console.log(totalEstudantes(allLessons));
 
 // ------ Exercicio 0 ------
