@@ -76,9 +76,16 @@ const totalEstudantes = (lessonsParam) => {
   }
 
   return total;
-
 };
+// console.log(
+totalEstudantes(allLessons);
+// );
 
-console.log(totalEstudantes(allLessons));
+// ------ Exercicio 07 ------
+
+const pegaValorPeloNumero = (object, number) => Object.values(object)[number];
+
+console.log(pegaValorPeloNumero(lesson1, 0));
+
 
 // ------ Exercicio 0 ------
