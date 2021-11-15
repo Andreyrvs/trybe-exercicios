@@ -10,4 +10,7 @@ describe('Para as funções encode e decode', () => {
   it('Para a função decode teste se os números 1, 2, 3, 4 e 5 são convertidos nas vogais a, e, i, o, u;', () => {
     expect(decode('1, 2, 3, 4, 5')).toBe('a, e, i, o, u');
   });
+  it('Teste se as demais letras/números não são convertidos para cada caso', () => {
+    expect(encode('b, c, d, f')).toBe('b, c, d, f')
+  });
 });
