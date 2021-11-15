@@ -7,5 +7,7 @@ describe('Para as funções encode e decode', () => {
   it('Para a função encode teste se as vogais a, e, i, o, u são convertidas em 1, 2, 3, 4, 5', () => {
     expect(encode('a, e, i, o, u')).toBe('1, 2, 3, 4, 5');
   });
-
+  it('Para a função decode teste se os números 1, 2, 3, 4 e 5 são convertidos nas vogais a, e, i, o, u;', () => {
+    expect(decode('1, 2, 3, 4, 5')).toBe('a, e, i, o, u');
+  });
 });
