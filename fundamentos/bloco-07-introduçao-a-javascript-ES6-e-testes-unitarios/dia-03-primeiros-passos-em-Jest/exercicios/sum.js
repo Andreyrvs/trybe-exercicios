@@ -7,3 +7,9 @@ function sum(a, b) {
 }
 
 module.exports = sum
+
+// Teste
+
+// console.log(
+//   sum(4, '5')
+// );
