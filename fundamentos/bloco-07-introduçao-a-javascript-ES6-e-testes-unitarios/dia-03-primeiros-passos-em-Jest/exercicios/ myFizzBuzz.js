@@ -10,5 +10,5 @@ module.exports = myFizzBuzz
 // implemente seus testes aqui
 
 console.log(
-myFizzBuzz(3)
+myFizzBuzz(15)
 );
