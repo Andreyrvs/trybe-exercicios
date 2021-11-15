@@ -7,4 +7,7 @@ describe(' A função myFizzBuzz(num) recebe um número num e retorna "fizzbuzz"
   it('Faça uma chamada com um número divisível por 3 e verifique se o retorno é o esperado', () => {
     expect(myFizzBuzz(3)).toBe('fizz')
   });
+  it ('Faça uma chamada com um número divisível por 5 e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz(10)).toBe('buzz')
+  });
 });
