@@ -22,14 +22,17 @@ function decode(string) {
   return string;
 }
 
-module.exports = encode, decode
+module.exports = {
+  encode,
+  decode,
+}
 
 // Teste aqui
 
-/* console.log(
-  encode, decode
-);
- */
+// console.log(
+//   decode('1, 2, 3, 4, 5')
+// );
+
 
 /* console.log(
 
