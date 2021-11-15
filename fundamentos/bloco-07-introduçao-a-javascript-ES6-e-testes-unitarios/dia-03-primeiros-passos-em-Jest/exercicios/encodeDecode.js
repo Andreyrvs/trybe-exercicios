@@ -30,7 +30,7 @@ module.exports = {
 // Teste aqui
 
 console.log(
-  encode('b, c, d, f')
+  encode('a, e, i, o, u').length
 );
 
 

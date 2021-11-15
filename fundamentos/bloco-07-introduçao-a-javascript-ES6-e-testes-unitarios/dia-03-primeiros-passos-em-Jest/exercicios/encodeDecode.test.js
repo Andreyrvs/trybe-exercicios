@@ -13,4 +13,7 @@ describe('Para as funções encode e decode', () => {
   it('Teste se as demais letras/números não são convertidos para cada caso', () => {
     expect(encode('b, c, d, f')).toBe('b, c, d, f')
   });
+  it('Teste se a string que é retornada pelas funções têm o mesmo número de caracteres que a string passada como parâmetro.', () => {
+    expect(encode('a, e, i, o, u')).toHaveLength(13)
+  });
 });
