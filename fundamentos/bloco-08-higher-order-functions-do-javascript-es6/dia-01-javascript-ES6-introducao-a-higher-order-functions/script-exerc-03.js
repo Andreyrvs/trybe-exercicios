@@ -27,7 +27,7 @@ console.log(myHOF(RIGHT_ANSWERS, STUDENT_ANSWERS, (rightAnswers, studentAnswers)
 // Outra forma de fazer a contagem da Pontuação
 
 
-const solucao = (rightAnswers, studentAnswers) => {
+const pontuacao = (rightAnswers, studentAnswers) => {
   if (rightAnswers === studentAnswers) {
     return + 1;
   }
@@ -36,4 +36,4 @@ const solucao = (rightAnswers, studentAnswers) => {
   }
 }
 
-console.log(myHOF(RIGHT_ANSWERS, STUDENT_ANSWERS, solucao));
+console.log(myHOF(RIGHT_ANSWERS, STUDENT_ANSWERS, pontuacao));

@@ -1,17 +1,25 @@
-
-const sorteio = (callback) => {
+const sorteio = (aposta, callback) => {
   const min = 1;
   const max = 5;
-  const resultado = Math.floor(Math.random() * (max - min + 1) + min);
+  let sorteado = 0
+  sorteado += Math.floor(Math.random() * (max - min + 1) + min);
+  const verificacao = callback(aposta, sorteado);
 
-  callback(resultado)
-
+  console.log(sorteado);
+  return verificacao;
 };
 
-const checar = (aposta) => {
-  if (aposta !== resultado) {
-    return 'Tente novamente'
-  } return 'Parabéns você ganhou'
-};
+// const checar = (aposta, sorteado) => {
 
-console.log(sorteio(checar));
+// };
+
+console.log(
+  sorteio(1, (aposta, sorteado) => {
+    if (aposta === sorteado) {
+      return 'Parabéns você ganhou';
+    }
+    if (aposta !== sorteado) {
+      return 'Tente novamente';
+    }
+  })
+);
