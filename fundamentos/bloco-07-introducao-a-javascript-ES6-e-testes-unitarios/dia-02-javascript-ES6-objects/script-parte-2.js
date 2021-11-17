@@ -77,9 +77,9 @@ const totalEstudantes = (lessonsParam) => {
 
   return total;
 };
-// console.log(
-totalEstudantes(allLessons);
-// );
+console.log(
+totalEstudantes(allLessons)
+);
 
 // ------ Exercicio 07 ------
 
