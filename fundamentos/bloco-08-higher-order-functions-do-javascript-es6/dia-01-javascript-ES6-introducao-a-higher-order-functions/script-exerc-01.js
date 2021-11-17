@@ -19,4 +19,3 @@ const newEmployees = () => {
 };
 
 console.log(newEmployees());
-
