@@ -9,10 +9,6 @@ const sorteio = (aposta, callback) => {
   return verificacao;
 };
 
-// const checar = (aposta, sorteado) => {
-
-// };
-
 console.log(
   sorteio(1, (aposta, sorteado) => {
     if (aposta === sorteado) {
