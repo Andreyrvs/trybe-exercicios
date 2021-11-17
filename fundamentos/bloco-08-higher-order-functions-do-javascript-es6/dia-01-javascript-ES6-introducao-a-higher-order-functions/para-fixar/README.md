@@ -1,3 +1,5 @@
+# Para Fixar
+
 Vamos praticar com os seguintes exercícios:
 - [ ] 1. Crie uma função que retorne a string 'Acordando!!' ;
 - [ ] 2. Crie outra função que retorne a string 'Bora tomar café!!' ;
