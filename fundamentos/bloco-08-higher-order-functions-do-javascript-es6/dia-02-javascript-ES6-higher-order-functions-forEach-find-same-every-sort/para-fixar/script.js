@@ -1,9 +1,3 @@
-## Para Fixar 
-
-1 - Use o método forEach chamando a callback showEmailList para apresentar os emails
-<br>
-
-```
 const emailListInData = [
   'roberta@email.com',
   'paulo@email.com',
@@ -16,4 +10,7 @@ const showEmailList = (email) => {
 };
 
 // Adicione seu código aqui
-```
+
+emailListInData.forEach(showEmailList => {
+  console.log(showEmailList);
+})
