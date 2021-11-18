@@ -1,7 +1,7 @@
 const mage = {
   healthPoints: 130,
   intelligence: 45,
-  mana: 13,
+  mana: 3,
   damage: undefined,
 };
 
@@ -39,18 +39,15 @@ const warriorDano = () => {
 // console.log(warriorDano());
 
 const mageDano = () => {
-  let danoGerado = Math.floor(
-    Math.random() * (mage.intelligence * 2 - mage.intelligence + 1) +
-      mage.intelligence
-  );
+  let danoGerado = Math.floor(Math.random() * (mage.intelligence * 2 - mage.intelligence + 1) + mage.intelligence);
 
   let manaTurno = 15;
   let manaGasta = mage.mana - manaTurno;
 
   if (mage.mana < 15) {
-    danoGerado = 0
-    manaGasta = 'Não possui mana suficiente';
-    return { danoGerado, manaGasta: mage.mana };
+    danoGerado = 'Não possui mana suficiente'
+    manaGasta = mage.mana
+    return { danoGerado, manaGasta,};
   }
 
   return { danoGerado, manaGasta, };
@@ -62,23 +59,20 @@ const mageDano = () => {
 const gameActions = {
   turnoWarrior: (callback) => {
     const salvaDano = dragon.healthPoints - callback();
-    // Não esta atualizando a Vida do dragão
-    // dragon.healthPoints = salvaDano;
-    // warrior.damage = callback()
     return {
       vidaDragao: dragon.healthPoints = salvaDano,
       danoWarrior: warrior.damage = callback(),
     };
   },
-  turnoMage: (callback) => {
-    // const salvaDano = dragon.healthPoints - callback();
-    // Não está salvando os atributos
-    // dragon.healthPoints = salvaDano
-    // mage.damage = callback()
-    // mage.mana = callback() - manaTurno
-    // const manaTurno = 15;
+  turnoMage: (callback) => {   
+    let vidaDragao = dragon.healthPoints;
+    if (typeof callback().danoGerado === typeof Number) {
+      vidaDragao = dragon.healthPoints - callback().danoGerado
+    } 
+    // callback().danoGerado;
+
     return {
-      vidaDragao: dragon.healthPoints - callback().danoGerado,
+      vidaDragao,
       danoMago: mage.damage = callback().danoGerado,
       mana: mage.mana = callback().manaGasta,
     };
@@ -101,8 +95,8 @@ const gameActions = {
     return battleMembers;
   },
 };
+console.log(gameActions.turnoFinal());
 
 // console.log(gameActions.turnoWarrior(warriorDano));
 // console.log(gameActions.turnoMage(mageDano));
 // console.log(gameActions.turnoDragon(dragonDano));
-console.log(gameActions.turnoFinal());
