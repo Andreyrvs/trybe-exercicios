@@ -1,5 +1,7 @@
 const books = require('./referencia');
 
+// Faz a verificação estrita entre dois arrays
+const assert = require('assert')
 
 const expectedResult = [
   { 
@@ -41,3 +43,5 @@ function fantasyOrScienceFiction() {
 }
 
 console.log(fantasyOrScienceFiction());
+
+assert.deepStrictEqual(fantasyOrScienceFiction(), expectedResult);
