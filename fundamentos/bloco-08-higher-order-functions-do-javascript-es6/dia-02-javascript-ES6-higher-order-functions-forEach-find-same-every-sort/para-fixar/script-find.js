@@ -6,20 +6,17 @@ const findDivisibleBy3And5 = (numero) => {
   return numbers.find((numero) => numero % 3 === 0 && numero % 5 === 0)
 }
 
-
-
-console.log(findDivisibleBy3And5())
+// console.log(findDivisibleBy3And5())
 
 // ---------- Exercicio 02 ----------
 
 const names = ['João', 'Irene', 'Fernando', 'Maria'];
 
-const findNameWithFiveLetters = (letter) => letter.length === 5;
+const findNameWithFiveLetters = () => {
+  return names.find((letter) => letter.length === 5)
+}
 
-const achaName = names.find(findNameWithFiveLetters);
-
-// console.log(findNameWithFiveLetters(achaName));
-// console.log(achaName);
+console.log(findNameWithFiveLetters());
 
 // ---------- Exercicio 03 ----------
 
