@@ -311,8 +311,21 @@ Dica: use a função forEach .
    </details>
    <br>
 
+7. Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
+  <br>
+   <details>
+   <summary>Código</summary>
+   
+   ```
+   const expectedResult = false;
 
-
+   function authorUnique() {
+     // escreva seu código aqui
+   }
+   ```
+   
+   </details>
+   <br>
 
 
 
