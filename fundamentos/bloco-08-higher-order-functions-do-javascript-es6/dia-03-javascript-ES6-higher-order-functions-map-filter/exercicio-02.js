@@ -1,5 +1,4 @@
-const books = require('./referencia')
-
+const books = require('./referencia');
 
 const expectedResult = [
   {
@@ -28,7 +27,14 @@ const expectedResult = [
   },
 ];
 
-
 function nameAndAge() {
   // escreva seu código aqui
+  // books.author.name
+  // books.releaseYear - books.author.birthYear
+  
+  return books.map((element) => `${element.author.name} ${element.releaseYear - element.author.birthYear}`)
+    .sort((a, b) => a - b);
+
 }
+
+console.log(nameAndAge());
