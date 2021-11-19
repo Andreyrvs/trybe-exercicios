@@ -2,15 +2,13 @@
 
 const numbers = [19, 21, 30, 3, 45, 22, 15];
 
-const findDivisibleBy3And5 = (numbers) => {
-  if (numbers % 3 === 0 && numbers % 3 === 0) {
-    return numbers;
-  }
-};
+const findDivisibleBy3And5 = (numero) => {
+  return numbers.find((numero) => numero % 3 === 0 && numero % 5 === 0)
+}
 
-const achaNumber = numbers.find(findDivisibleBy3And5);
 
-// console.log(findDivisibleBy3And5(achaNumber))
+
+console.log(findDivisibleBy3And5())
 
 // ---------- Exercicio 02 ----------
 
@@ -37,6 +35,6 @@ function findMusic(id) {
 
 const achaId = musicas.find((element) => element.id === '31031685')
   
-console.log(achaId);
+// console.log(achaId);
 
 // console.log(findMusic('31031685'));
