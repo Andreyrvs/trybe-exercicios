@@ -70,7 +70,7 @@
 
 
 3. Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
-Dica: use a função filter.
+    - Dica: use a função filter.
 
  
     <br>
@@ -117,21 +117,62 @@ Dica: use a função filter.
     </details>
     <br> 
 
+4. Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
+    - Dica: use as funções filter e sort.
 
-
-
-   
-   
-   
-   
-   
     <br>
     <details>
-    <summary>Código</summary>   
+    <summary>Código</summary>
 
     ```
+    const expectedResult = [
+      {
+        id: 6,
+        name: 'O Chamado de Cthulhu',
+        genre: 'Terror',
+        author: { name: 'H. P. Lovecraft', birthYear: 1890 },
+        releaseYear: 1928,
+      },
+      {
+        id: 3,
+        name: 'Fundação',
+        genre: 'Ficção Científica',
+        author: { name: 'Isaac Asimov', birthYear: 1920 },
+        releaseYear: 1951,
+      },
+      {
+        id: 2,
+        name: 'O Senhor dos Anéis',
+        genre: 'Fantasia',
+        author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
+        releaseYear: 1954,
+      },
+    ];
 
+    function oldBooksOrdered() {
+      // escreva seu código aqui
+    }
     ```
 
     </details>
-    <br> 
+    <br>
+
+
+
+
+
+
+
+
+
+
+<br>
+<details>
+<summary>Código</summary>   
+
+```
+
+```
+
+</details>
+<br> 
