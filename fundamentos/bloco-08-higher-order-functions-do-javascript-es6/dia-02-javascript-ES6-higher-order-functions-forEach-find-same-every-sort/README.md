@@ -276,6 +276,23 @@ Dica: use a função forEach .
    </details>
    <br>
 
+5. Faça uma função que retorne true , se todas as pessoas autoras nasceram no século XX, ou false , caso contrário.
+
+
+   <br>
+   <details>
+   <summary>Código</summary>
+   
+   ```
+   const expectedResult = false;
+
+   function everyoneWasBornOnSecXX() {
+     // escreva seu código aqui
+   }
+   ```
+   
+   </details>
+   <br>
 
 
 
