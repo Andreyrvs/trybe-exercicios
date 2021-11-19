@@ -28,7 +28,7 @@ const expectedResult = [
 ];
 
 function oldBooksOrdered() {
-  // escreva seu código aqui
+  // Pega o ano atual
   const currentYear = new Date().getFullYear();
 
   return books.filter((livros) => {

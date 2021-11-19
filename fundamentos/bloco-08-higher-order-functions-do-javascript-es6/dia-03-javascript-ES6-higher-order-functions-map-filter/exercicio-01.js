@@ -1,5 +1,8 @@
 const books = require('./referencia');
 
+// Faz a verificação estrita entre dois arrays
+const assert = require('assert')
+
 const expectedResult = [
   'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
   'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
@@ -15,8 +18,9 @@ function formatedBookNames() {
   // books.genre
   // books.author.name
 
-  return books.map((el) => `${el.name} - ${el.genre} - ${el.author.name}`);
+  return books.map((livros) => `${livros.name} - ${livros.genre} - ${livros.author.name}`);
 
 }
 
 console.log(formatedBookNames());
+assert.deepStrictEqual(formatedBookNames(), expectedResult);
