@@ -1,14 +1,17 @@
 const books = require('./referencia')
 
 
-function smallerName(arr) {
+function smallerName() {
   let nameBook;
   // escreva aqui o seu código
-  arr.forEach(element => {
-    element.name.length ? 0 : 1
-  });
+  books.forEach((element) => {
+    if (!nameBook || element.name.length < nameBook.length) {
+      nameBook = element.name
+    }
+
+  })
   // Variável nameBook que receberá o valor do menor   nome;
   return nameBook;
  }
 
- console.log(smallerName(books));
+ console.log(smallerName());
