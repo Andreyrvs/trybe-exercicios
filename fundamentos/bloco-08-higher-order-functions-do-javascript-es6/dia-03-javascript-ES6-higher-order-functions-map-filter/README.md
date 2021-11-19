@@ -1,3 +1,14 @@
+## Aula Ao vivo
+
+usar .map em objetos preciso usa Object.assign
+
+---
+O calculo era multiplicar um parametro por 15%
+![Como fazer calculo de porcentagem](Fazer-Porcentagem.png)
+
+---
+## Exercicicos
+
 1. Crie um array com strings no formato NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
     - Dica: Use a função map.
 
