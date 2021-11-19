@@ -4,7 +4,7 @@ const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
 
 const hasName = (arr, name) => {
   //Adicione seu código aqui
-  return names.some((arr => arr === name))
+  return arr.some((nomeAtual => nomeAtual === name))
 }
 
 console.log(hasName(names, 'Ana'))
