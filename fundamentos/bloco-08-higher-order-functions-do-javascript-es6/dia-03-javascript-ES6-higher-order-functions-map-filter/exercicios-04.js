@@ -26,8 +26,14 @@ const expectedResult = [
 
 function oldBooksOrdered() {
   // escreva seu código aqui
+  const livrosVelhos = books.filter((bookSesenta) => {
+    const idadeLivro = (bookSesenta.releaseYear - 2021) * -1
+    if (idadeLivro >= 60) {
+     return idadeLivro
+    }
+  }).sort((a, b) => a - b).reverse()
 
-  
+  return livrosVelhos
 }
 
 console.log(oldBooksOrdered());
