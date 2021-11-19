@@ -11,6 +11,4 @@ const showEmailList = (email) => {
 
 // Adicione seu código aqui
 
-emailListInData.forEach(showEmailList => {
-  console.log(showEmailList);
-})
+emailListInData.forEach(showEmailList);
