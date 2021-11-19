@@ -11,8 +11,13 @@ const people = [
 // Adicione se código aqui
 
 const idadeCrescente = (arr) => {
-  return arr.sort((a, b) => a.age - b.age)
-}
-
+  return arr.sort((a, b) => a.age - b.age);
+};
 
 console.log(idadeCrescente(people));
+
+// Outra opção mais direta
+
+people.sort((a, b) => a.age - b.age);
+
+console.log(people);
