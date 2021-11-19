@@ -4,7 +4,7 @@ const expectedResult = false;
 
 function everyoneWasBornOnSecXX() {
   return books.every(
-    (born) => born.author.birthYear >= 1901 && born.author.birthYear <= 2000
+    (authorBorn) => authorBorn.author.birthYear >= 1901 && authorBorn.author.birthYear <= 2000
   );
 }
 

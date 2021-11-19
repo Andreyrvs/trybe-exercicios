@@ -294,6 +294,23 @@ Dica: use a função forEach .
    </details>
    <br>
 
+6. Faça uma função que retorne true , se algum livro foi lançado na década de 80, e false , caso contrário.
+
+   <br>
+   <details>
+   <summary>Código</summary>
+   
+   ```
+   const expectedResult = true;
+
+   function someBookWasReleaseOnThe80s() {
+     // escreva seu código aqui
+   }
+   ```
+   
+   </details>
+   <br>
+
 
 
 
