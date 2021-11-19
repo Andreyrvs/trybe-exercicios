@@ -11,7 +11,19 @@ const findDivisibleBy3And5 = (numbers) => {
 
 const achaNumber = numbers.find(findDivisibleBy3And5);
 
-console.log(findDivisibleBy3And5(achaNumber))
+// console.log(findDivisibleBy3And5(achaNumber))
 
 
 // ---------- Exercicio 02 ----------
+
+const names = ['João', 'Irene', 'Fernando', 'Maria'];
+
+const findNameWithFiveLetters = (letter) => {
+  // Adicione seu código aqui:
+  return letter.length === 5
+}
+
+const achaName = names.find(findNameWithFiveLetters)
+
+console.log(findNameWithFiveLetters(achaName));
+console.log(achaName);
