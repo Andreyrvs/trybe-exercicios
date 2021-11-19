@@ -154,7 +154,26 @@
    </details>
    <br>
 
- 
+## Exercicios 
+
+1. Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
+Dica: use a função find .
+   <br>
+   <details>
+   <summary>Código</summary>
+   
+   ```
+   function authorBornIn1947() {
+   // escreva aqui o seu código
+   }
+   ```
+   
+   </details>
+   <br>
+
+
+
+
 
 
 
