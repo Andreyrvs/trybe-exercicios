@@ -26,4 +26,8 @@ const expectedResult = [
 
 function oldBooksOrdered() {
   // escreva seu código aqui
+
+  
 }
+
+console.log(oldBooksOrdered());

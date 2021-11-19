@@ -31,10 +31,14 @@ function nameAndAge() {
   // escreva seu código aqui
   // books.author.name
   // books.releaseYear - books.author.birthYear
-  
-  return books.map((element) => `${element.author.name} ${element.releaseYear - element.author.birthYear}`)
-    .sort((a, b) => a - b);
-
+  const pessoaMaisJovem = books.map((element) => {
+    const idadeDoAutor = element.releaseYear - element.author.birthYear
+    const ordenaArray = books.sort((idadeDoAutorA, idadeDoAutorB) => idadeDoAutorA - idadeDoAutorB)
+    
+    `${element.author.name} ${idadeDoAutor}`
+  });
+  return pessoaMaisJovem
+    
 }
 
 console.log(nameAndAge());
