@@ -1,5 +1,8 @@
 const books = require('./referencia')
 
+// Faz a verificação estrita entre dois arrays
+const assert = require('assert')
+
 const expectedResult = [
   {
     id: 6,
@@ -26,16 +29,17 @@ const expectedResult = [
 
 function oldBooksOrdered() {
   // escreva seu código aqui
-  const livrosVelhos = books.filter((bookSesenta) => {
-    const idadeLivro = (bookSesenta.releaseYear - 2021) * -1
+  const currentYear = new Date().getFullYear();
+
+  return books.filter((livros) => {
+  const idadeLivro = (currentYear - livros.releaseYear)
     if (idadeLivro >= 60) {
      return idadeLivro
     }
-  }).sort((a, b) => a - b).reverse()
+  }).sort((a, b) => a.releaseYear - b.releaseYear);
 
-  return livrosVelhos
+  
 }
 
 console.log(oldBooksOrdered());
-
-// 
+assert.deepStrictEqual(oldBooksOrdered(), expectedResult);
