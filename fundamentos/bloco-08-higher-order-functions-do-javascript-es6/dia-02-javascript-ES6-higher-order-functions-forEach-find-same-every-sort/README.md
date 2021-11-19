@@ -1,7 +1,10 @@
 ## Para Fixar 
 
-1 - Use o método forEach chamando a callback showEmailList para apresentar os emails
+1. Use o método forEach chamando a callback showEmailList para apresentar os emails
 <br>
+
+<details>
+<summary>Código</summary>
 
 ```
 const emailListInData = [
@@ -17,3 +20,5 @@ const showEmailList = (email) => {
 
 // Adicione seu código aqui
 ```
+
+</details>
