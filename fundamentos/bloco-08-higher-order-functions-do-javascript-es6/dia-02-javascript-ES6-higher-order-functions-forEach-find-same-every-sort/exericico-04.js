@@ -59,3 +59,10 @@ function booksOrderedByReleaseYearDesc() {
 }
 
 console.log(booksOrderedByReleaseYearDesc());
+
+// ----------- Forma do Gabarito ------------
+// function booksOrderedByReleaseYearDesc() {
+//   return books.sort((bookA, bookB) => bookB.releaseYear - bookA.releaseYear)
+// }
+
+// console.log(booksOrderedByReleaseYearDesc());
