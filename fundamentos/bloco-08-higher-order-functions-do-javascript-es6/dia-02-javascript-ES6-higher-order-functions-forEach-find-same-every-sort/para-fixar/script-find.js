@@ -16,7 +16,7 @@ const findNameWithFiveLetters = () => {
   return names.find((letter) => letter.length === 5)
 }
 
-console.log(findNameWithFiveLetters());
+// console.log(findNameWithFiveLetters());
 
 // ---------- Exercicio 03 ----------
 
@@ -27,11 +27,7 @@ const musicas = [
 ];
 
 function findMusic(id) {
- 
+  return musicas.find((musica) => musica.id === id)
 }
 
-const achaId = musicas.find((element) => element.id === '31031685')
-  
-// console.log(achaId);
-
-// console.log(findMusic('31031685'));
+console.log(findMusic('31031685'));
