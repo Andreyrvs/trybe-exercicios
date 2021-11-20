@@ -13,13 +13,7 @@ const expectedResult = [
 ];
 
 function formatedBookNames() {
-  // escreva seu código aqui
-  // books.name
-  // books.genre
-  // books.author.name
-
   return books.map((livros) => `${livros.name} - ${livros.genre} - ${livros.author.name}`);
-
 }
 
 console.log(formatedBookNames());

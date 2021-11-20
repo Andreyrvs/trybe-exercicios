@@ -4,9 +4,9 @@ usar .map em objetos preciso usa Object.assign
 
 ---
 O calculo era multiplicar um parametro por 15%
-<details>
+
 ![Como fazer calculo de porcentagem](Fazer-Porcentagem.png)
-</details>
+
 ---
 ## Exercicicos
 
