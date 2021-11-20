@@ -2,7 +2,6 @@ const {encode, decode} = require('../exercicios/encodeDecode');
 
 describe('Para as funções encode e decode', () => {
 
-  // -------- Encode -------------
   describe('Função Encode', () => {
     it('Teste se "encode" é definida', () => {
       expect(encode).toBeDefined();
