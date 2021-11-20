@@ -1,4 +1,4 @@
-const myFizzBuzz = require('../exercicios/ myFizzBuzz');
+const myFizzBuzz = require('./myFizzBuzz');
 
 describe('Testa a função myFizzBuzz', () => {
   it('Faça uma chamada com um número divisível por 3 e 5 e verifique se o retorno é "fizzbuzz"', () => {

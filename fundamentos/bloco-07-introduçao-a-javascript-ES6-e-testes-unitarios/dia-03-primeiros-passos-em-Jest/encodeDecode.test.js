@@ -1,4 +1,4 @@
-const {encode, decode} = require('../exercicios/encodeDecode');
+const {encode, decode} = require('./encodeDecode');
 
 describe('Para as funções encode e decode', () => {
 

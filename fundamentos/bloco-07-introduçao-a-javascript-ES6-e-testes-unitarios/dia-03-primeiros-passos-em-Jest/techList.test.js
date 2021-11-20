@@ -1,4 +1,4 @@
-const techList = require('./techList.js');
+const techList = require('./techList');
 
 describe('Testa a função techList', () => {
   it('Testa se a função techList é definida', () => {
@@ -36,4 +36,4 @@ describe('Testa a função techList', () => {
   });
 });
 
-module.exports = techList;
+// module.exports = techList;

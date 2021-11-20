@@ -1,7 +1,8 @@
 {
-  "name": "exercicios",
+  "name": "dia-03-primeiros-passos-em-jest",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Apenas um teste",
+  "main": " myFizzBuzz.js",
   "scripts": {
     "test": "jest"
   },
@@ -13,6 +14,5 @@
   },
   "dependencies": {
     "@types/jest": "^27.0.3"
-  },
-  "description": ""
+  }
 }
