@@ -31,14 +31,10 @@ function oldBooksOrdered() {
   // Pega o ano atual
   const currentYear = new Date().getFullYear();
 
-  return books.filter((livros) => {
-  const idadeLivro = (currentYear - livros.releaseYear)
-    if (idadeLivro >= 60) {
-     return idadeLivro
-    }
-  }).sort((a, b) => a.releaseYear - b.releaseYear);
+  return books.filter((livros) => (
+    livros.releaseYear < currentYear - 60    
+  )).sort((livroA, livroB) => livroA.releaseYear - livroB.releaseYear);
 
-  
 }
 
 console.log(oldBooksOrdered());
