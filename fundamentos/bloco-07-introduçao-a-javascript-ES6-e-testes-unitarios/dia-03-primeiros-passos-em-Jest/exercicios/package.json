@@ -1,7 +1,6 @@
 {
   "name": "exercicios",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -14,5 +13,6 @@
   },
   "dependencies": {
     "@types/jest": "^27.0.2"
-  }
+  },
+  "description": ""
 }
