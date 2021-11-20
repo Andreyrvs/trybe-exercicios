@@ -1,18 +1,24 @@
 function hydrate(stingParam) {
-  if (stingParam === '1 cerveja') {
-    return '1 copo de água'
-  } else if (stingParam === '1 cerveja, 2 shots e 1 catuaba') {
-    return '4 copos de água'
-  } else if (stingParam === '2 caipirinhas') {
-    return '2 copos de água'
+  const separaSting = stingParam.split('');
+  let coposDAgua = 0;
+
+  for (let index = 0; index < separaSting.length; index += 1) {
+    const pegaCaracter = parseInt(separaSting[index]);
+
+    if (pegaCaracter) {
+      coposDAgua += pegaCaracter;
+    }
   }
 
+  let copo = 'copo';
+
+  if (coposDAgua > 1) {
+    copo = 'copos';
+  }
+  return `${coposDAgua} ${copo} de água`
 }
 
-module.exports = hydrate
+module.exports = hydrate;
 
-// Teste aqui 
-
-console.log(
-  hydrate('10 cerveja')
-);
+// Teste aqui
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
