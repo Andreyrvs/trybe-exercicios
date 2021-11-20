@@ -29,11 +29,6 @@ module.exports = {
 
 // Teste aqui
 
-console.log(
-  encode('a, e, i, o, u').length
-);
-
-
-/* console.log(
-
-); */
+// console.log(
+//   encode('a, e, i, o, u').length
+// );
