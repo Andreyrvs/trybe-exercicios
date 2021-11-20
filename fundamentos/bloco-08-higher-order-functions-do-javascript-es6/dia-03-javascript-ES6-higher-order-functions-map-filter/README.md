@@ -4,8 +4,9 @@ usar .map em objetos preciso usa Object.assign
 
 ---
 O calculo era multiplicar um parametro por 15%
+<details>
 ![Como fazer calculo de porcentagem](Fazer-Porcentagem.png)
-
+</details>
 ---
 ## Exercicicos
 
@@ -211,11 +212,28 @@ O calculo era multiplicar um parametro por 15%
    </details>
    <br> 
 
+7. Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+Dica: cada inicial termina com um ponto.
+
+   <br>
+   <details>
+   <summary>Código</summary>   
+   
+   ```
+   const expectedResult = 'O Senhor dos Anéis';
+   
+   function authorWith3DotsOnName() {
+     // escreva seu código aqui
+   }
+   ```
+   
+   </details>
+   <br> 
 
 
 <br>
 <details>
-<summary>Código</summary>   
+<summary>Código Modelo</summary>   
 
 ```
 

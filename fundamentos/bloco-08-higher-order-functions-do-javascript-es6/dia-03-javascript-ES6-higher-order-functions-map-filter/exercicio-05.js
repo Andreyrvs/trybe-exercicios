@@ -21,4 +21,4 @@ function fantasyOrScienceFictionAuthors() {
 }
 
 console.log(fantasyOrScienceFictionAuthors());
-// assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
+assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
