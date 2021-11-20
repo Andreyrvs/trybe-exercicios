@@ -1,7 +1,7 @@
 const books = require('./referencia');
 
 // Faz a verificação estrita entre dois arrays
-const assert = require('assert')
+const assert = require('assert');
 
 const expectedResult = [
   'Frank Herbert',
@@ -11,13 +11,12 @@ const expectedResult = [
 ];
 
 function fantasyOrScienceFictionAuthors() {
-  // escreva seu código aqui
-  return books.map((livros) => {
-    const ficcao = 'Ficção Científica'
-    const fantasia ='Fantasia'
+  const generosrRequeridos = ['Ficção Científica', 'Fantasia'];
 
-    if (livros.genre === ficcao && livros.genre === fantasia) return livros.author.name
-  });
+  return books
+    .filter((livros) => generosrRequeridos.includes(livros.genre))
+    .map((livros) => livros.author.name)
+    .sort();
 }
 
 console.log(fantasyOrScienceFictionAuthors());
