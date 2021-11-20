@@ -1,11 +1,6 @@
 const {encode, decode} = require('../exercicios/encodeDecode');
 
 describe('Para as funções encode e decode', () => {
-  // Feito com Boolean
-/*   it('Teste se "encode" e "decode" são funções', () => {
-    expect({ encode, decode }).toBeTruthy();
-  }); */
-  // Outra Forma de fazer, feito com typeof
 
   // -------- Encode -------------
   describe('Função Encode', () => {
