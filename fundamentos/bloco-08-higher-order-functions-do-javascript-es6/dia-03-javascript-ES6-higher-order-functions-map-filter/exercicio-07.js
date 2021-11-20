@@ -6,7 +6,11 @@ const assert = require('assert')
 const expectedResult = 'O Senhor dos Anéis';
 
 function authorWith3DotsOnName() {
-  // escreva seu código aqui
+  return books.find((livros) => (
+    livros.author.name.split(' ')
+    .filter((letra) => letra.endsWith('.')).length === 3 ))
+    .name
 }
 
-assert.deepStrictEqual(oldBooks(), expectedResult);
+console.log(authorWith3DotsOnName());
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
