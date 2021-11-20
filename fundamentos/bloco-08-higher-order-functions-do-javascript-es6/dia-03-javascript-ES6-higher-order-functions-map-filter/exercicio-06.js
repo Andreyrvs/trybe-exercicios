@@ -12,10 +12,10 @@ const expectedResult = [
 function oldBooks() {
   const currentYear = new Date().getFullYear();
 
-  return books.fill((livros) => {
-    const idadeLivro = currentYear - livros.releaseYear;
-    if (idadeLivro >= 60) livros.name;
-  });
+  return books
+  .filter((livro) =>  currentYear - livro.releaseYear > 60 )
+  .map((livro) => livro.name)
 }
 
+console.log(oldBooks());
 assert.deepStrictEqual(oldBooks(), expectedResult);
