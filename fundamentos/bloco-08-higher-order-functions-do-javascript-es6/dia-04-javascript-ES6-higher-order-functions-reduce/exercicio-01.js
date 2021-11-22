@@ -4,11 +4,9 @@ const arrays = [
   [4, 5, 6],
 ];
 
-function flatten(acc, number) {
+function flatten() {
   // escreva seu código aqui
-  return [acc + number]
+  return arrays.reduce((acc, number) => acc.concat(number))
 }
 
-const reduce = arrays.reduce(flatten)
-
-console.log(reduce);
+console.log(flatten());
