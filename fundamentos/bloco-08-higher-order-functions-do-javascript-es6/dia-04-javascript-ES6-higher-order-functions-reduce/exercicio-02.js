@@ -4,17 +4,14 @@ const assert = require('assert')
 
 const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
 
-function reduceNames(acc, number) {
+function reduceNames() {
   // escreva seu código aqui
-
-  const reducer = acc + number
-
-  return books.filter((el) => el.author.name)
+  const reducer = (acc, number) => acc + number;
+  return `${books.map((elemento) => `${elemento.author.name}, `).reduce(reducer)}`
 }
 
 
-const test = books.reduce() 
 console.log(reduceNames());
 
-// 
+
 // assert.deepStrictEqual(reduceNames(), expectedResult)
