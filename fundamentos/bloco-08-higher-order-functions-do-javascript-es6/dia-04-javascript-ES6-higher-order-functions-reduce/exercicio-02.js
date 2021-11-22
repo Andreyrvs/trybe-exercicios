@@ -6,13 +6,15 @@ const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Fra
 
 function reduceNames() {
   // escreva seu código aqui
-  const reducer = (acc, number) => acc + number;
+  const reducer = (acc, valorAtual) => acc + valorAtual;
   return books.map((elemento) => elemento.author.name)
   .reduce(reducer)
 }
 
-
-console.log(reduceNames());
+console.log(
+  books.map((el) => (el.author.name).replace('', ', ')).reduce((acc, atual) => acc + atual) + '.'
+  );
+// console.log(reduceNames());
 
 
 // assert.deepStrictEqual(reduceNames(), expectedResult)

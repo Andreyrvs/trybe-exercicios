@@ -12,4 +12,4 @@ function averageAge() {
 
 
 console.log(averageAge())
-// assert.deepStrictEqual(averageAge(), expectedResult)
+assert.deepStrictEqual(averageAge(), expectedResult)
