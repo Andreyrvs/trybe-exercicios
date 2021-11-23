@@ -8,9 +8,10 @@ const names = [
 
 function containsA() {
   // escreva seu código aqui
-  const letraCompare = 'A'
-  if (letraCompare === letraCompare.toLowerCase) return names.reduce((acumulador, valorAtual) => acumulador + valorAtual)
-  return letraCompare
+  return names.reduce((acc, Aual) => acc + Aual.split('').reduce((acumulador, valorAtual) => {
+    if (valorAtual === 'a' || valorAtual === 'A') return acumulador + 1
+    return acumulador
+  }, 0), 0)
 }
 
 console.log(containsA());
