@@ -6,9 +6,9 @@ const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Fra
 
 function reduceNames() {
   // escreva seu código aqui
-  return books.map((el) => (el.author.name))
-}
+  return books.reduce((acumulador, valorAtual) => acumulador += ` ${valorAtual.author.name},`)
 
+}
 
 console.log(reduceNames());
 
