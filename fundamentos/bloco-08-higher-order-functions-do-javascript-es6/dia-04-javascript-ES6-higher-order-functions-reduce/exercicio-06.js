@@ -12,15 +12,45 @@ const grades = [
   [10, 7, 10, 8, 9],
 ];
 
-function studentAverage() {
-  // escreva seu código aqui
-  const notaAlunos = students.map((elemento, index) => ({
-    name: elemento,
-    average:
-      grades[index].reduce((acumulador, valorAtual) => acumulador + valorAtual, 0) / grades[index].length,
-  }));
+// ---------- Forma 01 de fazer --------------
 
-  return notaAlunos;
+// function studentAverage() {
+//   // escreva seu código aqui
+//   const notaAlunos = students.map((elemento, index) => ({
+//     name: elemento,
+//     average:
+//       grades[index].reduce((acumulador, valorAtual) => acumulador + valorAtual, 0) / grades[index].length,
+//   }));
+
+//   return notaAlunos;
+// }
+
+// console.log(studentAverage());
+
+
+// ---------- Forma 02 de fazer --------------
+
+function sumGrades(acc, grade) {
+  return acc + grade;
+}
+
+function calcAvegare(index) {
+  const sum = grades[index].reduce(sumGrades, 0)
+
+  return sum / grades[index].length
+}
+
+function studentAverage() {
+  // escreva seu codigo aqui
+  return students.reduce((acumulador, student, index) => {
+    const object = {
+      name: student,
+      average: calcAvegare(index),
+    };
+
+    acumulador.push(object);
+    return acumulador
+  }, [])
 }
 
 console.log(studentAverage());
@@ -31,4 +61,5 @@ const expected = [
   { name: 'Maria Clara', average: 8.8 },
 ];
 
-assert.deepStrictEqual(studentAverage(), expected)
+assert.deepStrictEqual(studentAverage(), expected);
+
