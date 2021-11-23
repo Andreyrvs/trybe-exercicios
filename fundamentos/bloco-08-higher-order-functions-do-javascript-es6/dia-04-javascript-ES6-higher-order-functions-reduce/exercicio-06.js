@@ -11,13 +11,13 @@ const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
 function studentAverage() {
   // escreva seu código aqui
-  const mediaAlunos = {
-    names,
-    average,
-  }
+  const notaAlunos = students.map((elemento, index) => ({
+    name: elemento,
+    average: (grades[index].reduce((acumulador, valorAtual) => acumulador + valorAtual, 0) / grades[index].length)
+    }))
   
 
-  return mediaAlunos
+  return notaAlunos
 }
 
 console.log(studentAverage());
