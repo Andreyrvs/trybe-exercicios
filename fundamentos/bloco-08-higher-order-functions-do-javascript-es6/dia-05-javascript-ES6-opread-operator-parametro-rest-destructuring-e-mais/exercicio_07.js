@@ -20,7 +20,7 @@ const ships = [
 
 // escreva shipLength abaixo
 
-const shipLength = ({name,length, measurementUnit}) => `Comprimento do navio ${name}: ${length} ${measurementUnit}`
+const shipLength = ({name,length, measurementUnit}) => `Comprimento do ${name} é ${length} ${measurementUnit}`
 
 console.log(shipLength(ships[0])) // 'Titanic is 269.1 meters long'
 console.log(shipLength(ships[1])) // 'Queen Mary 2 is 1132 feet long'
