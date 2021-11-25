@@ -5,3 +5,7 @@
 const myList = [1, 2, 3];
 
 // escreva swap abaixo
+
+[myList[0], myList[2]] = [myList[2], myList[0]]
+
+console.log(myList);
