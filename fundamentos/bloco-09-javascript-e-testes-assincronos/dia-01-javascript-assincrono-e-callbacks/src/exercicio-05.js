@@ -17,11 +17,11 @@ const greet = (temperature) =>
 
 // definição da função sendMarsTemperature...
 
-function sendMarsTemperature(callback) {
+function sendMarsTemperature(onSuccess) {
   const temperaturaAtual = getMarsTemperature();
 
   setTimeout (() => {
-    callback(temperaturaAtual)
+    onSuccess(temperaturaAtual)
   }, messageDelay())
 }
 
