@@ -15,7 +15,6 @@ const fetchJoke = () => {
 function append(piada) {
   const pegaBody = document.querySelector('#jokeContainer');
   pegaBody.innerHTML = piada;
-  pegaBody.appendChild(criaTag);
 }
 
 window.onload = () => fetchJoke();
