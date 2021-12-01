@@ -1,0 +1,68 @@
+/* Cor de fundo com gradiente + animação */
+body {
+  animation: gradient 15s ease
+  infinite;
+  background-color: #4158D0;
+  background: linear-gradient(-45deg, #4158D0 , #C850C0 , #FFCC70 );
+  background-size: 400% 400%;
+  height: 100vh;
+}
+
+/* Animação do gradiente */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* efeito de card */
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.card {
+  background-color: #FFCC70;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  padding: 2px 16px;
+  transition: 0.3s;
+  width: 70%;
+  width: 100vh;
+}
+
+/* Dispocição elementos */
+.titulo {
+  display: flex;
+  justify-content: center;
+}
+
+#criptoLista-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.criptoLista {
+  align-items: center;
+  display: flex;
+  padding: 3px 3px;
+}
+
+.criptoLista:hover {
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 70%;
+}

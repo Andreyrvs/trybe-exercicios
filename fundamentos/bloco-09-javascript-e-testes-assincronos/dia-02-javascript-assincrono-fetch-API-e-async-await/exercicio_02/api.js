@@ -9,9 +9,9 @@ const fetchCripto = async () => {
   const coins = await fetch(API_URL, myObject)
     .then((response) => response.json())
     .then((obj) => obj.data)
-    .catch((error) => error.toString())
+    .catch((error) => error.toString());
 
-  return coins
+  return coins;
 };
 
 // Filtra as 10 primeiras Modedas
@@ -21,17 +21,17 @@ const filtraCoins = async () => {
   coins
     .filter((coin) => Number(coin.rank) <= 10)
     .forEach((coin) => {
-      append(`${coin.name} (${coin.symbol}): ${coin.priceUsd}`)
-    })
-
-}
+      append(`${coin.name} (${coin.symbol}): ${coin.priceUsd}`);
+    });
+};
 
 // Cria as li, é passada como na função fintraCoins
 function append(lista) {
-  const catchH2 = document.querySelector('#listaCripto');
-  const creatLi = document.createElement('li')
+  const catchUl = document.querySelector('#criptoLista-container');
+  const creatLi = document.createElement('li');
+  creatLi.className = 'criptoLista';
   creatLi.innerHTML = lista;
-  catchH2.appendChild(creatLi)
+  catchUl.appendChild(creatLi);
 }
 
 window.onload = () => filtraCoins();
