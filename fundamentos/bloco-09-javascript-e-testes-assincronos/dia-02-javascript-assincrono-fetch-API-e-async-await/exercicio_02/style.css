@@ -38,25 +38,26 @@ body {
   padding: 2px 16px;
   transition: 0.3s;
   width: 70%;
-  width: 100vh;
 }
 
 /* Dispocição elementos */
-.titulo {
+.h1 {
   display: flex;
   justify-content: center;
 }
 
+.titulo {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 40px;
+}
+
 #criptoLista-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   width: 100%;
 }
 
 .criptoLista {
-  align-items: center;
   display: flex;
+  text-align: center;
   padding: 3px 3px;
 }
 
