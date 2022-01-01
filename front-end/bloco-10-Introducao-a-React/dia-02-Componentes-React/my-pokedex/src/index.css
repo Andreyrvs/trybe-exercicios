@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 10px;
+}
+
+.pokemon {
+  align-items: center;
+  display: flex;
+  border: 2px solid gray;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-width: 25%;
+  margin: 10px 10px;
+  user-select: none;
+}
+
+.pokemon:hover {
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+}
