@@ -4,40 +4,60 @@ class Test extends React.Component {
   constructor() {
     super();
     this.state = {
-      btn1: 0,
-      btn2: 0,
-      btn3: 0,
+      clicksBtnOne: 0,
+      clicksBtnTwo: 0,
+      clkcksBtnThree: 0,
     };
 
-    this.handleClick = this.handleClick.bind(this);
-    this.handleClick2 = this.handleClick2.bind(this);
-    this.handleClick3 = this.handleClick3.bind(this);
+    this.handleBtnOne = this.handleBtnOne.bind(this);
+    this.handleBtnTwo = this.handleBtnTwo.bind(this);
+    this.handleBtnThree = this.handleBtnThree.bind(this);
   }
 
-  handleClick = () => {
-    this.setState((estadoAnteriror, _props) => ({
-      btn1: estadoAnteriror.btn1 + 1,
+  handleBtnOne = () => {
+    this.setState(({ clicksBtnOne }) => ({
+      clicksBtnOne: clicksBtnOne + 1,
     }));
   };
 
-  handleClick2 = () => {
-    this.setState((estadoAnteriror, _props) => ({
-      btn2: estadoAnteriror.btn2 + 1,
+  handleBtnTwo = () => {
+    this.setState(({ clicksBtnTwo }) => ({
+      clicksBtnTwo: clicksBtnTwo + 1,
     }));
   };
 
-  handleClick3 = () => {
-    this.setState((estadoAnteriror, _props) => ({
-      btn3: estadoAnteriror.btn3 + 1,
+  handleBtnThree = () => {
+    this.setState(({ clkcksBtnThree }) => ({
+      clkcksBtnThree: clkcksBtnThree + 1,
     }));
   };
+
+  getButtonColor(num) {
+    return num % 2 === 0 ? "green" : "white";
+  }
 
   render() {
+    const { clicksBtnOne, clicksBtnTwo, clkcksBtnThree } = this.state;
     return (
       <>
-        <button onClick={this.handleClick}>{this.state.btn1}</button>
-        <button onClick={this.handleClick2}>{this.state.btn2}</button>
-        <button onClick={this.handleClick3}>{this.state.btn3}</button>
+        <button
+          onClick={this.handleBtnOne}
+          style={{ backgroundColor: this.getButtonColor(clicksBtnOne) }}
+        >
+          Botão 1 | Count = {clicksBtnOne}
+        </button>
+        <button
+          onClick={this.handleBtnTwo}
+          style={{ backgroundColor: this.getButtonColor(clicksBtnTwo) }}
+        >
+          Botão 2 | Count = {clicksBtnTwo}
+        </button>
+        <button
+          onClick={this.handleBtnThree}
+          style={{ backgroundColor: this.getButtonColor(clkcksBtnThree) }}
+        >
+          Botão 3 | Count = {clkcksBtnThree}
+        </button>
       </>
     );
   }
