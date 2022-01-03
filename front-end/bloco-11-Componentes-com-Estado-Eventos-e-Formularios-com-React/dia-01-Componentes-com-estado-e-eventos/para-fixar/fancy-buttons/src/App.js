@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 class App extends React.Component {
   constructor() {
@@ -10,15 +10,15 @@ class App extends React.Component {
   }
 
   handleClick() {
-    console.log('Clicou no botão 1!');
+    console.log("Clicou no botão 1!");
   }
 
   handleClick2() {
-    console.log('Clicou no botão 2!!');
+    console.log("Clicou no botão 2!!");
   }
 
   handleClick3() {
-    console.log('Clicou no botão 3!!');
+    console.log("Clicou no botão 3!!");
   }
 
   render() {
