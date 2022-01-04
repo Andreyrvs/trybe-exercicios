@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class DataFieldset extends Component {
   render() {
@@ -13,11 +13,11 @@ class DataFieldset extends Component {
           <textarea
             id="anecdote"
             name="anecdote"
-            onChange={ handleChange }
-            value={ anecdoteValue }
+            onChange={handleChange}
+            value={anecdoteValue}
           />
+          {!anecdoteValue.length ? " -campo vazio- " : " -ok- "}
         </label>
-
         <input type="file" />
       </fieldset>
     );
