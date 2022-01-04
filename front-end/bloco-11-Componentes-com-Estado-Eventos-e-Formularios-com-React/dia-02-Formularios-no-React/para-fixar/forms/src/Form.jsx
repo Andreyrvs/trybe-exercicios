@@ -1,82 +1,56 @@
-import React, { Component } from "react";
-import "./Form.css";
+import React, { Component } from 'react';
+import DataFieldset from './DataFieldset';
+import PersonalFieldset from './PersonalFieldset';
 
 class Form extends Component {
   constructor() {
     super();
 
-    this.handleChange = this.handleChange.bind(this);
-    this.fileInput = React.createRef();
-
     this.state = {
-      estadoFavorito: "",
-      idade: "",
-      vaiComparecer: "",
-      select: "maca",
+      name: '',
+      email: '',
+      age: '',
+      anecdote: '',
+      terms: false,
     };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-    alert(
-      `Selected file  - ${this.fileInput.current.files[0].name}`
-      );
-    }
-    
-    handleChange({ target }) {
+  handleChange({ target }) {
     const { name } = target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
-
+    const value = (target.type === 'checkbox') ? target.checked : target.value;
     this.setState({
       [name]: value,
     });
   }
 
   render() {
+    const { name, email, age, anecdote, terms } = this.state;
+
     return (
-      <div className="container">
-        <h1>
-          Estados e React - Tecnologia fantástica ou reagindo a regionalismos?
-        </h1>
+      <div>
+        <h1>Estados e React - Tecnologia fantástica ou reagindo a regionalismos?</h1>
+        <form className="form">
+          <PersonalFieldset
+            nameValue={ name }
+            emailValue={ email }
+            ageValue={ age }
+            handleChange={ this.handleChange }
+          />
 
-        <form className="form-container" onSubmit={this.handleSubmit}>
-          <fieldset>
-            <label>
-              Diga qual o seu Estado favorito! De React ou do Brasil, você
-              decide! =)
-            </label>
-            <textarea
-              name="estadoFavorito"
-              value={this.state.estadoFavorito}
-              onChange={this.handleChange}
-            />
+          <DataFieldset anecdoteValue={ anecdote } handleChange={ this.handleChange } />
 
-            <label>number</label>
+          <label htmlFor="terms">
             <input
-              type="number"
-              name="idade"
-              value={this.state.idade}
-              onChange={this.handleChange}
-            />
-
-            <label>checkbox</label>
-            <input
+              id="terms"
               type="checkbox"
-              name="vaiComparecer"
-              checked={this.state.vaiComparecer}
-              onChange={this.handleChange}
+              name="terms"
+              onChange={ this.handleChange }
+              value={ terms }
             />
-
-            <label>select</label>
-            <select value={this.state.select} onChange={this.handleChange}>
-              <option value="maca">Maca</option>
-              <option value="banana">Banana</option>
-              <option value="pessego">Pessego</option>
-            </select>
-
-            <input type="file" ref={this.fileInput}></input>
-            <input type="submit" value="enviar"></input>
-          </fieldset>
+            Concordo com termos e acordos
+          </label>
         </form>
       </div>
     );
