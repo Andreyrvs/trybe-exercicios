@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import './Form.css'
+import './Form.css'
 
 class Form extends Component {
   constructor() {
@@ -46,32 +46,35 @@ class Form extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         <h1>
           Estados e React - Tecnologia fantástica ou reagindo a regionalismos?
         </h1>
-        <form className="form">
+        <form className="form-container">
           <label>
             Diga qual o seu Estado favorito! De React ou do Brasil, você decide!
             =)
+          </label>
             <textarea
               name="estadoFavorito"
               value={this.state.estadoFavorito}
               onChange={this.handleTextarea}
             />
-          </label>
+            <label>number</label>
           <input
             type="number"
             name="idade"
             value={this.state.inputNumber}
             onChange={this.handleIptNumber}
           />
+          <label>checkbox</label>
           <input
             type="checkbox"
             name="vaiComparecer"
             checked={this.state.inputCheckbox}
             onChange={this.handleCheckbox}
           />
+          <label>select</label>
           <select value={this.state.select} onChange={this.handleSelect}>
             <option value="maca">Maca</option>
             <option value="banana">Banana</option>
