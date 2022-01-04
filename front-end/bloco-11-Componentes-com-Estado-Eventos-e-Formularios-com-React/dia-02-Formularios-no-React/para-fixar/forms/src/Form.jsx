@@ -6,10 +6,7 @@ class Form extends Component {
     super();
 
     this.handleChange = this.handleChange.bind(this);
-
-    // this.handleIptNumber = this.handleIptNumber.bind(this);
-    // this.handleCheckbox = this.handleCheckbox.bind(this);
-    // this.handleSelect = this.handleSelect.bind(this);
+    this.fileInput = React.createRef();
 
     this.state = {
       estadoFavorito: "",
@@ -19,7 +16,14 @@ class Form extends Component {
     };
   }
 
-  handleChange({ target }) {
+  handleSubmit(event) {
+    event.preventDefault();
+    alert(
+      `Selected file  - ${this.fileInput.current.files[0].name}`
+      );
+    }
+    
+    handleChange({ target }) {
     const { name } = target;
     const value = target.type === "checkbox" ? target.checked : target.value;
 
@@ -28,26 +32,6 @@ class Form extends Component {
     });
   }
 
-  // handleIptNumber(event) {
-  //   this.setState({
-  //     inputNumber: event.target.value,
-  //   });
-  // }
-
-  // handleCheckbox(event) {
-  //   const target = event.target;
-  //   const value = target.type === "checkbox" ? target.checked : target.value;
-  //   this.setState({
-  //     inputCheckbox: value,
-  //   });
-  // }
-
-  // handleSelect(event) {
-  //   this.setState({
-  //     select: event.target.value,
-  //   });
-  // }
-
   render() {
     return (
       <div className="container">
@@ -55,7 +39,7 @@ class Form extends Component {
           Estados e React - Tecnologia fantástica ou reagindo a regionalismos?
         </h1>
 
-        <form className="form-container">
+        <form className="form-container" onSubmit={this.handleSubmit}>
           <fieldset>
             <label>
               Diga qual o seu Estado favorito! De React ou do Brasil, você
@@ -89,6 +73,9 @@ class Form extends Component {
               <option value="banana">Banana</option>
               <option value="pessego">Pessego</option>
             </select>
+
+            <input type="file" ref={this.fileInput}></input>
+            <input type="submit" value="enviar"></input>
           </fieldset>
         </form>
       </div>
