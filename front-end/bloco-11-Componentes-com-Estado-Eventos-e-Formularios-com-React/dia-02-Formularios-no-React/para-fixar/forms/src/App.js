@@ -1,11 +1,15 @@
-import './App.css';
+import React from "react";
+import "./App.css";
+import Form from './Form';
 
-function App() {
-  return (
-  <>
-
-  </>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <Form />
+      </>
+    );
+  }
 }
 
 export default App;
