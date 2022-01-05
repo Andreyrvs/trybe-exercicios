@@ -87,13 +87,13 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 10-2: _Componentes React_
 - [x] 10-3: _[Projeto - Solar System]()_
 
-##### Bloco 12: React
+##### Bloco 11: React
 
 - [x] 12-1: _Components com estado_
-- [ ] 12-2: _Eventos e formulÃ¡rios no React_
+- [x] 12-2: _Eventos e formulÃ¡rios no React_
 - [ ] 12-3: _[Projeto - Movie Cards Library Stateful]()_
 
-##### Bloco 13: React
+##### Bloco 12: React
 
 - [ ] 13-1: _Melhorando o reuso de componentes: props.children e PropTypes_
 - [ ] 13-2: _Ciclo de vida de componentes em React_
