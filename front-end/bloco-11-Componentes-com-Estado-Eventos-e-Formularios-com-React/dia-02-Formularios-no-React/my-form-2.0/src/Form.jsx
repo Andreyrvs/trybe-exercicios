@@ -1,17 +1,31 @@
 import React from "react";
-import "./App.css";
-import PersonalForm from './PersonalForm';
-import ProfessionalForm from './ProfessionalForm';
+import PersonalForm from "./PersonalForm";
+import ProfessionalForm from "./ProfessionalForm";
 
 class Form extends React.Component {
   render() {
+    const { sendForm, resetForm, changeHandler, currentState, onBlurHandler } =
+      this.props;
+
     return (
-      <div className="form-container">
-        <form>
-        <PersonalForm />
-        <ProfessionalForm />
-        </form>
-      </div>
+      <form>
+        <PersonalForm
+          changeHandler={changeHandler}
+          onBlurHandler={onBlurHandler}
+          currentState={currentState}
+        />
+        <ProfessionalForm changeHandler={ changeHandler }/>
+        <input 
+          type='button'
+          onClick={ sendForm }
+          value='Enviar'
+        />
+        <input 
+          type="reset"
+          onClick={ resetForm }
+          value="Limpar"
+        />
+      </form>
     );
   }
 }
