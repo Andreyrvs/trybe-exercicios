@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from 'react';
 
-class ProfessionalForm extends React.Component {
+class ProfessionalFormForm extends Component {
   render() {
     const { changeHandler } = this.props;
     return (
@@ -11,25 +11,23 @@ class ProfessionalForm extends React.Component {
           <textarea
             name="resume"
             maxLength="1000"
-            require
-            onChange={changeHandler}
-          />
-        </div>
-
-        <div className="container">
-          Cargo:
-          <input
-            type="text"
-            name="role"
-            maxLength="40"
             required
             onChange={changeHandler}
-            onMouseEnter={() => {
-              alert("Preencha com cuidado  esta informação.");
-            }}
           />
         </div>
-
+        <div className="container">
+          Cargo:
+            <input
+              type="text"
+              name="role"
+              maxLength="40"
+              required
+              onChange={changeHandler}
+              onMouseEnter={() => {
+                alert('Preencha com cuidado esta informação.');
+              }}
+            />
+        </div>
         <div className="container">
           Descrição do cargo:
           <textarea
@@ -43,4 +41,4 @@ class ProfessionalForm extends React.Component {
   }
 }
 
-export default ProfessionalForm;
+export default ProfessionalFormForm;
