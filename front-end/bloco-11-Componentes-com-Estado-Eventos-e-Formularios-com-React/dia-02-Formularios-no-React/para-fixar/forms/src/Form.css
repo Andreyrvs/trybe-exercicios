@@ -1,0 +1,16 @@
+.form-container > fieldset {
+  display: grid;
+  grid-template-columns: 12fr;
+  justify-items: start;
+  background-color: #eeee;
+  padding: 1.2em;
+}
+
+.form-container > input,
+.form-container > textarea,
+.form-container > select {
+  grid-column: 1fr;
+  grid-row: auto;
+  border: none;
+  padding: 1em;
+}

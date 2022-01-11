@@ -6,7 +6,7 @@ _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vi
 
 O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.
 
-## Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
+## Fundamentos do Desenvolvimento Web :white_check_mark:
 
 ##### Bloco 1: Introdução - Unix & Shell
 
@@ -39,11 +39,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [x] 5-1: _JavaScript - DOM e seletores_
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
-- [ ] 5-3: _JavaScript - Eventos_
+- [x] 5-3: _JavaScript - Eventos_
 - [x] 5-4: _JavaScript - Web Storage_
 - [ ] 5-5: _[Projeto - Meme Generator]()_
-- [x] 5-6: _[Projeto - Arte com Pixels](https://andreyrvs.github.io/Pixels-art/)_
-- [x] 5-7: _[Projeto - Lista de tarefas](https://andreyrvs.github.io/To-do-List/)_
+- [x] 5-6: _[Projeto - Arte com Pixels](https://andreyrvs.github.io/projetos/sd-017-project-pixels-art2/index.html)_
+- [x] 5-7: _[Projeto - Lista de tarefas](https://andreyrvs.github.io/projetos/sd-017-project-todo-list2/index.html)_
 - [ ] 5-7: _[Projeto - Adivinhe a Cor]()_
 - [ ] 5-7: _[Projeto - Carta Misteriosa]()_
 
@@ -74,8 +74,64 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 9: Assincronicidade & Callbacks
 
 - [x] 9-1: _JavaScript Assíncrono e Callbacks_
-- [ ] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
-- [ ] 9-3: _Jest - Testes Assíncronos_
-- [ ] 9-4: _[Projeto - Carrinho de Compras]()_
+- [x] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
+- [x] 9-3: _Jest - Testes Assíncronos_
+- [x] 9-4: _[Projeto - Carrinho de Compras]()_
 
+
+## Desenvolvimento Front-end :hourglass_flowing_sand:
+
+##### Bloco 10: Introdução - React
+
+- [x] 10-1: _'Hello, world!' no React!_
+- [x] 10-2: _Componentes React_
+- [x] 10-3: _[Projeto - Solar System]()_
+
+##### Bloco 11: React
+
+- [x] 12-1: _Components com estado_
+- [x] 12-2: _Eventos e formulÃ¡rios no React_
+- [ ] 12-3: _[Projeto - Movie Cards Library Stateful]()_
+
+##### Bloco 12: React
+
+- [ ] 13-1: _Melhorando o reuso de componentes: props.children e PropTypes_
+- [ ] 13-2: _Ciclo de vida de componentes em React_
+- [ ] 13-3: _React Router_
+- [ ] 13-4: _[Projeto - Movie Cards Library CRUD]()_
+
+##### Bloco 14: Metodologias Ãgeis
+
+- [ ] 14-1: _Metodologias Ãgeis_
+- [ ] 14-2: _[Projeto - Frontend Online Store]()_
+
+##### Bloco 15: Testes em React
+
+- [ ] 15-1: _Testando React com a React Testing Library_
+- [ ] 15-2: _Testando React com a React Testing Library - Parte 2_
+- [ ] 15-3: _[Projeto - Testes em React]()_
+
+##### Bloco 16: IntroduÃ§Ã£o ao Redux
+
+- [ ] 16-1: _IntroduÃ§Ã£o ao Redux_
+- [ ] 16-2: _React com Redux - Parte 1_
+- [ ] 16-3: _React com Redux - PrÃ¡tica_
+- [ ] 16-4: _React com Redux - Parte 2_
+- [ ] 16-5: _Testes sÃ­ncronos com React-Redux_
+- [ ] 16-6: _[Projeto - Tabela com filtros de dados]()_
+
+##### Bloco 17: Projeto React
+
+- [ ] 17-1: _[Projeto - Jogo de Trivia]()_
+
+##### Bloco 18: React & Context API
+
+- [ ] 18-1: _Context API do React_
+- [ ] 18-2: _React Hooks - useState e useContext_
+- [ ] 18-3: _React Hooks - useEffect e Hooks customizados_
+- [ ] 18-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+
+##### Bloco 19: Projeto Final de Front-end
+
+- [ ] 19-1: _[Projeto - App de Receitas]()_
 
