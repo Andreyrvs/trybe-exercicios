@@ -1,5 +1,7 @@
 # DIA - 01
 
+![Ciclo de vida React](Ciclo-de-vida-React.png "React Ciclo de vida")
+[Diagrama visto no video](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 ## O que vamos aprender?
 Na aula de hoje você irá aprender um conceito fundamental para a correta construção das suas aplicações em React . Todo componente React tem, no contexto da interação da aplicação com cada browser, um Lifecycle , ou ciclo de vida de um componente . As fases desse Lifecycle têm, associadas a si, funções através das quais quem programa pode associar comportamentos.
 Por exemplo, a função componentDidMount executa logo que um componente acabou de ser montado no DOM. Uma lógica a ser executada nesse exato momento deve ser chamada aí. Vamos ver, na aula de hoje, mais sobre o Lifecycle e os vários momentos com os quais se interage através de funções do próprio React.
