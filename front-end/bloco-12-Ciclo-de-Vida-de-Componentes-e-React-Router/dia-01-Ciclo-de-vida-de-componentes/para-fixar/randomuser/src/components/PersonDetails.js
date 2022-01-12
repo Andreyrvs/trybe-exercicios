@@ -49,7 +49,7 @@ class PersonDetails extends React.Component {
     return (
       <section>
         {person.map((currentPerson, index) => (
-          <PersonCard key={ index} person={ this.getUserElements(currentPerson)}/>
+          <PersonCard key={index} person={this.getUserElements(currentPerson)} />
         ))}
       </section>
     )

@@ -5,7 +5,7 @@ class App extends React.Component {
   render() {
     return (
       <section>
-        <PersonDetails/>
+        <PersonDetails />
       </section>
     )
   }
