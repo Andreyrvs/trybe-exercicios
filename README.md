@@ -89,21 +89,21 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 11: React
 
-- [x] 12-1: _Components com estado_
-- [x] 12-2: _Eventos e formulÃ¡rios no React_
-- [ ] 12-3: _[Projeto - Movie Cards Library Stateful]()_
+- [x] 11-1: _Components com estado_
+- [x] 11-2: _Eventos e formulÃ¡rios no React_
+- [x] 11-3: _[Projeto - Tryunfo]()_
 
 ##### Bloco 12: React
 
-- [ ] 13-1: _Melhorando o reuso de componentes: props.children e PropTypes_
-- [ ] 13-2: _Ciclo de vida de componentes em React_
-- [ ] 13-3: _React Router_
-- [ ] 13-4: _[Projeto - Movie Cards Library CRUD]()_
+- [ ] 12-1: _Melhorando o reuso de componentes: props.children e PropTypes_
+- [ ] 12-2: _Ciclo de vida de componentes em React_
+- [ ] 12-3: _React Router_
+- [ ] 12-4: _[Projeto - Movie Cards Library CRUD]()_
 
 ##### Bloco 14: Metodologias Ãgeis
 
-- [ ] 14-1: _Metodologias Ãgeis_
-- [ ] 14-2: _[Projeto - Frontend Online Store]()_
+- [ ] 13-1: _Metodologias Ãgeis_
+- [ ] 13-2: _[Projeto - Frontend Online Store]()_
 
 ##### Bloco 15: Testes em React
 
