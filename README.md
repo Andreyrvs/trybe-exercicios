@@ -95,14 +95,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 12: React
 
-- [ ] 12-1: _Melhorando o reuso de componentes: props.children e PropTypes_
-- [ ] 12-2: _Ciclo de vida de componentes em React_
-- [ ] 12-3: _React Router_
-- [ ] 12-4: _[Projeto - Movie Cards Library CRUD]()_
+- [x] 12-1: _Melhorando o reuso de componentes: props.children e PropTypes_
+- [x] 12-2: _Ciclo de vida de componentes em React_
+- [x] 12-3: _React Router_
+- [x] 12-4: _[Projeto - TrybeTunes]()_
 
 ##### Bloco 14: Metodologias Ãgeis
 
-- [ ] 13-1: _Metodologias Ãgeis_
+- [x] 13-1: _Metodologias Ãgeis_
 - [ ] 13-2: _[Projeto - Frontend Online Store]()_
 
 ##### Bloco 15: Testes em React
