@@ -118,7 +118,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 16-3: _Usando o Redux no React - Prática_
 - [x] 16-4: _Usando o Redux no React - Actions Assíncronas_
 - [x] 16-5: _Testes em React-Redux_
-- [x] 16-6: _[Projeto - Trybe Wallet]()_
+- [ ] 16-6: _[Projeto - Trybe Wallet]()_
 
 ##### Bloco 16: Projeto React
 
@@ -126,9 +126,9 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 17: (REACT) Context API e React Hooks
 
-- [ ] 17-1: _Context API do React_
-- [ ] 17-2: _React Hooks - useState e useContext_
-- [ ] 17-3: _React Hooks - useEffect e Hooks customizados_
+- [x] 17-1: _Context API do React_
+- [x] 17-2: _React Hooks - useState e useContext_
+- [x] 17-3: _React Hooks - useEffect e Hooks customizados_
 - [ ] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
 
 ##### Bloco 18: (TCC - Front-end) Projeto App de Receitas
