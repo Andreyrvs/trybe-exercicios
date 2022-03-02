@@ -87,51 +87,51 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 10-2: _Componentes React_
 - [x] 10-3: _[Projeto - Solar System]()_
 
-##### Bloco 11: React
+##### Bloco 11: (REACT) Componentes com Estado, Eventos e Formulários com React
 
-- [x] 11-1: _Components com estado_
-- [x] 11-2: _Eventos e formulÃ¡rios no React_
+- [x] 11-1: _Componentes com estado e eventos_
+- [x] 11-2: _Formulários no React_
 - [x] 11-3: _[Projeto - Tryunfo]()_
 
-##### Bloco 12: React
+##### Bloco 12: (REACT) Ciclo de Vida de Componentes e React Router
 
-- [x] 12-1: _Melhorando o reuso de componentes: props.children e PropTypes_
-- [x] 12-2: _Ciclo de vida de componentes em React_
-- [x] 12-3: _React Router_
+- [x] 12-1: _Ciclo de vida de componentes_
+- [x] 12-2: _React Router_
 - [x] 12-4: _[Projeto - TrybeTunes]()_
 
-##### Bloco 14: Metodologias Ãgeis
+##### Bloco 13: Metodologias Ágeis
 
-- [x] 13-1: _Metodologias Ãgeis_
-- [ ] 13-2: _[Projeto - Frontend Online Store]()_
+- [x] 13-1: _Metodologias Ágeis_
+- [x] 13-2: _[Projeto - Frontend Online Store]()_
 
-##### Bloco 15: Testes em React
+##### Bloco 14: (RTL) Testes automatizados com React Testing Library
 
-- [ ] 15-1: _Testando React com a React Testing Library_
-- [ ] 15-2: _Testando React com a React Testing Library - Parte 2_
-- [ ] 15-3: _[Projeto - Testes em React]()_
+- [x] 14-1: _Primeiros passos_
+- [x] 14-2: _Mocks e Inputs_
+- [x] 14-3: _Testando React Router_
+- [x] 14-4: _[Projeto - Testes em React]()_
 
-##### Bloco 16: IntroduÃ§Ã£o ao Redux
+##### Bloco 15: (REDUX) Gerenciamento de estado com Redux
 
-- [ ] 16-1: _IntroduÃ§Ã£o ao Redux_
-- [ ] 16-2: _React com Redux - Parte 1_
-- [ ] 16-3: _React com Redux - PrÃ¡tica_
-- [ ] 16-4: _React com Redux - Parte 2_
-- [ ] 16-5: _Testes sÃ­ncronos com React-Redux_
-- [ ] 16-6: _[Projeto - Tabela com filtros de dados]()_
+- [x] 16-1: _Introdução ao Redux - O estado global da aplicação_
+- [x] 16-2: _Usando o Redux no React_
+- [x] 16-3: _Usando o Redux no React - Prática_
+- [x] 16-4: _Usando o Redux no React - Actions Assíncronas_
+- [x] 16-5: _Testes em React-Redux_
+- [x] 16-6: _[Projeto - Trybe Wallet]()_
 
-##### Bloco 17: Projeto React
+##### Bloco 16: Projeto React
 
 - [ ] 17-1: _[Projeto - Jogo de Trivia]()_
 
-##### Bloco 18: React & Context API
+##### Bloco 17: (REACT) Context API e React Hooks
 
-- [ ] 18-1: _Context API do React_
-- [ ] 18-2: _React Hooks - useState e useContext_
-- [ ] 18-3: _React Hooks - useEffect e Hooks customizados_
-- [ ] 18-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+- [ ] 17-1: _Context API do React_
+- [ ] 17-2: _React Hooks - useState e useContext_
+- [ ] 17-3: _React Hooks - useEffect e Hooks customizados_
+- [ ] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
 
-##### Bloco 19: Projeto Final de Front-end
+##### Bloco 18: (TCC - Front-end) Projeto App de Receitas
 
-- [ ] 19-1: _[Projeto - App de Receitas]()_
+- [ ] 18-1: _[Projeto - App de Receitas]()_
 
