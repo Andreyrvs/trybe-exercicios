@@ -137,29 +137,59 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
-##### Bloco 20: IntroduÃ§Ã£o - Bancos de dados relacionais
+### Bloco 19: Docker: Utilizando Containers
 
-- [ ] 20-1: _Banco de dados SQL_
-- [ ] 20-2: _Encontrando dados em um banco de dados_
-- [ ] 20-3: _Filtrando dados de forma especÃ­fica_
-- [ ] 20-4: _Manipulando tabelas_
-- [ ] 20-5: _[Projeto - All For One]()_
+- [ ] 01: _Introdução - Back-end_
+- [ ] 01: _Utilizando Containers - Docker_
+- [ ] 02: _Manipulação e Criação de Imagens no Docker_
+- [ ] 03: _Orquestrando Containers com Docker Compose_
+- [ ] 04: _[Projeto - Docker Todo-List]()_
 
-##### Bloco 21: Bancos de dados relacionais
+### Bloco 20: Introdução à SQL
 
-- [ ] 21-1: _FunÃ§Ãµes mais usadas no SQL_
-- [ ] 21-2: _Descomplicando JOINs e UNIONs_
-- [ ] 21-3: _Stored Routines & Subqueries_
-- [ ] 21-4: _[Projeto - Vocabulary Booster]()_
+- [ ] 01: _Introdução - Bancos de dados relacionais_
+- [ ] 01: _Banco de dados SQL_
+- [ ] 02: _Encontrando dados em um banco de dados_
+- [ ] 03: _Filtrando dados de forma específica_
+- [ ] 04: _Manipulando tabelas_
+- [ ] 05: _[Projeto - All For One]()_
 
-##### Bloco 22: Bancos de dados relacionais
+### Bloco 21: Funções SQL, JOINs e Normalização
 
-- [ ] 22-1: _Transformando ideias em um modelo de banco de dados_
-- [ ] 22-2: _NormalizaÃ§Ã£o, Formas Normais e Dumps_
-- [ ] 22-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
-- [ ] 22-3: _[Projeto - One For All]()_
+- [ ] 01: _Funções mais usadas no SQL_
+- [ ] 02: _Descomplicando JOINs_
+- [ ] 03: _Transformando ideias em um modelo de banco de dados_
+- [ ] 04: _[Aula ao vivo + Projeto - One For All]()_
 
-##### Bloco 23: IntroduÃ§Ã£o - NoSQL
+### Bloco 22: Introdução ao desenvolvimento Web com Node.js
+
+- [ ] 01: _Intro - Node.js_
+- [ ] 01: _Node.js - Um motor JavaScript_
+- [ ] 02: _Node.js - Fluxo Assíncrono_
+- [ ] 03: _Mocha, Chai e Sinon - Testes de Back-end com Node.js_
+- [ ] 04: _Express - HTTP com Node.js_
+- [ ] 05: _Express - Middlewares_
+- [ ] 06: _[Projeto - Talker Manager]()_
+
+### Bloco 23: Node.js: Camada de Serviço e Arquitetura Rest e Restful
+
+- [ ] 01: _Introdução - Arquitetura de Software_
+- [ ] 01: _Arquitetura de Software - Camada de Model_
+- [ ] 02: _Arquitetura de Software - Camada de Controller e Service_
+- [ ] 03: _Arquitetura Web - Rest e Restful_
+- [ ] 04: _Arquitetura de Software - Testando as Camadas_
+- [ ] 05: _[Projeto - Store Manager]()_
+
+
+
+
+
+
+
+
+
+
+### Bloco 23: IntroduÃ§Ã£o - NoSQL
 
 - [ ] 23-1: _MongoDB - IntroduÃ§Ã£o_
 - [ ] 23-2: _Filter Operators_
