@@ -8,26 +8,32 @@ function calculaImc() {
   
   if (imc < 18.5) {
     console.log( `${imc} Abaixo do peso (magreza)`);
+    return;
   }
 
   if (imc >= 18.5 && imc < 24.9 ) {
     console.log(`Peso normal`);
+    return;
   }
   
   if (imc >= 25 && imc < 29.9 ) {
     console.log(`Acima do peso (sobrepeso)`);
+    return;
   }
 
   if (imc > 30 && imc < 34.9 ) {
     console.log(`Obesidade grau I`);
+    return;
   }
 
   if (imc >= 35 && imc < 39.9 ) {
     console.log(`Obesidade grau II`);
+    return;
   }
 
   if (imc > 40 ) {
     console.log(`Obesidade graus III e IV`);
+    return;
   }
 }
 
