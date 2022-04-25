@@ -10,3 +10,5 @@ function calculaVelocidadeMedia () {
   console.log(`Velocidade média: ${velocidadeMedia} m/s`);
 }
 calculaVelocidadeMedia()
+
+module.exports = calculaVelocidadeMedia;

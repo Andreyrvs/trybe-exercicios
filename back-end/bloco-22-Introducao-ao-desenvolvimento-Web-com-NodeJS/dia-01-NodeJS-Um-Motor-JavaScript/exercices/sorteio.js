@@ -16,3 +16,5 @@ function sorteio () {
 }
 
 sorteio()
+
+module.exports = sorteio;

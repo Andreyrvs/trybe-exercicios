@@ -38,3 +38,5 @@ function calculaImc() {
 }
 
 calculaImc()
+
+module.exports = calculaImc;
