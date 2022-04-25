@@ -18,7 +18,7 @@ const scriptNumber = readline.questionInt(mensagem) - 1;
 const script = scripts[scriptNumber];
 
 if (!script) {
-  return console.log('Número inválido. Saindo')
+  console.log('Número inválido. Saindo');
 };
 
 require(script.script);
