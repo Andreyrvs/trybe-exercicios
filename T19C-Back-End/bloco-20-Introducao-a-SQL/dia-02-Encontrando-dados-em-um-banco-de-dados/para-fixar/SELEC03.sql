@@ -1,0 +1,1 @@
+SELECT 'Andrey' AS nome, 'Visniewski' AS sobrenome, 'Paulo Frontin' as cidade_natal, 24 as idade
