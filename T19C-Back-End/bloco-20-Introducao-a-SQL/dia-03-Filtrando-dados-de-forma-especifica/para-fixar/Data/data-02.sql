@@ -1,5 +1,5 @@
 SELECT 
-    *
+    count(*) as Pagamentos
 FROM
     sakila.payment
 WHERE
