@@ -1,5 +1,5 @@
 SELECT 
-    COUNT(active) AS 'Usuarios Ativor'
+    COUNT(active) AS 'Usuarios Ativos'
 FROM
     sakila.customer
 WHERE
