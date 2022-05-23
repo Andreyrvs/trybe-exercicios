@@ -3,4 +3,4 @@ SELECT
 FROM
     sakila.customer
 WHERE
-    active = 1
+    active = 1 AND store_id = 1
