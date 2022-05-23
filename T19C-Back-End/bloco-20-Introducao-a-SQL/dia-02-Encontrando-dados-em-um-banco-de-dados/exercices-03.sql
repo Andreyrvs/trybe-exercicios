@@ -1,1 +1,1 @@
-select 10 + 15
+SELECT 10 + 15
