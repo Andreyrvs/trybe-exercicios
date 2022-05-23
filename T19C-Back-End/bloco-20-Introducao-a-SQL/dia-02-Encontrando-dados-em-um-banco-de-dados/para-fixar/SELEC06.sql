@@ -1,0 +1,4 @@
+SELECT 
+    *
+FROM
+    sakila.city
