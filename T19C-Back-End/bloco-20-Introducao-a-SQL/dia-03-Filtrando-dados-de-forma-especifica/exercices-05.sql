@@ -1,7 +1,7 @@
 SELECT 
     *
 FROM
-    PecasFornecedores.Fornecimentos
+    PecasFornecedores.Fornecedores
 WHERE
-    preco >= 15 AND preco < 40
-ORDER BY preco ASC
+    code LIKE '%F%';
+    

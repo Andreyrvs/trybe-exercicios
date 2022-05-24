@@ -1,7 +1,6 @@
 SELECT 
-    COUNT(*)
+    Fornecedor, Preco
 FROM
-    PecasFornecedores.Fornecedores
+    PecasFornecedores.Fornecimentos
 WHERE
-    name LIKE '%LTDA'
-ORDER BY name ASC
+    Fornecedor LIKE '%N%'

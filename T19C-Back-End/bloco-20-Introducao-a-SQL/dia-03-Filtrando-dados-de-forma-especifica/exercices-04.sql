@@ -1,6 +1,7 @@
 SELECT 
-    *
+    COUNT(*)
 FROM
     PecasFornecedores.Fornecedores
 WHERE
-    code LIKE '%F%';
+    name LIKE '%LTDA'
+ORDER BY name ASC
