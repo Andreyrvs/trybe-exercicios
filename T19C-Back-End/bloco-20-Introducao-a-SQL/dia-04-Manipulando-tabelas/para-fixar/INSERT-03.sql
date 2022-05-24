@@ -1,5 +1,6 @@
-INSERT INTO sakila.staff 
-(first_name, last_name, address_id, email, store_id, active, username) 
+INSERT INTO sakila.actor 
+(first_name, last_name) 
 SELECT 
-first_name, last_name, 1, concat(first_name, '@email.com'), 1, 1, first_name 
-from sakila.actor 
+first_name, last_name
+from sakila.customer
+order by customer_id limit 5
