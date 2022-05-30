@@ -150,9 +150,9 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 01: _Introdução - Bancos de dados relacionais_
 - [x] 01: _Banco de dados SQL_
 - [x] 02: _Encontrando dados em um banco de dados_
-- [ ] 03: _Filtrando dados de forma específica_
+- [x] 03: _Filtrando dados de forma específica_
 - [ ] 04: _Manipulando tabelas_
-- [ ] 05: _[Projeto - All For One]()_
+- [x] 05: _[Projeto - All For One]()_
 
 ### Bloco 21: Funções SQL, JOINs e Normalização
 
