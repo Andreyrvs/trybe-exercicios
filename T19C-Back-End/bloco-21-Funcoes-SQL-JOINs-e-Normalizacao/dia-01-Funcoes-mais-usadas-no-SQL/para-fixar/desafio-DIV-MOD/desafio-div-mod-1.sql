@@ -1,0 +1,1 @@
+SELECT IF(15 MOD 2, 'Par', 'Impar') AS 'Par ou Ímpar'
