@@ -1,0 +1,1 @@
+SELECT DATEDIFF('2030-01-20', NOW()) AS 'Diff em Dias'
