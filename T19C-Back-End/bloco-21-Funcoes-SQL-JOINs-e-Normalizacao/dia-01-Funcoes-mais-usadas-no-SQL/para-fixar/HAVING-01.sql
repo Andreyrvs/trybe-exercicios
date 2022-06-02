@@ -1,4 +1,4 @@
-    SELECT 
+SELECT 
     rating, AVG(length) AS duração_média
 FROM
     sakila.film
