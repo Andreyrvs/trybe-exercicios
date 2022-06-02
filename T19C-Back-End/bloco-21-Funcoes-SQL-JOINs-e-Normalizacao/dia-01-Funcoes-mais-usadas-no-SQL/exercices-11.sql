@@ -6,5 +6,4 @@ SET
 WHERE
     phone_number LIKE '515%';
 
-
-select * from hr.employees
+SET SQL_SAFE_UPDATES = 1;
