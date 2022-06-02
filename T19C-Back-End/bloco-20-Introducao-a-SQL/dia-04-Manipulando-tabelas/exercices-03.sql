@@ -1,5 +1,5 @@
 SET SQL_SAFE_UPDATES = 0;
 
 UPDATE Pixar.Movies
-SET director = 'John Lasseter'
-WHERE director = 'Andrew Staton';
+SET director = 'Andrew Staton'
+WHERE title = 'Procurando Nemo';
