@@ -7,7 +7,7 @@ CREATE TABLE funcionarios (
     nome VARCHAR(45) NOT NULL,
     sobrenome VARCHAR(45) NOT NULL,
     email VARCHAR(50) NOT NULL,
-    telefone VARCHAR(14),
+    telefone VARCHAR(20),
     data_cadastro DATETIME NOT NULL
 );
 
