@@ -45,3 +45,5 @@ if (imc >= 35 && imc < 40) {
 console.log('Situação: Obesidade graus III e IV');
 // ...
 }
+
+main()

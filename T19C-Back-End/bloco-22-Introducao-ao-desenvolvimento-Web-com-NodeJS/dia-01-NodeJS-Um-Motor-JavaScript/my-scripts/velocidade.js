@@ -1,12 +1,18 @@
 const readlineSync = require('readline-sync');
 
-const DISTANCIA_KM = readlineSync.questionInt("Distancia (km) ");
-const TEMPO_MINUTOS =  readlineSync.questionInt("Tempo (h) ");
-
-function velocidadeMedia() {
-  const calculo = DISTANCIA_KM / TEMPO_MINUTOS;
-
-  console.log(`Velocidade media: ${calculo}km/h`);
+function calculaVelocidadeMedia(distancia, tempo) {
+  const velocidadeMedia = distancia / tempo;
+  
+  return velocidadeMedia;
 }
 
-velocidadeMedia()
+function main() {
+  const distancia = readlineSync.questionInt("Distancia (km) ");
+  const tempo =  readlineSync.questionInt("Tempo (h) ");
+
+  const velocidadeMedia = calculaVelocidadeMedia(distancia, tempo);
+  
+  console.log(`Velocidade media: ${velocidadeMedia}km/h`);
+}
+
+main()
