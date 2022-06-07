@@ -1,7 +1,7 @@
 const readlineSync = require('readline-sync');
 
-const PESO_PADRAO_EM_KG = readlineSync.question("Qual seu peso? (Kg) ");
-const ALTURA_PADRAO_EM_CM = readlineSync.question("Qual sua altura? (cm) ");
+const PESO_PADRAO_EM_KG = readlineSync.questionFloat("Qual seu peso? (Kg) ");
+const ALTURA_PADRAO_EM_CM = readlineSync.questionInt("Qual sua altura? (cm) ");
 const METROS_PARA_CM = 100;
 const AO_QUADRADO = 2;
 
