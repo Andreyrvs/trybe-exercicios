@@ -1,11 +1,18 @@
 const readlineSync = require('readline-sync');
 
-const PESO_PADRAO_EM_KG = readlineSync.question("Qual seu peso? (Kg) ")
-const ALTURA_PADRAO_EM_METROS = readlineSync.question("Qual sua altura? (m) ")
+const PESO_PADRAO_EM_KG = readlineSync.question("Qual seu peso? (Kg) ");
+const ALTURA_PADRAO_EM_CM = readlineSync.question("Qual sua altura? (cm) ");
+const METROS_PARA_CM = 100;
+const AO_QUADRADO = 2;
 
 function main() {
-  const imc = PESO_PADRAO_EM_KG / ALTURA_PADRAO_EM_METROS ** 2;
- console.log(imc);
+
+  const metrosEmCm = ALTURA_PADRAO_EM_CM / METROS_PARA_CM;
+  const alturaAoQuadrado = metrosEmCm ** AO_QUADRADO;
+
+  const imc = PESO_PADRAO_EM_KG / alturaAoQuadrado
+
+  console.log(`Seu imc é: ${imc}`);
 }
 
 main()
