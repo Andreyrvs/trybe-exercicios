@@ -1,22 +1,26 @@
 const readlineSync = require('readline-sync');
 
-const PESO_PADRAO_EM_KG = readlineSync.questionFloat("Qual seu peso? (Kg) ");
-const ALTURA_PADRAO_EM_CM = readlineSync.questionInt("Qual sua altura? (cm) ");
 const METROS_PARA_CM = 100;
 const AO_QUADRADO = 2;
 
 function main() {
+  const peso = readlineSync.questionFloat("Qual seu peso? (Kg) ");
+  const altura = readlineSync.questionInt("Qual sua altura? (cm) ");
+  calculaImc(altura, peso)
+  
+}
 
-  const metrosEmCm = ALTURA_PADRAO_EM_CM / METROS_PARA_CM;
+function calculaImc(altura, peso) {
+  const metrosEmCm = altura / METROS_PARA_CM;
   const alturaAoQuadrado = metrosEmCm ** AO_QUADRADO;
-
+  
+  const imc = peso / alturaAoQuadrado
+  verificaIMC(imc)
   console.log(`Seu imc é: ${imc}`);
-  const imc = PESO_PADRAO_EM_KG / alturaAoQuadrado
-  tablelaImc(imc)
 
 }
 
-function tablelaImc(imc){
+function verificaIMC(imc){
 if (imc < 18.5) {
   console.log('Situação: Abaixo do peso (magreza)');
   return;
@@ -45,5 +49,3 @@ if (imc >= 35 && imc < 40) {
 console.log('Situação: Obesidade graus III e IV');
 // ...
 }
-
-main()
