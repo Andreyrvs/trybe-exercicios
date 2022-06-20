@@ -1,13 +1,13 @@
 version: '3'
 services:
   node:
-    image: node:16-alpine
+    image: node:16
     container_name: bloco_22
     tty: true
     stdin_open: true
     command: bash
     restart: always
-    work_dir: /app
+    working_dir: /app
     volumes:
     - ./:/app
     
