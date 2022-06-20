@@ -10,3 +10,4 @@ fs.readFile(nomeDoAquivo, 'utf-8')
     console.error(`Não foi possivel ler o arquivo ${nomeDoAquivo}\n Erro: ${err}`);
     process.exit(1);
   })
+  
