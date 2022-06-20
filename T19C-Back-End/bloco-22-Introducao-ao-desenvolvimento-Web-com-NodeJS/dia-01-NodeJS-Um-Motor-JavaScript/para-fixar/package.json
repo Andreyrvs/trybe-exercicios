@@ -1,0 +1,15 @@
+{
+  "name": "para-fixar",
+  "version": "1.0.0",
+  "description": "primeiro npm init ever",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Andrey Rannerson Visniewski",
+  "license": "ISC",
+  "devDependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
