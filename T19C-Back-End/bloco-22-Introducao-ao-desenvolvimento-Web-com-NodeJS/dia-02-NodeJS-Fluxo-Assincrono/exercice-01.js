@@ -1,5 +1,5 @@
 
-function main(a, b, c) {
+function doMath(a, b, c) {
   return new Promise((resolve, reject) => {
     if (typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number') {
       return reject(new Error("Informe apenas números"))
@@ -12,14 +12,17 @@ function main(a, b, c) {
   })
 }
 
-main(10, 10, 10)
-  .then((resolve) => console.log(resolve))
-  .catch((error) => console.log(error.message))
+function getRandomNumber() {
+  return Math.floor(Math.random() * 100 + 1);
+}
 
-main(1, 1, 'a')
-  .then((resolve) => console.log(resolve))
-  .catch((error) => console.log(error.message))
+function callDoMath() {
+  const randomNumbers = Array.from({ length: 3 }).map(getRandomNumber);
+  console.log(randomNumbers);
 
-main(1, 1, 1)
-  .then((resolve) => console.log(resolve))
-  .catch((error) => console.log(error.message))
+  return randomNumbers;
+}
+
+doMath(callDoMath(), callDoMath(), callDoMath())
+  .then((result) => console.log(result))
+  .catch((err) => console.error(err.message));
