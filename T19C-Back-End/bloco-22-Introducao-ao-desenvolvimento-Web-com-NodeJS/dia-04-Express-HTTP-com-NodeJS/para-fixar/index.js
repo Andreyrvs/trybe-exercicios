@@ -1,5 +1,7 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
+app.use(bodyParser.json());
 
 const recipes = [
   { id: 1, name: 'Lasanha', price: 40.0, waitTime: 30 },
@@ -16,6 +18,12 @@ const drinks = [
   { id: 6, name: 'Água Mineral 500 ml', price: 5.0 },
 ];
 
+app.post('/recipes', function (req, res) {
+  const {id, name, price} = req.body;
+  recipes.push({id, name, price});
+  res.status(201).json({message: 'Recipe created successfully!'})
+});
+
 app.get('/recipes', function (_req, res) {
   res.json(recipes)
 });
@@ -24,14 +32,25 @@ app.get('/drinks', function (_req, res) {
   res.json(drinks);
 });
 
+// ...
+
+app.get('/validateToken', function (req, res) {
+  const token = req.headers.authorization;
+  if (token.length !== 16) return res.status(401).json({message: 'Invalid Token!'});
+
+  res.status(200).json({message: 'Valid Token!'})
+});
+
+// ...
+
 app.get('/recipes/search', function (req, res) {
-  const { name, maxPrice, minPrice } = req.query;
+  const { name, maxPrice } = req.query;
   const filteredRecipes = recipes.filter((item) => item.name.includes(name) && item.price < Number(maxPrice));
   res.status(200).json(filteredRecipes);
 });
 
 app.get('/drinks/search', function (req, res) {
-  const {name} = req.query;
+  const { name } = req.query;
   const filteredDrinks = drinks.filter((item) => item.name.includes(name));
   res.status(200).json(filteredDrinks);
 })
@@ -52,8 +71,6 @@ app.get('/drinks/:id', function (req, res) {
   if (!drink) return res.status(404).json({ message: "Drink not found" })
   res.status(200).json(drink)
 })
-
-
 
 app.listen(3001, () => {
   console.log('Aplicação ouvindo na porta 3001');
