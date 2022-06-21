@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 
 function readAll() {
-  fs.readFile('./simpsonFamily.json', 'utf-8')
+  fs.readFile('./simpsonsFamily.json', 'utf-8')
     .then((fileContent) => {
       const simpsons = JSON.parse(fileContent)
       const strings = simpsons.map(({ id, name }) => `${id} - ${name}`)
@@ -30,8 +30,9 @@ function main() {
   // const simpson = await getSimpsonById(1)
   // console.log(simpson);
   // filterSimpsons()
-  createSimpsonFamily()
-  readAll()
+  // createSimpsonFamily()
+  addNelsonToFamily()
+  // readAll()
 }
 
 main()
@@ -68,5 +69,14 @@ async function createSimpsonFamily() {
 
   const simpsonsFamily = simpsons.filter(
     (simpson) => familyIds.includes(Number(simpson.id)));
-  await fs.writeFile('./simpsonFamily.json', JSON.stringify(simpsonsFamily))
+  await fs.writeFile('./simpsonsFamily.json', JSON.stringify(simpsonsFamily))
+}
+
+async function addNelsonToFamily() {
+  const fileContent = await fs.readFile('./simpsonsFamily.json', 'utf-8');
+
+  const simpsonsFamily = JSON.parse(fileContent);
+
+  simpsonsFamily.push({ id: '8', name: 'Nelson Muntz' });
+  await fs.writeFile('./simpsonsFamily.json', JSON.stringify(simpsonsFamily))
 }
