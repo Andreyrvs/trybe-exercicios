@@ -4,8 +4,8 @@ const app = express();
 
 app.get('/hello', handleHelloWorldRequest);
 
-app.listen(3001, () => {
-  console.log('Aplicação ouvindo na porta 3001')
+app.listen(3030, () => {
+  console.log('Aplicação ouvindo na porta 3030')
 });
 
 function handleHelloWorldRequest(_req, res) {

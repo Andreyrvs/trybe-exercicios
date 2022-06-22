@@ -3,10 +3,9 @@ version: '3'
 services:
   node:
     image: node:16-alpine
-    container_name: bloco_22
+    container_name: bloco_222
     tty: true
     stdin_open: true
-    command: bash
     restart: always
     working_dir: /app
     volumes:
@@ -16,4 +15,4 @@ services:
 
 networks:
   default:
-    name: bloco_22_net
+    name: bloco_222_net

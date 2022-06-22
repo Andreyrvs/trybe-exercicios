@@ -72,6 +72,6 @@ app.get('/drinks/:id', function (req, res) {
   res.status(200).json(drink)
 })
 
-app.listen(3001, () => {
-  console.log('Aplicação ouvindo na porta 3001');
+app.listen(3031, () => {
+  console.log('Aplicação ouvindo na porta 3031');
 })
