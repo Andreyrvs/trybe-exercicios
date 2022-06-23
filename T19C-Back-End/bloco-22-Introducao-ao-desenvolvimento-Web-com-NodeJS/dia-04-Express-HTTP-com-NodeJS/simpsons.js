@@ -8,8 +8,7 @@ async function getSimpsons() {
 }
 
 async function setSimpsons(newSimpsons) {
-  const fileContent = await fs.writeFile(fileName, JSON.stringify(newSimpsons));
-  return fileContent;
+  return await fs.writeFile(fileName, JSON.stringify(newSimpsons))
 }
 
 module.exports = { getSimpsons, setSimpsons }

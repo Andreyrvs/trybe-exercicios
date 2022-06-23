@@ -7,8 +7,9 @@ const app = express()
 app.use(bodyParser.json());
 
 const port = 3031
+const routeSimpsons = '/simpsons'
 
-app.get('/simpsons', async (_req, res) => {
+app.get(routeSimpsons, async (_req, res) => {
   try {
     const simpsons = await getSimpsons();
 
@@ -18,7 +19,7 @@ app.get('/simpsons', async (_req, res) => {
   }
 })
 
-app.get('/simpsons/:id', async (req, res) => {
+app.get(`${routeSimpsons}/:id`, async (req, res) => {
   try {
     const { id: paramsID } = req.params
     const simpsonsUtils = await getSimpsons()
@@ -34,5 +35,26 @@ app.get('/simpsons/:id', async (req, res) => {
     return res.status(500).end();
   }
 })
+
+app.post(routeSimpsons, async (req, res) => {
+  try {
+    const { id, name } = req.body;
+    const simpsons = await getSimpsons();
+
+    // const test = simpsons.some(({id}) => id === idBody)
+    if (simpsons.some((chacacter) => chacacter.id === id)) {
+      return res.status(409).json({ message: 'id already exists' })
+    }
+    simpsons.push({ id, name });
+
+    await setSimpsons(simpsons)
+
+    return res.status(204).end()
+  } catch (error) {
+
+    return res.status(500).json(error)
+  }
+
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
