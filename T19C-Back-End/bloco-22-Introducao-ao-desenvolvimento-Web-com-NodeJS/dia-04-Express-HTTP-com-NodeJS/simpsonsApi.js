@@ -52,7 +52,7 @@ app.post(routeSimpsons, async (req, res) => {
     return res.status(204).end()
   } catch (error) {
 
-    return res.status(500).json(error)
+    return res.status(500).json(error).end()
   }
 
 });
