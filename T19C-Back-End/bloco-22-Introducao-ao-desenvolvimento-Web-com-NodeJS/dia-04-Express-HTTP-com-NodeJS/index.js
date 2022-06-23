@@ -23,8 +23,9 @@ app.post('/greetings', function (req, res) {
 })
 
 app.put("/users/:name/:age", function (req, res) {
-  const {name, age} = req.params;
-  return res.status(200).json({"message": `Seu nome é ${name} e você tem ${age} anos de idade`})
+  const { name, age } = req.params;
+  return res.status(200)
+    .json({ "message": `Seu nome é ${name} e você tem ${age} anos de idade` })
 })
 
 app.listen(applicationPort, () => {
