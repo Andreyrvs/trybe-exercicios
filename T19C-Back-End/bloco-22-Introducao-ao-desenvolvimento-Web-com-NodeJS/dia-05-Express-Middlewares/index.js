@@ -1,12 +1,13 @@
 const express = require('express')
 const bodyParser = require('body-parser');
 const validateProducName = require('./middlewares/validateProducName')
+const validateInfo = require('./middlewares/validateInfo')
 
 const PORT = 3001
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/sales', validateProducName, (req, res) => {
+app.post('/sales', validateProducName, validateInfo, (req, res) => {
   res.status(201).json({ message: 'Sale created successfully!' })
 })
 
