@@ -76,7 +76,7 @@ app.all('*', function (req, res) {
 
 }; */
 
-function validatePrece(req, res, next) {
+function validatePrice(req, res, next) {
   const { price } = req.body;
   if (!price || price < 0 || typeof price !== 'number') {
     return res.status(400).json({ message: 'Invalid price!' })
@@ -84,13 +84,14 @@ function validatePrece(req, res, next) {
   next();
 }
 
-app.post('/recipes', validatePrece, function (req, res) {
+app.post('/recipes', validatePrice, function (req, res) {
   const { id, name, price } = req.body;
-  recipes.push({ id, name, price });
+  const {username} = req.user;
+  recipes.push({ id, name, price, chef: username });
   res.status(201).json({ message: 'Recipe created successfully!' });
 });
 
-app.put('/recipes/:id', validatePrece, function (req, res) {
+app.put('/recipes/:id', validatePrice, function (req, res) {
   const { id } = req.params;
   const { name, price } = req.body;
   const recipesIndex = recipes.findIndex((r) => r.id === Number(id));
