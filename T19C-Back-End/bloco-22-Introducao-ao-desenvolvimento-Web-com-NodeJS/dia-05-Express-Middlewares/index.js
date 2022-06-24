@@ -5,6 +5,8 @@ const validateInfo = require('./middlewares/validateInfo')
 const validateSaleDate = require('./middlewares/validateSaleDate')
 const validateWarrantyPeriod = require('./middlewares/validateWarrantyPeriod')
 const validateSignup = require('./middlewares/validateSignup')
+const authMiddleware = require('./middlewares/authMiddleware')
+
 const crypto = require('crypto');
 
 const PORT = 3001
@@ -16,13 +18,13 @@ function generateToken() {
 }
 
 app.post('/sales',
-  validateProducName, validateInfo, validateSaleDate, validateWarrantyPeriod,
-  (_req, res) => {
-    res.status(201).json({ "message": "Venda cadastrada com sucesso" })
-  })
+authMiddleware, validateProducName, validateInfo, validateSaleDate, validateWarrantyPeriod,
+(req, res) => {
+  res.status(201).json({ "message": "Venda cadastrada com sucesso" })
+})
 
-app.post('/signup',validateSignup,(_req, res) => {
-  return res.status(201).json({"token": `${generateToken()}`})
+app.post('/signup', validateSignup, (req, res) => {
+  return res.status(201).json({ "token": `${generateToken()}` })
 })
 
 app.listen(PORT, () => console.log(`Aplicação escutando na porta ${PORT}`))
