@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  node:
+    image: node:16-alpine
+    container_name: bloco_23
+    tty: true
+    stdin_open: true
+    command: bash
+    restart: always
+    working_dir: /app
+    volumes:
+    - .:/app
+    ports:
+      - 3010:3000
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    container_name: mysql_8a
+    environment:    
+      MYSQL_ROOT_PASSWORD: "password"      
+    ports:
+      - "3306:3306"  
+ 
+networks:
+  default:
+    name: bloco_23_net
