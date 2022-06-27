@@ -27,7 +27,7 @@ app.get('/books', async (req, res) => {
 
 app.get('/books/:id', async (req, res) => {
   const { id } = req.params;
-  const books = await Books.getBybookId(id);
+  const books = await Books.getByAuthorId(id);
   if (!books) return res.status(404).json({ message: 'not found' });
   res.status(200).json(books);
 });
