@@ -12,13 +12,24 @@ const getAll = async () => {
   return books.map(serialize);
 };
 
-const getByAuthorId = async (bookId) => {
+const getByAuthorId = async (authorId) => {
   const [books] = await connection.execute(
     `SELECT * 
       FROM model_example.books 
       WHERE author_id = ?`,
-    [bookId],
+    [authorId],
   );
+
+  if (books.length === 0) return null;
+
+  return books.map(serialize);
+};
+
+const findBook = async (bookId) => {
+  const query = `SELECT *
+  FROM model_example.books
+  WHERE id = ?`;
+  const [books] = await connection.execute(query, [bookId]);
 
   if (books.length === 0) return null;
 
@@ -28,4 +39,5 @@ const getByAuthorId = async (bookId) => {
 module.exports = {
   getAll,
   getByAuthorId,
+  findBook,
 };
