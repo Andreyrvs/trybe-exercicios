@@ -11,13 +11,15 @@ app.get('/authors', async (_req, res) => {
   res.status(200).json(authors);
 });
 
-app.get('/books', async (_req, res) => {
-  const books = await Books.getAll();
+app.get('/books/:id', async (req, res) => {
+  const { id } = req.params;
+  const books = await Books.getBybookId(id);
+  // const findBook = books.find((book) => book.id === id);
 
   res.status(200).json(books);
 });
 
-const PORT = process.env.PORT || 3001; 
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
   console.log(`Aplicação ouvindo a porta ${PORT}`);

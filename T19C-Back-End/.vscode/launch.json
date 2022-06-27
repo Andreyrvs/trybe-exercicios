@@ -4,11 +4,11 @@
   {
 		// Aqui você pode colocar o nome que preferir.
 		// ao iniciar o debugger é o nome que ira aparecer
-    "name": "start",
+    "name": "dev",
     "request": "launch",
     "runtimeArgs": [
       "run-script",
-      "start"
+      "dev"
     ],
     "runtimeExecutable": "npm",
     "skipFiles": [
