@@ -11,6 +11,11 @@ app.get('/authors', async (_req, res) => {
   res.status(200).json(authors);
 });
 
+app.get('/books', async (req, res) => {
+  const books = await Books.getAll();
+  res.status(200).json(books);
+});
+
 app.get('/books/:id', async (req, res) => {
   const { id } = req.params;
   const books = await Books.getBybookId(id);
@@ -19,7 +24,7 @@ app.get('/books/:id', async (req, res) => {
   res.status(200).json(books);
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Aplicação ouvindo a porta ${PORT}`);
