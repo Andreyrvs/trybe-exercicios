@@ -20,15 +20,15 @@ app.get('/authors/:id', async (req, res) => {
   res.status(200).json(author);
 });
 
-app.get('/books', async (req, res) => {
-  const books = await Books.getAll();
-  res.status(200).json(books);
-});
-
-app.get('/books/:id', async (req, res) => {
+app.get('/authors/books/:id', async (req, res) => {
   const { id } = req.params;
   const books = await Books.getByAuthorId(id);
   if (!books) return res.status(404).json({ message: 'not found' });
+  res.status(200).json(books);
+});
+
+app.get('/books', async (req, res) => {
+  const books = await Books.getAll();
   res.status(200).json(books);
 });
 
