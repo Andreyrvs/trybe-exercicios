@@ -27,9 +27,18 @@ app.get('/authors/books/:id', async (req, res) => {
   res.status(200).json(books);
 });
 
-app.get('/books', async (req, res) => {
+app.get('/books', async (_req, res) => {
   const books = await Books.getAll();
   res.status(200).json(books);
+});
+
+app.get('/books/:id', async (req, res) => {
+  const { id } = req.params;
+  const book = await Books.findBook(id);
+
+  if (!book) return res.status(404).json({ message: 'Not found' });
+
+  res.status(200).json(book);
 });
 
 const PORT = process.env.PORT || 3000;
