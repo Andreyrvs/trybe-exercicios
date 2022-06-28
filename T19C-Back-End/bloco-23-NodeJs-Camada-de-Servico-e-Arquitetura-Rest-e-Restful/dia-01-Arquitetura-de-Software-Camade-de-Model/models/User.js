@@ -4,6 +4,7 @@ const connection = require('./connection');
 //   id: userData.id,
 //   firstName: userData.first_name,
 //   lastName: userData.last_name,
+//   email: userData.email,
 // });
 
 const create = async (firstName, lastName, email, password) => connection.execute(
@@ -15,4 +16,5 @@ const create = async (firstName, lastName, email, password) => connection.execut
 
 module.exports = {
   create,
+  // serialize,
 };

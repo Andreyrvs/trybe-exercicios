@@ -12,7 +12,7 @@ app.post('/user', validatePassword, validateEmail, async (req, res) => {
   const { first_name, last_name, email, password } = req.body;
   try {
     await User.create(first_name, last_name, email, password);
-    res.status(201).json({ message: 'Usuario Criado com sucesso!' });
+    res.status(201).json({ first_name, last_name, email });
   } catch (error) {
     console.error(error);
     return res.status(500).end();
