@@ -1,11 +1,18 @@
 const connection = require('./connection');
 
-// const serialize = (userData) => ({
-//   id: userData.id,
-//   firstName: userData.first_name,
-//   lastName: userData.last_name,
-//   email: userData.email,
-// });
+const serialize = (userData) => ({
+  id: userData.id,
+  firstName: userData.first_name,
+  lastName: userData.last_name,
+  email: userData.email,
+});
+
+const getNewAuthor = ({ id, firstName, lastName, email }) => ({
+  id,
+  firstName,
+  lastName,
+  email,
+});
 
 const create = async (firstName, lastName, email, password) => {
   const query = `INSERT INTO camada_de_model.user
@@ -21,7 +28,22 @@ const getAll = async () => {
   return rows;
 };
 
+const findById = async (id) => {
+  const query = `SELECT * FROM camada_de_model.user
+  WHERE id = ?`;
+  const [userId] = await connection.execute(query, [id]);
+
+  const { firstName, lastName, email } = userId.map(serialize)[0];
+  return getNewAuthor({
+    id,
+    firstName,
+    lastName,
+    email,
+  });
+};
+
 module.exports = {
   create,
   getAll,
+  findById,
 };

@@ -14,17 +14,34 @@ app.post('/user', validatePassword, validateEmail, validateUser, async (req, res
   try {
     const newUser = await User.create(firstName, lastName, email, password);
     return res.status(201).json(newUser);
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
+    console.error(err);
     return res.status(500).end();
   }
 });
 
-app.get('/user', async (req, res) => {
+app.get('/user', async (_req, res) => {
   try {
     const allUsers = await User.getAll();
     return res.status(200).json(allUsers);
-  } catch (error) {
+  } catch (err) {
+    console.error(err);
+    return res.status(500).end();
+  }
+});
+
+app.get('/user/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const findUser = await User.findById(id);
+
+    if (!findUser) {
+      return res.status(404).json({ message: 'User not Found' });
+    }
+
+    return res.status(200).json(findUser);
+  } catch (err) {
+    console.error(err);
     return res.status(500).end();
   }
 });
