@@ -6,9 +6,12 @@ const connection = require('./connection');
 //   lastName: userData.last_name,
 // });
 
-const isValid = async (firstName, lastName, email, password) => {
-  if (!firstName || !lastName || !email || !password) return null;
+const isValidPassword = async (password) => {
   if (typeof password === 'string' || password < 6) return null;
+};
+
+const isValidData = async (firstName, lastName, email, password) => {
+  if (!firstName || !lastName || !email || !password) return null;
 };
 
 const create = async (firstName, lastName, email, password) => connection.execute(
@@ -20,5 +23,6 @@ const create = async (firstName, lastName, email, password) => connection.execut
 
 module.exports = {
   create,
-  isValid,
+  isValidPassword,
+  isValidData,
 };
