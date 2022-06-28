@@ -4,7 +4,8 @@
   "description": "modulo de backend com config",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon /app/bloco-23-NodeJs-Camada-de-Serviço-e-Arquitetura-Rest-e-Restful/dia-01-Arquitetura-de-Software-Camade-de-Model/index.js"
   },
   "author": "Andrey Rannerson Visniewski",
   "license": "ISC",
