@@ -33,6 +33,8 @@ const findById = async (id) => {
   WHERE id = ?`;
   const [userId] = await connection.execute(query, [id]);
 
+  if (userId.length === 0) return null;
+
   const { firstName, lastName, email } = userId.map(serialize)[0];
   return getNewAuthor({
     id,
