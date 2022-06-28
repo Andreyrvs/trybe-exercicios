@@ -7,12 +7,14 @@ const connection = require('./connection');
 //   email: userData.email,
 // });
 
-const create = async (firstName, lastName, email, password) => connection.execute(
-  `INSERT INTO camada_de_model.user
+const create = async (firstName, lastName, email, password) => {
+  const query = `INSERT INTO camada_de_model.user
   (first_name, last_name, email, password)
-  VALUES
-  (?, ?, ?, ?)`, [firstName, lastName, email, password],
-);
+  VALUES (?, ?, ?, ?)`;
+  return connection.execute(
+    query, [firstName, lastName, email, password],
+  ).then(([result]) => ({ id: result.insertId, firstName, lastName, email }));
+};
 
 module.exports = {
   create,

@@ -9,10 +9,10 @@ const validatePassword = require('./middleware/validatePassword');
 const validateEmail = require('./middleware/validateEmail');
 
 app.post('/user', validatePassword, validateEmail, async (req, res) => {
-  const { first_name, last_name, email, password } = req.body;
+  const { firstName, lastName, email, password } = req.body;
   try {
-    await User.create(first_name, last_name, email, password);
-    res.status(201).json({ first_name, last_name, email });
+    const newUser = await User.create(firstName, lastName, email, password);
+    return res.status(201).json(newUser);
   } catch (error) {
     console.error(error);
     return res.status(500).end();
