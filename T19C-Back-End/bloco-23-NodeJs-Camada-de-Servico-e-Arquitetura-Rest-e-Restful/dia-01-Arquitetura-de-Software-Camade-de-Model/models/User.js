@@ -16,7 +16,12 @@ const create = async (firstName, lastName, email, password) => {
   ).then(([result]) => ({ id: result.insertId, firstName, lastName, email }));
 };
 
+const getAll = async () => {
+  const [rows] = await connection.execute('SELECT * FROM camada_de_model.user');
+  return rows;
+};
+
 module.exports = {
   create,
-  // serialize,
+  getAll,
 };

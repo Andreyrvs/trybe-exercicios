@@ -20,5 +20,14 @@ app.post('/user', validatePassword, validateEmail, validateUser, async (req, res
   }
 });
 
+app.get('/user', async (req, res) => {
+  try {
+    const allUsers = await User.getAll();
+    return res.status(200).json(allUsers);
+  } catch (error) {
+    return res.status(500).end();
+  }
+});
+
 const port = 3000;
 app.listen(port, () => console.log(`Aplicação ouvino na porta: ${port}!`));
