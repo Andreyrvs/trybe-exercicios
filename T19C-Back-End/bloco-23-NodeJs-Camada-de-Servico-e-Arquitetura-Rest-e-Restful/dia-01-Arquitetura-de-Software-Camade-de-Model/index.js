@@ -5,8 +5,10 @@ const app = express();
 app.use(bodyParser.json());
 
 const User = require('./models/User');
+const validatePassword = require('./middleware/validatePassword');
+const validateEmail = require('./middleware/validateEmail');
 
-app.post('/user', async (req, res) => {
+app.post('/user', validatePassword, validateEmail, async (req, res) => {
   const { first_name, last_name, email, password } = req.body;
   try {
     await User.create(first_name, last_name, email, password);
