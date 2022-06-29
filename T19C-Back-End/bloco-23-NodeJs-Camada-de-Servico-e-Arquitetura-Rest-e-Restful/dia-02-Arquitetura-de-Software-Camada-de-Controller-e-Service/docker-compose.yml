@@ -11,7 +11,7 @@ services:
     - 3306:3306
 
   api:
-    image: node:16-apine
+    image: node:16-alpine
     # Variaveis de ambiente que estão no arquivo .env
     environment:
     - APP_PORT=3000
@@ -28,7 +28,7 @@ services:
     # Restarta a imagem caso algo a faça parar
     restart: always
     # Diretório padrão de execução
-    working_dir: /app
+    working_dir: /app/src
     volumes:
       # Monta o diretório atual, com todos os dados do projeto, 
       # dentro do diretório /app/src
