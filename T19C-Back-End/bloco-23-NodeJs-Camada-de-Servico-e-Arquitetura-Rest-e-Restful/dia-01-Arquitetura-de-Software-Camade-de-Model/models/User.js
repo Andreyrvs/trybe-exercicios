@@ -44,15 +44,15 @@ const findById = async (id) => {
   });
 };
 
-const update = async (id, firstName, lastName, email) => {
+const update = async (id, { firstName, lastName, email, password }) => {
   const query = `UPDATE camada_de_model.user
-  SET first_name = ?, last_name = ?, email = ?
+  SET first_name = ?, last_name = ?, email = ?, password = ?
   WHERE id = ?`;
-  await connection.execute(query, [firstName, lastName, email, id]);
+  await connection.execute(query, [firstName, lastName, email, password, id]);
 
-  const result = { id, firstName, lastName, email };
-
-  return result;
+  // const result = { id, firstName, lastName, email };
+  // if (result === 0) return undefined;
+  return findById(id);
 };
 
 module.exports = {

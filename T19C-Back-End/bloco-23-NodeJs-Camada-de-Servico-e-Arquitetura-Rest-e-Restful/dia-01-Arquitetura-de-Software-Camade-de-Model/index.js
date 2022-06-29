@@ -7,18 +7,24 @@ app.use(bodyParser.json());
 const User = require('./models/User');
 const validatePassword = require('./middleware/validatePassword');
 const validateEmail = require('./middleware/validateEmail');
-const validateUser = require('./middleware/validateUser');
+const validateFirstName = require('./middleware/validateFirstName');
+const validateLastName = require('./middleware/validateLastName');
 
-app.post('/user', validatePassword, validateEmail, validateUser, async (req, res) => {
-  const { firstName, lastName, email, password } = req.body;
-  try {
-    const newUser = await User.create(firstName, lastName, email, password);
-    return res.status(201).json(newUser);
-  } catch (err) {
-    console.error(err);
-    return res.status(500).end();
-  }
-});
+app.post('/user',
+  validatePassword,
+  validateEmail,
+  validateFirstName,
+  validateLastName,
+  async (req, res) => {
+    const { firstName, lastName, email, password } = req.body;
+    try {
+      const newUser = await User.create(firstName, lastName, email, password);
+      return res.status(201).json(newUser);
+    } catch (err) {
+      console.error(err);
+      return res.status(500).end();
+    }
+  });
 
 app.get('/user', async (_req, res) => {
   try {
@@ -46,18 +52,28 @@ app.get('/user/:id', async (req, res) => {
   }
 });
 
-app.put('/user/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { firstName, lastName, email } = req.body;
-    const result = await User.update(id, firstName, lastName, email);
+app.put('/user/:id',
+  validateEmail,
+  validateFirstName,
+  validateLastName,
+  validatePassword,
+  async (req, res) => {
+    try {
+      const { id } = req.params;
+      const { firstName, lastName, email, password } = req.body;
+      const result = await User.update(id, { firstName, lastName, email, password });
 
-    return res.status(200).json(result);
-  } catch (err) {
-    console.error(err);
-    return res.status(500).end();
-  }
-});
+      if (!result) {
+        return res.status(404).json({
+          message: 'User not Found',
+        });
+      }
+      return res.status(200).json(result);
+    } catch (err) {
+      console.error(err);
+      return res.status(500).end();
+    }
+  });
 
 const port = 3000;
 app.listen(port, () => console.log(`Aplicação ouvino na porta: ${port}!`));

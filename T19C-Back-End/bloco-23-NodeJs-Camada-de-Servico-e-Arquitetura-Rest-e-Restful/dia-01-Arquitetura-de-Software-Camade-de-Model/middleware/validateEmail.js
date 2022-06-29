@@ -3,12 +3,12 @@ const isValid = (req, res, next) => {
   const regex = /^(\w+)@[a-z]+(\.[a-z]+){1,2}$/i;
   if (!email || email === undefined) {
     return res.status(400).json({
-      message: '"email" é obrigatorio',
+      message: '"email" is not allowed to be empty',
     });
   }
   if (!regex.test(email)) {
     return res.status(400).json({
-      message: '"email" invalido! Formado deve ser: "email@email.com',
+      message: '"email" must be a valid email',
     });
   }
   next();
