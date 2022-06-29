@@ -28,11 +28,11 @@ services:
     # Restarta a imagem caso algo a faça parar
     restart: always
     # Diretório padrão de execução
-    working_dir: /app/src
+    working_dir: /app
     volumes:
       # Monta o diretório atual, com todos os dados do projeto, 
       # dentro do diretório /app/src
-    - ./:/app/src
+    - ./:/app
     ports:
     # Expõe a porta padrão da aplicação: altere aqui caso use outra porta
     - 3000:3000
