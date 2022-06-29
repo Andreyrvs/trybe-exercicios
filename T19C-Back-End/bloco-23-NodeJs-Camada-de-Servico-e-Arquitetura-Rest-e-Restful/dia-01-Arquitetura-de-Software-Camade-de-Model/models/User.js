@@ -1,4 +1,4 @@
-const connection = require('./connection');
+const connection = require('../helpers/connection');
 
 const serialize = (userData) => ({
   id: userData.id,
@@ -44,8 +44,20 @@ const findById = async (id) => {
   });
 };
 
+const update = async (id, firstName, lastName, email) => {
+  const query = `UPDATE camada_de_model.user
+  SET first_name = ?, last_name = ?, email = ?
+  WHERE id = ?`;
+  await connection.execute(query, [firstName, lastName, email, id]);
+
+  const result = { id, firstName, lastName, email };
+
+  return result;
+};
+
 module.exports = {
   create,
   getAll,
   findById,
+  update,
 };

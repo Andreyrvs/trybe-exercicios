@@ -46,5 +46,18 @@ app.get('/user/:id', async (req, res) => {
   }
 });
 
+app.put('/user/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { firstName, lastName, email } = req.body;
+    const result = await User.update(id, firstName, lastName, email);
+
+    return res.status(200).json(result);
+  } catch (err) {
+    console.error(err);
+    return res.status(500).end();
+  }
+});
+
 const port = 3000;
 app.listen(port, () => console.log(`Aplicação ouvino na porta: ${port}!`));
