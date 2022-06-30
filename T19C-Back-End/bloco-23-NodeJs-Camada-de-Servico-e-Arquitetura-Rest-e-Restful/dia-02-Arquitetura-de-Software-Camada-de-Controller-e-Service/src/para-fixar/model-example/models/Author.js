@@ -23,36 +23,37 @@ const serialize = (authorData) => ({
 
 const getAll = async () => {
   const [authors] = await connection.execute(
-    'SELECT id, first_name, middle_name, last_name FROM model_example.authors',
+    'SELECT * FROM model_example.authors',
   );
   return authors.map(serialize).map(getNewAuthor);
 };
 
-const findById = async (id) => {
-  const query = `SELECT id, first_name, middle_name, last_name 
+const getAuthorById = async (id) => {
+  const query = `SELECT * 
   FROM model_example.authors
   WHERE id = ? `;
   const [authorData] = await connection.execute(query, [id]);
-
+  console.log('Models', authorData);
   if (authorData.length === 0) return null;
 
-  const { firstName, middleName, lastName } = authorData.map(serialize)[0];
+  // const { firstName, middleName, lastName } =
+  return authorData.map(serialize);
 
-  return getNewAuthor({
-    id,
-    firstName,
-    middleName,
-    lastName,
-  });
+  // return getNewAuthor({
+  //   id,
+  //   firstName,
+  //   middleName,
+  //   lastName,
+  // });
 };
 
-const create = async (firstName, middleName, lastName) => connection.execute(
+const createAuthor = async (firstName, middleName, lastName) => connection.execute(
   'INSERT INTO model_example.authors (first_name, middle_name, last_name) VALUES (?,?,?)',
   [firstName, middleName, lastName],
 );
 
 module.exports = {
   getAll,
-  findById,
-  create,
+  getAuthorById,
+  createAuthor,
 };
