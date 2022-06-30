@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyPaser = require('body-parser');
+const rescue = require('express-rescue');
 
 const Author = require('./models/Author');
-const Books = require('./models/Books');
+const Book = require('./controllers/Book');
+const errorMiddleware = require('./middlewares/error');
 
 const app = express();
 
@@ -23,26 +25,12 @@ app.get('/authors/:id', async (req, res) => {
   res.status(200).json(author);
 });
 
-app.get('/authors/books/:id', async (req, res) => {
-  const { id } = req.params;
-  const books = await Books.getByAuthorId(id);
-  if (!books) return res.status(404).json({ message: 'not found' });
-  res.status(200).json(books);
-});
-
-app.get('/books', async (_req, res) => {
-  const books = await Books.getAll();
-  res.status(200).json(books);
-});
-
-app.get('/books/:id', async (req, res) => {
-  const { id } = req.params;
-  const book = await Books.findBook(id);
-
-  if (!book) return res.status(404).json({ message: 'Not found' });
-
-  res.status(200).json(book);
-});
+// app.get('/authors/books/:id', async (req, res) => {
+//   const { id } = req.params;
+//   const books = await Books.getByAuthorId(id);
+//   if (!books) return res.status(404).json({ message: 'not found' });
+//   res.status(200).json(books);
+// });
 
 app.post('/authors', async (req, res) => {
   const { first_name, middle_name, last_name } = req.body;
@@ -56,20 +44,19 @@ app.post('/authors', async (req, res) => {
   res.status(201).json({ message: 'Autor criado com sucesso!' });
 });
 
-app.post('/books', async (req, res) => {
-  const { title, author_id } = req.body;
+app.get('/books', rescue(Book.getAll));
+app.get('/books/:id', rescue(Book.findById));
+app.post('/books', rescue(Book.createBook));
 
-  if (!Books.isValid(title, author_id)) {
-    return res.status(400).json({ message: 'Dados inválidos' });
-  }
-
-  await Books.create(title, author_id);
-
-  res.status(201).json({ message: 'Livro criado com sucesso!' });
-});
-
-const PORT = process.env.PORT || 3000;
+app.use(errorMiddleware);
+const PORT = process.env.API_PORT;
 
 app.listen(PORT, () => {
   console.log(`Aplicação ouvindo a porta ${PORT}`);
 });
+
+// index.js
+
+// app.get('/authors', rescue(Author.getAll));
+// app.get('/authors/:id', rescue(Author.findById));
+// app.post('/authors', rescue(Author.createAuthor));

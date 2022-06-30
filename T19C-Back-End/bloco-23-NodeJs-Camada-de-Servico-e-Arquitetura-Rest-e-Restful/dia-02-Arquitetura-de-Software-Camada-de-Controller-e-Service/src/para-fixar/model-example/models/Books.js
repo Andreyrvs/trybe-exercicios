@@ -25,7 +25,7 @@ const getByAuthorId = async (authorId) => {
   return books.map(serialize);
 };
 
-const findBook = async (bookId) => {
+const getBybookId = async (bookId) => {
   const query = `SELECT *
   FROM model_example.books
   WHERE id = ?`;
@@ -50,7 +50,7 @@ const create = async (title, authorId) => connection.execute(
 module.exports = {
   getAll,
   getByAuthorId,
-  findBook,
+  getBybookId,
   isValid,
   create,
 };
