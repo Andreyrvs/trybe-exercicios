@@ -31,8 +31,6 @@ const createCep = async (req, res, next) => {
 
   if (error) return next(error);
 
-  // const { cep, logradouro, bairro, localidade, uf } = req.body;
-
   const newCep = await Cep.createCep(req.body);
 
   if (newCep.error) return next(newCep.error);
