@@ -2,6 +2,8 @@
 
 const Book = require('../models/Books');
 
+const createBook = async (title, bookId) => Book.create(title, bookId);
+
 const getAll = async () => Book.getAll();
 
 const findById = async (id) => {
@@ -22,4 +24,5 @@ const findById = async (id) => {
 module.exports = {
   getAll,
   findById,
+  createBook,
 };
