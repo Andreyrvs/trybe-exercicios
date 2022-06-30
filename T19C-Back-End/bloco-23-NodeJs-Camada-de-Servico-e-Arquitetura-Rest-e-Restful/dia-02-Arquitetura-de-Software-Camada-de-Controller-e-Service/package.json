@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "cep-lookup",
   "version": "1.0.0",
   "description": "Exercicios do dia 23.2",
   "main": "index.js",
