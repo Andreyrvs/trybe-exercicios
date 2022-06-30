@@ -10,10 +10,24 @@ const formatCep = (cep) => {
   return cep.replace(/(\d{5})(\d{3})/, '$1-$2');
 };
 
+const getNewCepById = (cep, result) => {
+  // Desestrutua o array e depois o objeto onde estão as informaçoes
+
+  const [{ logradouro, bairro, localidade, uf }] = result;
+  return {
+    cep: formatCep(cep),
+    logradouro,
+    bairro,
+    localidade,
+    uf,
+  };
+};
+
 // Formata os campos para exibição
 const getNewCep = (cep, result) => {
   // Desestrutua o array e depois o objeto onde estão as informaçoes
-  const [{ logradouro, bairro, localidade, uf }] = result;
+
+  const { logradouro, bairro, localidade, uf } = result;
   return {
     cep: formatCep(cep),
     logradouro,
@@ -39,10 +53,26 @@ const getById = async (cep) => {
       },
     };
   }
+  const newResult = getNewCepById(cep, result);
+  return newResult;
+};
+
+const createCep = async ({ cep: rawCep, logradouro, bairro, localidade, uf }) => {
+  const exintingCep = await Cep.getById(rawCep);
+
+  if (exintingCep) {
+    return {
+      error: { code: 'alreadyExists', message: 'CEP já existente' },
+    };
+  }
+  const cep = rawCep.replace(/-/ig, '');
+  const result = await Cep.createCep({ cep, logradouro, bairro, localidade, uf });
+
   const newResult = getNewCep(cep, result);
   return newResult;
 };
 
 module.exports = {
   getById,
+  createCep,
 };
