@@ -3,6 +3,7 @@ const connection = require('./connection');
 const serialize = (bookId) => ({
   bookId: bookId.id,
   title: bookId.title,
+  authorId: bookId.author_id,
 });
 
 const getAll = async () => {
@@ -36,21 +37,23 @@ const getBybookId = async (bookId) => {
   return books.map(serialize);
 };
 
-const isValid = async (title, authorId) => {
-  if (!title || title < 3) return false;
-  if (!authorId) return false;
-  return true;
-};
+const create = async (title, authorId) => {
+  const query = `INSERT INTO model_example.books 
+  (title, author_id) 
+  VAlUES (?, ?)`;
 
-const create = async (title, authorId) => connection.execute(
-  'INSERT INTO model_example.books (title, author_id) VAlUES (?, ?)',
-  [title, authorId],
-);
+  const [row] = await connection.execute(query, [title, authorId]);
+
+  const result = {
+    id: row.insertId,
+    title,
+    authorId,
+  };
+  return result;
+};
 
 module.exports = {
   getAll,
-  // getByAuthorId,
   getBybookId,
-  isValid,
   create,
 };

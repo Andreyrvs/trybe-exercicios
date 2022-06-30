@@ -1,5 +1,7 @@
 CREATE DATABASE IF NOT EXISTS model_example;
 
+USE model_example;
+
 CREATE TABLE authors
 (
 	id INT NOT NULL AUTO_INCREMENT,

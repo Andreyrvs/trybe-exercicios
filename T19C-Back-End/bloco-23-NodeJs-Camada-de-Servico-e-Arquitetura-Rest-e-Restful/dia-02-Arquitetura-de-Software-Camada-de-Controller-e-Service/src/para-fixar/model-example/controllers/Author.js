@@ -30,7 +30,7 @@ const createAuthor = async (req, res, next) => {
   const { firstName, middleName, lastName } = req.body;
 
   const newAuthor = await Author.createAuthor(firstName, middleName, lastName);
-  console.log(newAuthor);
+
   if (newAuthor.error) return next(newAuthor.error);
 
   res.status(201).json(newAuthor);

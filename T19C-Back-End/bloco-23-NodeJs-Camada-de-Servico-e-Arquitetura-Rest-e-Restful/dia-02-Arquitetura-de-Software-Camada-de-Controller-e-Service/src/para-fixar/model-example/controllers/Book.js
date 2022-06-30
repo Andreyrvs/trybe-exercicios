@@ -22,15 +22,15 @@ const findById = async (req, res, next) => {
 const createBook = async (req, res, next) => {
   const { error } = Joi.object({
     title: Joi.string().not().empty().required(),
-    bookId: Joi.string().not().empty().required(),
+    authorId: Joi.string().not().empty().required(),
   })
     .validate(req.body);
 
   if (error) return next(error);
 
-  const { title, bookId } = req.body;
+  const { title, authorId } = req.body;
 
-  const newBook = await Book.createBook(title, bookId);
+  const newBook = await Book.createBook(title, authorId);
 
   if (newBook.error) return next(newBook.error);
 

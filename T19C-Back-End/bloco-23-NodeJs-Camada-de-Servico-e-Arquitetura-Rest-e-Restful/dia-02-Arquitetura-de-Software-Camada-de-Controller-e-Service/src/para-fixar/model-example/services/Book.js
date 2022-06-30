@@ -2,7 +2,13 @@
 
 const Book = require('../models/Books');
 
-const createBook = async (title, bookId) => Book.create(title, bookId);
+const createBook = async (title, authorId) => {
+  if (title && authorId) {
+    const result = await Book.create(title, authorId);
+    return result;
+  }
+  return [];
+};
 
 const getAll = async () => Book.getAll();
 
