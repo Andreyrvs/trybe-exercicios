@@ -1,18 +1,19 @@
+require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const rescue = require('express-rescue');
 
-require('dotenv').config();
-
 const errorMiddleware = require('./middlewares/error');
+const Cep = require('./controllers/Cep');
 
 const app = express();
 app.use(bodyParser.json());
 
-const Cep = require('./controllers/Cep');
-
 app.get('/ping', (req, res) => res.status(200).json({ message: 'pong!' }));
+
 app.get('/cep/:cep', rescue(Cep.getById));
+app.post('/cep', rescue(Cep.createCep));
 
 app.use(errorMiddleware);
 
