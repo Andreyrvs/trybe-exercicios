@@ -1,12 +1,20 @@
+// launch.json
 {
-  "version": "0.2.0",
   "configurations": [
-    {
-      "name": "Launch Node.js in Docker",
-      "type": "docker",
-      "request": "launch",
-      "preLaunchTask": "start",
-      "platform": "node"
-    }
+  {
+		// Aqui você pode colocar o nome que preferir.
+		// ao iniciar o debugger é o nome que ira aparecer
+    "name": "dev",
+    "request": "launch",
+    "runtimeArgs": [
+      "run-script",
+      "dev"
+    ],
+    "runtimeExecutable": "npm",
+    "skipFiles": [
+      "<node_internals>/**"
+    ],
+    "type": "node"
+  }
   ]
 }
