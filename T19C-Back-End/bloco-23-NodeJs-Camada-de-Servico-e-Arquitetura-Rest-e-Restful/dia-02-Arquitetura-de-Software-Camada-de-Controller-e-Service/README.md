@@ -2,9 +2,9 @@
 
 npm i express
 npm i body-parser
+npm i nodemon -D
 npm i mysql2 --save
 npm i dotenv --save
-npm i nodemon -D
 npm i eslint -D
 npm i eslint-config-trybe-backend -D
 npm i @types/node -D
