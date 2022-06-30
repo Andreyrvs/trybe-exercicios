@@ -1,5 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable complexity */
 // hello-msc/models/Author.js
 
 const connection = require('./connection');
@@ -30,7 +28,6 @@ const serialize = (authorData) => authorData.map((item) => getNewAuthor({
 }));
 
 // Busca todos os autores do banco.
-
 const getAll = async () => {
   const [authors] = await connection.execute(
     'SELECT id, first_name, middle_name, last_name FROM model_example.authors;',
@@ -56,14 +53,6 @@ const findById = async (id) => {
   return serialize(authorData)[0];
 };
 
-const isValid = (firstName, middleName, lastName) => {
-  if (!firstName || typeof firstName !== 'string') return false;
-  if (!lastName || typeof lastName !== 'string') return false;
-  if (middleName && typeof middleName !== 'string') return false;
-
-  return true;
-};
-
 const createAuthor = async (firstName, middleName, lastName) => {
   const [author] = await connection.execute(
     'INSERT INTO model_example.authors (first_name, middle_name, last_name) VALUES (?, ?, ?)',
@@ -75,6 +64,5 @@ const createAuthor = async (firstName, middleName, lastName) => {
 module.exports = {
   getAll,
   findById,
-  isValid,
   createAuthor,
 };
