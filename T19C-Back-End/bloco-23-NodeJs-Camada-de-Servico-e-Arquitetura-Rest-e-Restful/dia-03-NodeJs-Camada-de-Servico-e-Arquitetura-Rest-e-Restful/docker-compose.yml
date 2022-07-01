@@ -1,0 +1,38 @@
+# versão do docker-compose
+version: "3"
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: backend_Mysql
+    environment:
+    - MYSQL_ROOT_PASSWORD=root
+    ports:
+    - 3306:3306
+
+  api:
+    build: .
+    # Variaveis de ambiente que estão no arquivo .env
+    environment:
+    - APP_PORT=3000
+    - MYSQL_HOST=mysql
+    - MYSQL_PORT=3306
+    - MYSQL_USER=root
+    - MYSQL_PASSWORD=root
+    # Nome do container para facilitar execução
+    container_name: b23_d3_api
+    # Mesmo que `docker run -t`
+    tty: true
+    # Mesmo que `docker run -i`
+    stdin_open: true
+    # Restarta a imagem caso algo a faça parar
+    restart: always
+    # Diretório padrão de execução
+    working_dir: /app
+    volumes:
+      # Monta o diretório atual, com todos os dados do projeto, 
+      # dentro do diretório /app
+    - ./:/app
+    ports:
+    # Expõe a porta padrão da aplicação: altere aqui caso use outra porta
+    - 3000:3000
