@@ -64,7 +64,8 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 7-4: _[Projeto - JavaScript Testes UnitÃ¡rios]()_
 
 ##### Bloco 8: JavaScript ES6
-- [x] 8-1: _JavaScript ES6 - Introdução a Higher Order Functions
+
+- [x] 8-1: _JavaScript ES6 - Introdução a Higher Order Functions_
 - [x] 8-2: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
 - [x] 8-3: _JavaScript ES6 - Higher Order Functions - map e filter_
 - [x] 8-4: _JavaScript ES6 - Higher Order Functions - reduce_
@@ -77,7 +78,6 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
 - [x] 9-3: _Jest - Testes Assíncronos_
 - [x] 9-4: _[Projeto - Carrinho de Compras]()_
-
 
 ## Desenvolvimento Front-end :white_check_mark:
 
@@ -159,35 +159,30 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 01: _Funções mais usadas no SQL_
 - [x] 02: _Descomplicando JOINs_
 - [x] 03: _Transformando ideias em um modelo de banco de dados_
-- [ ] 04: _[Aula ao vivo + Projeto - One For All]()_
+- [x] 04: _[Aula ao vivo + Projeto - One For All]()_
 
 ### Bloco 22: Introdução ao desenvolvimento Web com Node.js
 
-- [ ] 01: _Intro - Node.js_
-- [ ] 01: _Node.js - Um motor JavaScript_
-- [ ] 02: _Node.js - Fluxo Assíncrono_
-- [ ] 03: _Mocha, Chai e Sinon - Testes de Back-end com Node.js_
-- [ ] 04: _Express - HTTP com Node.js_
-- [ ] 05: _Express - Middlewares_
-- [ ] 06: _[Projeto - Talker Manager]()_
+- [x] 01: _Intro - Node.js_
+- [x] 01: _Node.js - Um motor JavaScript_
+- [x] 02: _Node.js - Fluxo Assíncrono_
+- [x] 03: _Mocha, Chai e Sinon - Testes de Back-end com Node.js_
+- [x] 04: _Express - HTTP com Node.js_
+- [x] 05: _Express - Middlewares_
+- [x] 06: _[Projeto - Talker Manager]()_
 
 ### Bloco 23: Node.js: Camada de Serviço e Arquitetura Rest e Restful
 
-- [ ] 01: _Introdução - Arquitetura de Software_
-- [ ] 01: _Arquitetura de Software - Camada de Model_
-- [ ] 02: _Arquitetura de Software - Camada de Controller e Service_
-- [ ] 03: _Arquitetura Web - Rest e Restful_
-- [ ] 04: _Arquitetura de Software - Testando as Camadas_
+- [x] 01: _Introdução - Arquitetura de Software_
+- [x] 01: _Arquitetura de Software - Camada de Model_
+- [x] 02: _Arquitetura de Software - Camada de Controller e Service_
+- [x] 03: _Arquitetura Web - Rest e Restful_
+- [x] 04: _Arquitetura de Software - Testando as Camadas_
 - [ ] 05: _[Projeto - Store Manager]()_
 
+---
 
-
-
-
-
-Atualizar
-
-
+## Atualizar
 
 ### Bloco 23: IntroduÃ§Ã£o - NoSQL
 
