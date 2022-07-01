@@ -2,9 +2,7 @@
 {
   "configurations": [
   {
-		// Aqui você pode colocar o nome que preferir.
-		// ao iniciar o debugger é o nome que ira aparecer
-    "name": "dev",
+    "name": "start",
     "request": "launch",
     "runtimeArgs": [
       "run-script",
