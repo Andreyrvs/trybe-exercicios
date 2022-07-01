@@ -37,39 +37,38 @@ const getNewCep = (cep, result) => {
   };
 };
 
+const errorMessage = (code, message) => ({
+  error: {
+    code,
+    message,
+  },
+});
+
+const cepIsValid = (cep) => REGEX_CEP.test(cep);
+
 const getById = async (cep) => {
-  if (!REGEX_CEP.test(cep)) {
-    return { error: { code: 'invalidData', message: 'CEP inválido' } };
+  if (!cepIsValid(cep)) {
+    return errorMessage('invalidData', 'CEP inválido');
   }
   const treatedCep = cep.replace('-', '');
 
   const result = await Cep.getById(treatedCep);
 
-  if (!result) {
-    return {
-      error: {
-        code: 'notFound',
-        message: 'CEP não encontrado',
-      },
-    };
-  }
+  if (!result) return errorMessage('notFound', 'CEP não encontrado');
+
   const newResult = getNewCepById(cep, result);
   return newResult;
 };
 
 const createCep = async ({ cep: rawCep, logradouro, bairro, localidade, uf }) => {
-  const exintingCep = await Cep.getById(rawCep);
-
-  if (exintingCep) {
-    return {
-      error: { code: 'alreadyExists', message: 'CEP já existente' },
-    };
-  }
   const cep = rawCep.replace(/-/ig, '');
+  const exintingCep = await Cep.getById(cep);
+
+  if (exintingCep) return errorMessage('alreadyExists', 'CEP já existente');
+
   const result = await Cep.createCep({ cep, logradouro, bairro, localidade, uf });
 
-  const newResult = getNewCep(cep, result);
-  return newResult;
+  return getNewCep(cep, result);
 };
 
 module.exports = {

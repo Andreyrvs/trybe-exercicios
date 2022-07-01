@@ -3,19 +3,13 @@ const Joi = require('joi');
 const Cep = require('../services/Cep');
 
 const getById = async (req, res, next) => {
-  try {
-    const { cep } = req.params;
+  const { cep } = req.params;
 
-    const result = await Cep.getById(cep);
+  const result = await Cep.getById(cep);
 
-    if (result.error) return next(result.error);
+  if (result.error) return next(result.error);
 
-    return res.status(200).json(result);
-  } catch (error) {
-    console.error(error);
-
-    return res.status(500).end();
-  }
+  return res.status(200).json(result);
 };
 
 const createCep = async (req, res, next) => {
