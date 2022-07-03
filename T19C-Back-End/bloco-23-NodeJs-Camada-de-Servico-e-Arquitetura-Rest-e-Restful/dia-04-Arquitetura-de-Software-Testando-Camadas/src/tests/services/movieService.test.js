@@ -1,8 +1,8 @@
+const sinon = require('sinon');
 const { expect } = require('chai');
 
-const MoviesService = {
-  create: () => { },
-};
+const MoviesModel = require('../../models/movieModel');
+const MoviesService = require('../../services/movieService');
 
 describe('Insere um novo filme no BD', function () {
   describe('Quando o payload informado não é válido', function () {
@@ -27,6 +27,16 @@ describe('Insere um novo filme no BD', function () {
       directedBy: 'Jane Dow',
       releaseYear: 1999,
     };
+
+    before(function () {
+      const ID_EXAMPLE = 1;
+
+      sinon.stub(MoviesModel, 'create').resolves({ id: ID_EXAMPLE });
+    });
+
+    after(function () {
+      MoviesModel.create.restore();
+    });
 
     it('retorna um objeto', async function () {
       const response = await MoviesService.create(payloadMovie);
