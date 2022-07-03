@@ -6,13 +6,13 @@ const router = express.Router();
 router.get('/list-all', async (req, res) => {
   const products = await ProductModel.getAll();
 
-  res.send(products);
+  res.status(200).json(products);
 });
 
 router.get('/list/:id', async (req, res) => {
   const product = await ProductModel.getById(req.params.id);
 
-  res.send(product);
+  res.status(200).json(product);
 });
 
 router.post('/add', async (req, res) => {
@@ -20,13 +20,13 @@ router.post('/add', async (req, res) => {
 
   const newProduct = await ProductModel.add(name, brand);
 
-  res.send(newProduct);
+  res.status(201).json(newProduct);
 });
 
 router.post('/delete/:id', async (req, res) => {
   const products = await ProductModel.exclude(req.params.id);
 
-  res.send(products);
+  res.status(200).json(products);
 });
 
 router.post('/update/:id', async (req, res) => {
@@ -34,7 +34,7 @@ router.post('/update/:id', async (req, res) => {
 
   const products = await ProductModel.update(req.params.id, name, brand);
 
-  res.send(products);
+  res.status(200).json(products);
 });
 
 module.exports = router;
