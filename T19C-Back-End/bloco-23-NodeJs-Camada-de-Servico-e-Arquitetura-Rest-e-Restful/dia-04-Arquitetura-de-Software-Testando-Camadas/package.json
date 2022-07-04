@@ -4,7 +4,7 @@
   "description": "Dia 04",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests --recursive --exit",
+    "test": "mocha ./src/tests/**/*$NAME*.test.js --exit",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
