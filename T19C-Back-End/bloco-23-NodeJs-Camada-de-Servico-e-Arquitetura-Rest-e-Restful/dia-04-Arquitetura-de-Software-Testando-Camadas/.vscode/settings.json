@@ -1,5 +1,7 @@
-// setting.json
 {
+    "eslint.workingDirectories": [
+    "./src" // replace {PATH_TO_CLIENT} with you own path
+  ],
   // quando colar, formata
   "editor.formatOnPaste": true,
   // quando salvar, formata
@@ -14,4 +16,5 @@
     // força o eslint a formatar o "trem" todo
     "source.fixAll.eslint": true
   },
+  
 }
