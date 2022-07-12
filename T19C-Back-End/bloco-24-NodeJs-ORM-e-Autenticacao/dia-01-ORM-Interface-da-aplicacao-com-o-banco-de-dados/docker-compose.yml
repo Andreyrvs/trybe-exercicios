@@ -36,3 +36,7 @@ services:
     ports:
     # Expõe a porta padrão da aplicação: altere aqui caso use outra porta
     - 3000:3000
+
+networks:
+  default:
+    name: bloco_24_net
