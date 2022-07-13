@@ -33,7 +33,29 @@ const getByIdEager = async (req, res) => {
   }
 };
 
+const getByIdLazy = async (req, res) => {
+  try {
+  const { id } = req.params;
+
+  const result = await EmployeeService.getByIdLazy(id);
+
+  if (!result.employee || !result.addresses) {
+    return res.status(404).json({ message: 'Funcionário não encontrado' });
+  }
+
+  if (req.query.includeAddresses === 'true') {
+    return res.status(200).json(result);
+  }
+  return res.status(200).json(result.employee);
+} catch (error) {
+  console.log(error.message);
+
+  res.status(500).json({ message: 'Algo deu errado' });
+}
+};
+
 module.exports = {
   getAll,
   getByIdEager,
+  getByIdLazy,
 };

@@ -23,8 +23,20 @@ const getByIdEager = async (id) => {
   return employee;
 };
 
+const getByIdLazy = async (id) => {
+  const employee = await Employee.findOne({ where: { id } });
+
+  if (!employee) return null;
+
+  const addresses = await Address.findAll({ where: { employeeId: id } });
+
+  if (!addresses) return null;
+
+  return { employee, addresses };
+};
+
 module.exports = {
   getAll,
   getByIdEager,
-
+  getByIdLazy,
 };
