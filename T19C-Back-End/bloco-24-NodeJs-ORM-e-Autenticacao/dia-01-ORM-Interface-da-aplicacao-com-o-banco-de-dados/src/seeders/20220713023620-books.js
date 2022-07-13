@@ -11,6 +11,20 @@ module.exports = {
           created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
           updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
+        {
+          title: "Dom Quixote",
+          author: "Miguel de Cervantes",
+          page_quantity: 333,
+          created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+        },
+        {
+          title: "Alma Campeira",
+          author: "Os Monarcas",
+          page_quantity: 999,
+          created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+        },
       ]
       , {}),
 

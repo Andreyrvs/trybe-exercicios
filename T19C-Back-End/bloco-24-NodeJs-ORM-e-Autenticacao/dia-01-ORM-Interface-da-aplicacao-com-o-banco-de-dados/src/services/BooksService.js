@@ -21,7 +21,11 @@ const destroy = async (id) => {
 }
 
 const getAll = async () => {
-  const result = await Book.findAll();
+  const result = await Book.findAll({
+    order: [
+      ["title", "ASC"],
+    ]
+  });
 
   if (!result || result.length === 0) return null
 
@@ -37,7 +41,12 @@ const getById = async (id) => {
 }
 
 const getByAuthor = async (author) => {
-  const result = await Book.findOne({ where: { author: author } });
+  const result = await Book.findAll({
+    where: { author: author },
+    order: [
+      ["title", "ASC"]
+    ]
+  });
 
   if (!result) return null;
 
