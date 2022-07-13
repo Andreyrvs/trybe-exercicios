@@ -3,9 +3,9 @@ const BooksService = require('../services/BooksService');
 const create = async (req, res) => {
   try {
 
-    const { title, author, pageQuantity } = req.body;
+    const { title, author, pageQuantity, publisher } = req.body;
 
-    const result = await BooksService.create({ title, author, pageQuantity });
+    const result = await BooksService.create({ title, author, pageQuantity, publisher });
 
     if (!result) {
       return res.status(400).json({ message: 'Bad Request' });
@@ -99,9 +99,9 @@ const update = async (req, res) => {
   try {
 
     const { id } = req.params;
-    const { title, author, pageQuantity } = req.body;
+    const { title, author, pageQuantity, publisher } = req.body;
 
-    const result = await BooksService.update(id, { title, author, pageQuantity });
+    const result = await BooksService.update(id, { title, author, pageQuantity, publisher });
 
     if (!result) {
       return res.status(404).json({ message: 'Book not found!' });

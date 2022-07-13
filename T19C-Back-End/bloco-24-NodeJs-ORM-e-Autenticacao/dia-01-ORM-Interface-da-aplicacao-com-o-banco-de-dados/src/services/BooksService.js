@@ -1,7 +1,7 @@
 const { Book } = require('../models');
 
-const create = async ({ title, author, pageQuantity }) => {
-  const result = await Book.create({ title, author, pageQuantity });
+const create = async ({ title, author, pageQuantity, publisher }) => {
+  const result = await Book.create({ title, author, pageQuantity, publisher });
 
   if (!result) return null;
 
@@ -53,9 +53,9 @@ const getByAuthor = async (author) => {
   return result;
 }
 
-const update = async (id, { title, author, pageQuantity }) => {
+const update = async (id, { title, author, pageQuantity, publisher }) => {
   const [result] = await Book.update(
-    { title, author, pageQuantity },
+    { title, author, pageQuantity, publisher },
     { where: { id } },
   )
 
