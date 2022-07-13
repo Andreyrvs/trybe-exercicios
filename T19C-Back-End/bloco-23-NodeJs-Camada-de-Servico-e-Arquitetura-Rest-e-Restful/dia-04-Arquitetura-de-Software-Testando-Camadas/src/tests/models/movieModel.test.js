@@ -48,7 +48,7 @@ describe('Insere um novo filme no BD', function () {
     describe('quando não existe um filme com o ID informado', function () {
       it('retorna null', async function () {
         const response = await MoviesModel.getById();
-        expect(response).to.be.equal(null);
+        expect(response).to.be.empty;
       });
     });
 
