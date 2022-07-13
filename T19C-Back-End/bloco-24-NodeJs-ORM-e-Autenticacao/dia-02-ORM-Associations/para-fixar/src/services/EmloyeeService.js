@@ -10,7 +10,7 @@ const getAll = async () => {
   return employees;
 };
 
-const getById = async (id) => {
+const getByIdEager = async (id) => {
   const employee = await Employee.findOne({
     where: { id },
     include: [{ model: Address,
@@ -25,5 +25,6 @@ const getById = async (id) => {
 
 module.exports = {
   getAll,
-  getById,
+  getByIdEager,
+
 };

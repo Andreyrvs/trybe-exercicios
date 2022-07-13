@@ -15,11 +15,11 @@ const getAll = async (req, res) => {
   }
 };
 
-const getById = async (req, res) => {
+const getByIdEager = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const employee = await EmployeeService.getById(id);
+    const employee = await EmployeeService.getByIdEager(id);
 
     if (!employee) {
       return res.status(404).json({ message: 'Funcionário não encontrado' });
@@ -35,5 +35,5 @@ const getById = async (req, res) => {
 
 module.exports = {
   getAll,
-  getById,
+  getByIdEager,
 };
