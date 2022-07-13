@@ -10,5 +10,6 @@ app.get('/books', BooksController.getall)
 app.get('/books/:id', BooksController.getById)
 app.post('/books', BooksController.create)
 app.put('/books/:id', BooksController.update)
+app.delete('/books/:id', BooksController.destroy)
 
 module.exports = app

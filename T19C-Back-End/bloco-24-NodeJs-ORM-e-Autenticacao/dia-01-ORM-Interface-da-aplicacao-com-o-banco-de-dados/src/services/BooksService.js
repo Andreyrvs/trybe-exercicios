@@ -9,6 +9,10 @@ const create = async ({ title, author, pageQuantity }) => {
 }
 
 const destroy = async (id) => {
+  const isValid = getById(id);
+
+  if (!isValid || isValid === undefined) return null
+
   const result = await Book.destroy({ where: { id } });
 
   if (!result) return null;

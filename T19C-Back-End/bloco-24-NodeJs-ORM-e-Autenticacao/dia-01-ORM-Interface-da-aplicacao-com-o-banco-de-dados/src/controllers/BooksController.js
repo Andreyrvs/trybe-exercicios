@@ -16,11 +16,29 @@ const create = async (req, res) => {
   } catch (error) {
     console.error(error);
 
-    return res.status(500).end()
+    return res.status(500).json({ message: 'Something went wrong' }).end()
   }
 }
 
-const getall = async (req, res) => {
+const destroy = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const result = await BooksService.destroy(id)
+
+    if (!result) {
+      return res.status(404).json({ message: 'Id not found' })
+    }
+
+    return res.status(200).json({ message: 'destroyed book' })
+  } catch (error) {
+    console.error(error);
+
+    return res.status(500).json({ message: 'Something went wrong' }).end()
+  }
+}
+
+const getall = async (__req, res) => {
   try {
     const result = await BooksService.getAll()
 
@@ -33,7 +51,7 @@ const getall = async (req, res) => {
   } catch (error) {
     console.error(error);
 
-    return res.status(500).end()
+    return res.status(500).json({ message: 'Something went wrong' }).end()
   }
 }
 
@@ -53,7 +71,7 @@ const getById = async (req, res) => {
   } catch (error) {
     console.error(error);
 
-    return res.status(500).end()
+    return res.status(500).json({ message: 'Something went wrong' }).end()
   }
 }
 
@@ -73,13 +91,14 @@ const update = async (req, res) => {
   } catch (error) {
     console.error(error);
 
-    return res.status(500).end();
+    return res.status(500).json({ message: 'Something went wrong' }).end();
   }
 
 }
 
 module.exports = {
   create,
+  destroy,
   getall,
   getById,
   update,
