@@ -36,6 +36,14 @@ const getById = async (id) => {
   return result;
 }
 
+const getByAuthor = async (author) => {
+  const result = await Book.findOne({ where: { author: author } });
+
+  if (!result) return null;
+
+  return result;
+}
+
 const update = async (id, { title, author, pageQuantity }) => {
   const [result] = await Book.update(
     { title, author, pageQuantity },
@@ -50,5 +58,6 @@ module.exports = {
   destroy,
   getAll,
   getById,
+  getByAuthor,
   update,
 }

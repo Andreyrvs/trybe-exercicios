@@ -75,6 +75,26 @@ const getById = async (req, res) => {
   }
 }
 
+const getByAuthor = async (req, res) => {
+  try {
+
+    const { author } = req.body
+
+    const result = await BooksService.getByAuthor(author)
+
+    if (!result) {
+      return res.status(404).json({ message: 'Author not found' })
+    }
+
+    return res.status(200).json(result);
+  } catch (error) {
+    console.error(error);
+
+    return res.status(500).json({ message: 'Something went wrong' }).end();
+  }
+
+}
+
 const update = async (req, res) => {
   try {
 
@@ -101,5 +121,6 @@ module.exports = {
   destroy,
   getall,
   getById,
+  getByAuthor,
   update,
 }
