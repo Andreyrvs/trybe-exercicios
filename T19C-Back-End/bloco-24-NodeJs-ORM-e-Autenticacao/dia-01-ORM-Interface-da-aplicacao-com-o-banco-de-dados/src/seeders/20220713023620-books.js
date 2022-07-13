@@ -10,6 +10,7 @@ module.exports = {
           page_quantity: 210,
           created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
           updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          publisher: "Bosa Nova",
         },
         {
           title: "Dom Quixote",
@@ -17,6 +18,7 @@ module.exports = {
           page_quantity: 333,
           created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
           updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          publisher: "Novo mundo",
         },
         {
           title: "Alma Campeira",
@@ -24,6 +26,7 @@ module.exports = {
           page_quantity: 999,
           created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
           updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          publisher: "Gaucha",
         },
       ]
       , {}),
