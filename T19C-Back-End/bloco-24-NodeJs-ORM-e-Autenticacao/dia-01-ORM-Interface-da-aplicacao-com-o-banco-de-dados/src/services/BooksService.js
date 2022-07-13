@@ -8,6 +8,14 @@ const create = async ({ title, author, pageQuantity }) => {
   return result;
 }
 
+const destroy = async (id) => {
+  const result = await Book.destroy({ where: { id } });
+
+  if (!result) return null;
+
+  return result;
+}
+
 const getAll = async () => {
   const result = await Book.findAll();
 
@@ -35,6 +43,7 @@ const update = async (id, { title, author, pageQuantity }) => {
 
 module.exports = {
   create,
+  destroy,
   getAll,
   getById,
   update,
