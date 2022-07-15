@@ -1,10 +1,40 @@
+const Sequelize = require('sequelize');
 const { Address, Employee } = require('../models');
 
-const createNew = async ({ firstName, lastName, age, city, street, number }) => {
-  const employee = await Employee.create({ firstName, lastName, age, city, street, number });
+const config = require('../config/config');
 
-  await Address.create({ city, street, number, employeeId: employee.id });
+const sequelize = new Sequelize(config.development);
 
+const createManaged = async ({ firstName, lastName, age, city, street, number }) => {
+  const result = await sequelize.transaction(async (t) => {
+      const employee = await Employee.create({
+        firstName, lastName, age,
+      }, { transaction: t });
+  
+      await Address.create({
+        city, street, number, employeeId: employee.id,
+      }, { transaction: t });
+    });
+
+  return result;
+};
+
+const createUnmanaged = async ({ firstName, lastName, age, city, street, number }) => {
+  const t = await sequelize.transaction();
+  
+  const employee = await Employee.create(
+    { firstName, lastName, age },
+    { transaction: t },
+  );
+  
+  await Address.create(
+    { city, street, number, employeeId: employee.id },
+    { transaction: t },
+  );
+  
+  await t.commit();
+
+  await t.rollback();
   return employee;
 };
 
@@ -44,7 +74,8 @@ const getByIdLazy = async (id) => {
 };
 
 module.exports = {
-  createNew,
+  createManaged,
+  createUnmanaged,
   getAll,
   getByIdEager,
   getByIdLazy,

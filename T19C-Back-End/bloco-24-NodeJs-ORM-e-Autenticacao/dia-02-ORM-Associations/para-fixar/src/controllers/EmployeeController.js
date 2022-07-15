@@ -1,10 +1,36 @@
 const EmployeeService = require('../services/EmloyeeService');
 
-const createNew = async (req, res) => {
+const errorMessage = {
+  message: 'Algo deu errado',
+};
+
+const createManaged = async (req, res) => {
+  try {
+    const { firstName, lastName, age, city, street, number } = req.body;
+
+    const employee = await EmployeeService.createManaged(
+      { firstName, lastName, age, city, street, number },
+    );
+
+    // ======
+    // Adiciona corretamente mas cai nesse IF =/
+    // if (!employee) {
+    //   return res.status(400).json({ message: 'Bad Request' });
+    // }
+    console.log(employee);
+
+    return res.status(201).json({ message: 'Cadastrado com sucesso' });
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json(errorMessage);
+  }
+};
+
+const createUnmanaged = async (req, res) => {
   try {
     const { firstName, lastName, age, city, street, number } = req.body;
   
-    const employee = await EmployeeService.createNew(
+    const employee = await EmployeeService.createUnmanaged(
       { firstName, lastName, age, city, street, number },
   );
   
@@ -15,7 +41,7 @@ const createNew = async (req, res) => {
     return res.status(201).json({ message: 'Cadastrado com sucesso' });
   } catch (error) {
     console.error(error.message);
-    res.status(500).json({ message: 'Algo deu errados' });
+    res.status(500).json(errorMessage);
   }
 };
 
@@ -48,7 +74,7 @@ const getByIdEager = async (req, res) => {
   } catch (error) {
   console.error(error);
   
-  res.status(500).json({ message: 'Algo deu errado' });
+  res.status(500).json(errorMessage);
   }
 };
 
@@ -69,12 +95,13 @@ const getByIdLazy = async (req, res) => {
 } catch (error) {
   console.log(error.message);
 
-  res.status(500).json({ message: 'Algo deu errado' });
+  res.status(500).json(errorMessage);
 }
 };
 
 module.exports = {
-  createNew,
+  createManaged,
+  createUnmanaged,
   getAll,
   getByIdEager,
   getByIdLazy,
