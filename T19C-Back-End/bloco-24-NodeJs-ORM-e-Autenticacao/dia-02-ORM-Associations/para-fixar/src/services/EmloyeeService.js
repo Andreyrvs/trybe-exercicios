@@ -40,7 +40,7 @@ const createUnmanaged = async ({ firstName, lastName, age, city, street, number 
     await t.commit();
     return employee;
   } catch (error) {
-    console.error(error.message);
+    // console.error(error.message);
     await t.rollback();
   }
 };

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha ./tests/**/*$NAME*.test.js --exit",
+    "test": "NODE_ENV=test mocha ./src/tests/**/*$NAME*.test.js --exit",
     "debug": "nodemon src/index.js"
   },
   "keywords": [],

@@ -33,10 +33,11 @@ const createUnmanaged = async (req, res) => {
     const employee = await EmployeeService.createUnmanaged(
       { firstName, lastName, age, city, street, number },
   );
-  
-    if (!employee) {
-      return res.status(400).json({ message: 'Bad Request' });
-    }
+    // ======
+    // Teste quebra aqui =/
+    // if (!employee) {
+    //   return res.status(400).json({ message: 'Bad Request' });
+    // }
   
     return res.status(201).json({
       id: employee.id, // esse dado será nossa referência para validar a transação
