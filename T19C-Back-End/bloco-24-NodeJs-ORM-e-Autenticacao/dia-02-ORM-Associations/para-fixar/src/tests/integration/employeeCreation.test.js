@@ -1,3 +1,4 @@
+/* eslint-disable mocha/no-top-level-hooks */
 /*
 ### Testando a rota POST /employees
 
@@ -25,7 +26,6 @@
 const chai = require('chai');
 const { stub } = require('sinon');
 const chaiHttp = require('chai-http');
-const { use, expect } = require('chai');
 
 chai.use(chaiHttp);
 
