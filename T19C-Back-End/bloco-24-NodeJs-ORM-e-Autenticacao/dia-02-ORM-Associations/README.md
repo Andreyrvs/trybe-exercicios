@@ -28,4 +28,4 @@ ModelDeAssociação.associate = (models) => {
 
 Os exercicios estao em um repositorio da trybe o link do fork no meu rep é esse:
 
-[24.2 - ORM - Associations](git@github.com:Andreyrvs/24_4-exercise-sequelize-associations.git)
+[24.2 - ORM - Associations](https://github.com/Andreyrvs/24_4-exercise-sequelize-associations.git)
