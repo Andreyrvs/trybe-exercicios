@@ -10,6 +10,7 @@ app.use(express.json());
 app.get('/employees', EmployeeController.getAll);
 app.get('/eagerLoading/:id', EmployeeController.getByIdEager);
 app.get('/lazyLoading/:id', EmployeeController.getByIdLazy);
+app.post('/employees', EmployeeController.createNew);
 
 app.get('/usersbooks/:id', UserBookController.getById);
 

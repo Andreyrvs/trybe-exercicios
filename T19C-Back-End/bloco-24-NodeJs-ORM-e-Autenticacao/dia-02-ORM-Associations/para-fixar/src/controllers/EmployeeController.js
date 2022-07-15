@@ -1,5 +1,24 @@
 const EmployeeService = require('../services/EmloyeeService');
 
+const createNew = async (req, res) => {
+  try {
+    const { firstName, lastName, age, city, street, number } = req.body;
+  
+    const employee = await EmployeeService.createNew(
+      { firstName, lastName, age, city, street, number },
+  );
+  
+    if (!employee) {
+      return res.status(400).json({ message: 'Bad Request' });
+    }
+  
+    return res.status(201).json({ message: 'Cadastrado com sucesso' });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ message: 'Algo deu errados' });
+  }
+};
+
 const getAll = async (req, res) => {
   try {
     const employees = await EmployeeService.getAll();
@@ -55,6 +74,7 @@ const getByIdLazy = async (req, res) => {
 };
 
 module.exports = {
+  createNew,
   getAll,
   getByIdEager,
   getByIdLazy,

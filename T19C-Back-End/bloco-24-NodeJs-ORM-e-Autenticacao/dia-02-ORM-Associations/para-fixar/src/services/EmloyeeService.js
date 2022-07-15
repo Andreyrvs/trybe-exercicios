@@ -1,5 +1,13 @@
 const { Address, Employee } = require('../models');
 
+const createNew = async ({ firstName, lastName, age, city, street, number }) => {
+  const employee = await Employee.create({ firstName, lastName, age, city, street, number });
+
+  await Address.create({ city, street, number, employeeId: employee.id });
+
+  return employee;
+};
+
 const getAll = async () => {
   const employees = await Employee.findAll({
     include: { model: Address, as: 'addresses' },
@@ -36,6 +44,7 @@ const getByIdLazy = async (id) => {
 };
 
 module.exports = {
+  createNew,
   getAll,
   getByIdEager,
   getByIdLazy,
