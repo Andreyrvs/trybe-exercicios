@@ -1,0 +1,3 @@
+/src/migrations/*.js
+/src/seeders/*.js
+/src/models/index.js
