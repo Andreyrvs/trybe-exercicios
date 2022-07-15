@@ -2,8 +2,13 @@ const Sequelize = require('sequelize');
 const { Address, Employee } = require('../models');
 
 const config = require('../config/config');
-
-const sequelize = new Sequelize(config.development);
+/*
+  Essa linha será importante para que consigamos isolar nosso teste
+  utilizando a configuração `test` do seu `config.{js | json}`
+*/
+const sequelize = new Sequelize(
+  process.env.NODE_ENV === 'test' ? config.test : config.development,
+);
 
 const createManaged = async ({ firstName, lastName, age, city, street, number }) => {
   const result = await sequelize.transaction(async (t) => {
@@ -22,20 +27,22 @@ const createManaged = async ({ firstName, lastName, age, city, street, number })
 const createUnmanaged = async ({ firstName, lastName, age, city, street, number }) => {
   const t = await sequelize.transaction();
   
-  const employee = await Employee.create(
-    { firstName, lastName, age },
-    { transaction: t },
-  );
-  
-  await Address.create(
-    { city, street, number, employeeId: employee.id },
-    { transaction: t },
-  );
-  
-  await t.commit();
-
-  await t.rollback();
-  return employee;
+  try {
+    const employee = await Employee.create(
+      { firstName, lastName, age },
+      { transaction: t },
+    );
+    
+    await Address.create(
+      { city, street, number, employeeId: employee.id },
+      { transaction: t },
+    );
+    await t.commit();
+    return employee;
+  } catch (error) {
+    console.error(error.message);
+    await t.rollback();
+  }
 };
 
 const getAll = async () => {

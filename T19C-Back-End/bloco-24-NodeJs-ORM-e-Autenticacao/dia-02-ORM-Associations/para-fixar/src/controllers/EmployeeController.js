@@ -38,7 +38,10 @@ const createUnmanaged = async (req, res) => {
       return res.status(400).json({ message: 'Bad Request' });
     }
   
-    return res.status(201).json({ message: 'Cadastrado com sucesso' });
+    return res.status(201).json({
+      id: employee.id, // esse dado será nossa referência para validar a transação
+      message: 'Cadastrado com sucesso',
+    });
   } catch (error) {
     console.error(error.message);
     res.status(500).json(errorMessage);
