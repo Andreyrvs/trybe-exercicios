@@ -23,3 +23,6 @@ console.log(`🚀 Losango com Diagonal Maior(D) = 75cm e Diagonal menor(d) = 25c
 console.log(`⌛ Trapezio área com Base maior(B) = 100cm e Base menor(b) = 70cm Altura = 50; Área: ${Exercise.trapezoid(100, 70, 50)}cm²`)
 console.log(`⌛ Trapezio área com Base maior(B) = 75cm e Base menor(b) = 50cm Altura = 35; Área: ${Exercise.trapezoid(75, 50, 35)}cm²`)
 console.log(`⌛ Trapezio área com Base maior(B) = 150cm e Base menor(b) = 120cm Altura = 80; Área: ${Exercise.trapezoid(150, 120, 80)}cm²`)
+console.log(`Circulo com raio igual 25cm; Raio: ${Exercise.circle(25)}cm`)
+console.log(`Circulo com raio igual 100cm; Raio: ${Exercise.circle(100)}cm`)
+console.log(`Circulo com raio igual 12,5cm; Raio: ${Exercise.circle(12.5)}cm`)

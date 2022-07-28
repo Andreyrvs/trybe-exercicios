@@ -1,7 +1,7 @@
 "use strict";
 // ./exercises.ts
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.trapezoid = exports.rhombus = exports.rectangle = exports.square = exports.triangle = exports.sumArray = exports.add = exports.personAge = exports.greeter = void 0;
+exports.circle = exports.trapezoid = exports.rhombus = exports.rectangle = exports.square = exports.triangle = exports.sumArray = exports.add = exports.personAge = exports.greeter = void 0;
 function greeter(name) {
     return `Olá ${name}!`;
 }
@@ -38,3 +38,8 @@ function trapezoid(B, b, h) {
     return ((B + b) * h) / 2;
 }
 exports.trapezoid = trapezoid;
+function circle(radius) {
+    const PI = 3.14;
+    return PI * radius ** 2;
+}
+exports.circle = circle;
