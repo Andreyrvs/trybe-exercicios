@@ -30,11 +30,10 @@ function printCharacter(character: Character, index: number) {
   const { nickname, class: cls, createdAt, stats } = character;
   
   console.log(`\n\n===== Character: ${index + 1} ========`);
-  console.log();
   console.log(`nickname: ${nickname}
-class: ${cls}
-createdAt: ${createdAt}
-stats ${Object.entries(stats)}`);
+    class: ${cls}
+    createdAt: ${createdAt}
+    stats ${Object.entries(stats)}`);
 }
 
 characters.forEach(printCharacter);

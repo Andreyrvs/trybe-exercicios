@@ -22,10 +22,9 @@ const characters = [
 function printCharacter(character, index) {
     const { nickname, class: cls, createdAt, stats } = character;
     console.log(`\n\n===== Character: ${index + 1} ========`);
-    console.log();
     console.log(`nickname: ${nickname}
-class: ${cls}
-createdAt: ${createdAt}
-stats ⏰${Object.arguments(stats)}`);
+    class: ${cls}
+    createdAt: ${createdAt}
+    stats ${Object.entries(stats)}`);
 }
 characters.forEach(printCharacter);
