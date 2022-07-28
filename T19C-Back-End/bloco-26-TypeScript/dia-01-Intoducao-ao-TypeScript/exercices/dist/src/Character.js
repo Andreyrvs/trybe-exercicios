@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const characters = [
     {
         nickname: 'xKillerx',
@@ -21,10 +20,11 @@ const characters = [
     },
 ];
 function printCharacter(character, index) {
-    const { nickname, class: cls, createdAt } = character;
+    const { nickname, class: cls, createdAt, stats } = character;
     console.log(`\n\n===== Character: ${index + 1} ========`);
     console.log(`nickname: ${nickname}
-class: ${cls}
-createdAt: ${createdAt}`);
+    class: ${cls}
+    createdAt: ${createdAt}
+    stats ${Object.entries(stats)}`);
 }
 characters.forEach(printCharacter);
