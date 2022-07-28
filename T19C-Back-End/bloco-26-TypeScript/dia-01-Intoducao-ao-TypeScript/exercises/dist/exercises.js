@@ -1,7 +1,7 @@
 "use strict";
 // ./exercises.ts
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.rectangle = exports.square = exports.triangle = exports.sumArray = exports.add = exports.personAge = exports.greeter = void 0;
+exports.rhombus = exports.rectangle = exports.square = exports.triangle = exports.sumArray = exports.add = exports.personAge = exports.greeter = void 0;
 function greeter(name) {
     return `Olá ${name}!`;
 }
@@ -30,3 +30,7 @@ function rectangle(base, height) {
     return base * height;
 }
 exports.rectangle = rectangle;
+function rhombus(DGreater, dMinor) {
+    return (DGreater * dMinor) / 2;
+}
+exports.rhombus = rhombus;
