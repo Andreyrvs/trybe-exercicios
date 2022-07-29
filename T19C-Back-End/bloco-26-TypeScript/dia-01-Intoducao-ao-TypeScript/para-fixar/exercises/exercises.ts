@@ -17,10 +17,10 @@ export function sumArray(numbers: number[]): number {
 }
 
 export function triangle(base: number, height: number): number {
-  return (base * height) / 2;
+  return ( base * height )/ 2;
 }
 
-export function square(side: number): number {
+export function square(side: number):number {
   return side ** 2;
 }
 
@@ -32,8 +32,8 @@ export function rhombus(D: number, d: number): number {
   return (D * d) / 2
 }
 
-export function trapezoid (B:number, b:number, h:number): number {
-  return ((B + b) * h) / 2
+export function trapezoid (BaseG:number, baseM:number, height:number): number {
+  return ((BaseG + baseM) * height) / 2
 }
 
 export function circle (radius: number): number {
