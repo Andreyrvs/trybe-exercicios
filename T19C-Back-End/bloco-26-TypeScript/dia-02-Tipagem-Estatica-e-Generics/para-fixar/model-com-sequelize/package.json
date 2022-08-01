@@ -1,0 +1,21 @@
+{
+  "name": "model-com-sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/sequelize": "^4.28.14",
+    "dotenv": "^16.0.1",
+    "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "mysql2": "^2.3.3",
+    "sequelize-cli": "^6.4.1"
+  }
+}
