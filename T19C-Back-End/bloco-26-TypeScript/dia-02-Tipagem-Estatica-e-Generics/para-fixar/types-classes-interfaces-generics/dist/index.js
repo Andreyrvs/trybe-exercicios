@@ -53,22 +53,3 @@ let ferrari = {
 };
 ferrari.turnOn();
 ferrari.speedUp();
-// interface Feline {
-//   name: string;
-//   subfamilies: string;
-//   walk: () => void;
-//   hunt: () => void;
-//   eat: () => void;
-//   sleep: () => void;
-// }
-// interface Aircraft {
-//   model: string;
-//   brand: string;
-//   wings: number;
-//   engines: number;
-//   isManned: boolean;
-//   turnOn: () => void;
-//   turnOff: () => void;
-//   speedUp: () => void;
-//   speedDown: () => void;
-// }
