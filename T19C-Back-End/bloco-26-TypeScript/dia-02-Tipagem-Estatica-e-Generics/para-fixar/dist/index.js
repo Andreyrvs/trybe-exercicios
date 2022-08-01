@@ -9,6 +9,8 @@ class Dog {
         console.log("auau");
     }
 }
+// const dog2 = new Dog('nina', 'azul', 3)
+// console.log(dog2);
 class House {
     constructor(owner, address, color, area) {
         this.owner = owner;
@@ -26,3 +28,47 @@ class Flight {
         this.passengers = passengers;
     }
 }
+let ferrari = {
+    name: "super carro",
+    brand: "ferrari",
+    color: "red",
+    doors: 2,
+    gears: 4,
+    motor: "V12",
+    turnOn: function () {
+        console.log("ligado");
+    },
+    turnOff: function () {
+        console.log("desligado");
+    },
+    speedUp: function () {
+        console.log("acelerando");
+    },
+    speedDown: function () {
+        console.log("desacelerando");
+    },
+    break: function () {
+        console.log("parar");
+    }
+};
+ferrari.turnOn();
+ferrari.speedUp();
+// interface Feline {
+//   name: string;
+//   subfamilies: string;
+//   walk: () => void;
+//   hunt: () => void;
+//   eat: () => void;
+//   sleep: () => void;
+// }
+// interface Aircraft {
+//   model: string;
+//   brand: string;
+//   wings: number;
+//   engines: number;
+//   isManned: boolean;
+//   turnOn: () => void;
+//   turnOff: () => void;
+//   speedUp: () => void;
+//   speedDown: () => void;
+// }

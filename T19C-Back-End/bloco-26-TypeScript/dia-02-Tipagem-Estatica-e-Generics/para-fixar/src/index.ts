@@ -17,10 +17,13 @@ type Os = 'linux' | 'mac' | 'windows'
 type Vogais = 'a' | 'e' | 'i' | 'o' | 'u'
 
 
-class Dog {
+interface Dog {
   name: string;
   color: string;
   age: number;
+}
+
+class Dog {
   constructor(name: string, color: string, age: number) {
     this.name = name;
     this.color = color;
@@ -31,6 +34,9 @@ class Dog {
     console.log("auau");
   }
 }
+
+// const dog2 = new Dog('nina', 'azul', 3)
+// console.log(dog2);
 
 class House {
   owner: string;
@@ -73,6 +79,42 @@ interface Car {
   speedDown: () => void;
   break: () => void;
 }
+
+interface Ferrari extends Car {
+  name: string;
+  brand: string;
+  color: string;
+  doors: number;
+  gears: number;
+  motor: number | string;
+}
+
+let ferrari: Ferrari = {
+  name: "super carro",
+  brand: "ferrari",
+  color: "red",
+  doors: 2,
+  gears: 4,
+  motor: "V12",
+  turnOn: function (): void {
+    console.log("ligado");    
+  },
+  turnOff: function (): void {
+    console.log("desligado");
+  },
+  speedUp: function (): void {
+    console.log("acelerando");
+  },
+  speedDown: function (): void {
+    console.log("desacelerando");
+  },
+  break: function (): void {
+    console.log("parar");
+  }
+}
+
+ferrari.turnOn()
+ferrari.speedUp()
 
 interface Feline {
   name: string;
