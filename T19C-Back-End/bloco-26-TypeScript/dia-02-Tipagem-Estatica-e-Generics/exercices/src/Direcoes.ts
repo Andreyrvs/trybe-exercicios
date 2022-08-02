@@ -1,6 +1,6 @@
-enum Direcao {
+enum Direcoes {
   Esquerda = 'esquerda',
   Direita = 'direita',
 }
 
-export default Direcao;
+export default Direcoes;

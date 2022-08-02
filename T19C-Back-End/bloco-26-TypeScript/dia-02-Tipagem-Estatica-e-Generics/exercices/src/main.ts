@@ -1,5 +1,5 @@
 import Colors from './Colors';
-import Direcao from './Direcao';
+import Direcoes from './Direcoes';
 import Portas from './Portas';
 
 class Car {
@@ -16,15 +16,15 @@ class Car {
   }
 
   honk(): void {
-    console.log('aciona a busina do carro');
+    console.log('Buzinando: BIP BYP');
   }
 
   openTheDoor(porta: Portas): void {
-    console.log(`abre a porta ${porta}`);
+    console.log(`Abre a porta ${porta}`);
   }
 
   closeTheDoor(porta: Portas): void {
-    console.log(`fecha a porta${porta}`);
+    console.log(`Fecha a porta ${porta}`);
   }
 
   turnOn(): void {
@@ -36,19 +36,19 @@ class Car {
   }
 
   speedUp(): void {
-    console.log('desliga o carro');
+    console.log('Acelera o carro');
   }
 
   speedDown(): void {
-    console.log('reduz a velocidade do carro');
+    console.log('Reduz a velocidade do carro');
   }
 
   stop(): void {
-    console.log('para o carro');
+    console.log('Para o carro');
   }
 
-  turn(direcao: Direcao): void {
-    console.log(`vira o carro ${direcao}`);
+  turn(direcao: Direcoes): void {
+    console.log(`Vira para ${direcao}`);
   }
 }
 
