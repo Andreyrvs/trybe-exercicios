@@ -4,10 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 /* eslint-disable no-console */
-const Car_1 = __importDefault(require("./Car"));
-const Colors_1 = __importDefault(require("./Colors"));
-const Direcoes_1 = __importDefault(require("./Direcoes"));
-const Portas_1 = __importDefault(require("./Portas"));
+const Car_1 = __importDefault(require("./Cars/Car"));
+const Colors_1 = __importDefault(require("./Cars/Colors"));
+const Direcoes_1 = __importDefault(require("./Cars/Direcoes"));
+const Portas_1 = __importDefault(require("./Cars/Portas"));
 /**
  * Exercicio 02
  */
@@ -79,3 +79,18 @@ const commonPepperoni = {
     slices: 8,
 };
 console.log('🚀 ~ commonPepperoni', commonPepperoni);
+const vegetarianPalmito = {
+    flavor: 'Palmito',
+    slices: 6,
+};
+console.log('🚀 ~ vegetarianPalmito', vegetarianPalmito);
+const vegetarianCogumelo = {
+    flavor: 'Cogumelo',
+    slices: 8,
+};
+console.log('🚀 ~ vegetarianCogumelo', vegetarianCogumelo);
+const sweetGoiabadaComQueijo = {
+    flavor: 'Goiabada com Queijo',
+    slices: 4,
+};
+console.log('🚀 ~ sweetGoiabadaComQueijo', sweetGoiabadaComQueijo);

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable class-methods-use-this */
 import Colors from './Colors';
 import Direcoes from './Direcoes';

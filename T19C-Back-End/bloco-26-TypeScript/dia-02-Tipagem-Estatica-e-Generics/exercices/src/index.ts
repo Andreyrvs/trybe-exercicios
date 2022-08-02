@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
-import Car from './Car';
-import Color from './Colors';
-import Direcoes from './Direcoes';
-import IPizza from './Pizza';
-import IPizzaCommon from './PizzaCommon';
-import IPizzaSweet from './PizzaSweet';
-import IPizzaVegetarian from './PizzaVegetarian';
-import Portas from './Portas';
+import Car from './Cars/Car';
+import Color from './Cars/Colors';
+import Direcoes from './Cars/Direcoes';
+import IPizza from './Pizzas/Pizza';
+import IPizzaCommon from './Pizzas/PizzaCommon';
+import IPizzaSweet from './Pizzas/PizzaSweet';
+import IPizzaVegetarian from './Pizzas/PizzaVegetarian';
+import Portas from './Cars/Portas';
 
 /**
  * Exercicio 02
