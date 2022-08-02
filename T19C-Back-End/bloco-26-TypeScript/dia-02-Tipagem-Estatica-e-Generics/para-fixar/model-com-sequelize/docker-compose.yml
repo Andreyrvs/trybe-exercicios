@@ -10,38 +10,6 @@ services:
     ports:
     - 3306:3306
 
-  api:
-    image: node:16-alpine
-    # Variaveis de ambiente que estão no arquivo .env
-    ports:
-    # Expõe a porta padrão da aplicação: altere aqui caso use outra porta
-    - 3001:3001
-    environment:
-    - PORT=3001
-    - DB_HOST=mysql_docker
-    - DB_NAME=books_api
-    - DB_PORT=3306
-    - DB_USER=root
-    - DB_PASS=password
-    # Nome do container para facilitar execução
-    container_name: bloco_26
-    # Ao abrir o container esse sera o diretorio aberto no  bash
-    working_dir: /app
-    # Monta o diretório atual, com todos os dados do projeto, 
-    volumes:
-      # dentro do diretório /app
-    - ./:/app
-    # As duas opções abaixo correspondem ao -it
-    # Mesmo que `docker run -t`
-    tty: true
-    # Mesmo que `docker run -i`
-    stdin_open: true
-    # Restarta a imagem caso algo a faça parar
-    restart: always
-    # Diretório padrão de execução
-    depends_on:
-      - mysql
-
 networks:
   default:
     name: bloco_26_net
