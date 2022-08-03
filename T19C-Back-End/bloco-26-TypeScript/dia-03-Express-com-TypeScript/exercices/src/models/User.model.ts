@@ -17,7 +17,16 @@ class UserModel {
     const result = await this.connection.execute(query);
 
     const [rows] = result;
-    console.log('🚀 ~ UserModel ~ getAll ~ rows', rows);
+    return rows as IUser[];
+  }
+
+  public async getById(id: number): Promise<IUser[]> {
+    const query = 'SELECT * FROM TypeScriptExpress.Users WHERE id=?';
+    const values = [id];
+
+    const result = await this.connection.execute(query, values);
+
+    const [rows] = result;
     return rows as IUser[];
   }
 }
