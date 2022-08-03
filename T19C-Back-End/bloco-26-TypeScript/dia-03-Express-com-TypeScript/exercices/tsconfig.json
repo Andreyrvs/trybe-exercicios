@@ -3,8 +3,8 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
-    "rootDir": "./",
-    "outDir": "./public",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "preserveConstEnums": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
