@@ -26,7 +26,6 @@ class UserController {
     if (!result) {
       return res.status(StatusCodes.BAD_GATEWAY).send('BadRequest');
     }
-
     return res.status(StatusCodes.OK).json(result);
   };
 }
