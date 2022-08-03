@@ -13,6 +13,12 @@ class UserService {
     const result = await this.model.getAll();
     return result;
   }
+
+  public async getById(id: number): Promise<IUser[]> {
+    const result = await this.model.getById(id);
+
+    return result;
+  }
 }
 
 export default UserService;
