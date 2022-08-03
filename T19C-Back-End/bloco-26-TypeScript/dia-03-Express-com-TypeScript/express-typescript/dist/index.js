@@ -11,7 +11,7 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 const PORT = 8000;
 app.get('/', (req, res) => {
-    res.status(http_status_codes_1.StatusCodes.OK).send('Express + TypeScript');
+    res.status(http_status_codes_1.StatusCodes.OK).json({ message: 'Express + TypeScript' });
 });
 app.use(books_routes_1.default);
 app.use((err, req, res, next) => {

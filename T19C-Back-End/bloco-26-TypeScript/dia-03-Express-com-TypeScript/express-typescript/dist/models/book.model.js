@@ -17,7 +17,7 @@ class BookModel {
     getAll() {
         return __awaiter(this, void 0, void 0, function* () {
             const result = yield this.connection
-                .execute('SELECT * FROM books');
+                .execute('SELECT * FROM books_api.books;');
             const [rows] = result;
             return rows;
         });
