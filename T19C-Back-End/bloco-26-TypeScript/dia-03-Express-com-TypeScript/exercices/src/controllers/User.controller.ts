@@ -17,6 +17,18 @@ class UserController {
 
     return res.status(StatusCodes.OK).json(result);
   };
+
+  public create = async (req: Request, res: Response) => {
+    const user = req.body;
+
+    const result = await this.userService.create(user);
+
+    if (!result) {
+      return res.status(StatusCodes.BAD_GATEWAY).send('BadRequest');
+    }
+
+    return res.status(StatusCodes.OK).json(result);
+  };
 }
 
 export default UserController;
