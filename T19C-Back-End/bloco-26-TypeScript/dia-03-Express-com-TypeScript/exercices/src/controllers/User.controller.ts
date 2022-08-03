@@ -10,6 +10,13 @@ class UserController {
 
     return res.status(StatusCodes.OK).json(result);
   };
+
+  public getById = async (req: Request, res: Response) => {
+    const id = Number(req.params.id);
+    const result = await this.userService.getById(id);
+
+    return res.status(StatusCodes.OK).json(result);
+  };
 }
 
 export default UserController;
