@@ -7,14 +7,14 @@ const validateUser = (data: IUser): ValidationResult => {
       .messages(
         { 'any.required': 'Email válido é obrigatório' },
       ),
-    nome: Joi.string().required().min(3)
+    name: Joi.string().required().min(3)
       .messages(
         { 'string.min': 'Nome deve ter no mínimo 3 caracteres' },
       ),
-    senha: Joi.string().min(6).max(12).required()
+    password: Joi.string().min(6).max(12).required()
       .messages(
         {
-          'string.min': 'Password deve ter entre 3 e 12 caracteres',
+          'string.min': 'Password deve ter entre 6 e 12 caracteres',
         },
       ),
   });

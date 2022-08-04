@@ -2,6 +2,7 @@ import UserModel from '../models/user.model';
 import connection from '../utils/connection';
 import IUser from '../interfaces/IUser';
 import HttpException from '../validations/HttpException';
+import validateUser from '../validations/userValidation';
 
 class UserService {
   public userModel: UserModel;
@@ -22,6 +23,7 @@ class UserService {
   };
 
   public create = async (user: IUser) => {
+    validateUser(user);
     const userExist = await this.userModel.getByEmail(user.email);
 
     if (userExist) throw new HttpException('NotFoundError', 'Pessoa já cadastrada');
