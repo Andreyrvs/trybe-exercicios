@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import express from 'express';
-import UserRoutes from './routes/User.routes';
+import UserRoutes from './routes/user.routes';
 
 const app = express();
 

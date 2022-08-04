@@ -2,7 +2,7 @@
 import { Request, Response, NextFunction } from 'express';
 import HTTP_STATUS from '../enums/HttpStatus';
 import IUser from '../interfaces/IUser';
-import UserService from '../services/User.service';
+import UserService from '../services/user.service';
 
 class UserController {
   constructor(private userService = new UserService()) { }

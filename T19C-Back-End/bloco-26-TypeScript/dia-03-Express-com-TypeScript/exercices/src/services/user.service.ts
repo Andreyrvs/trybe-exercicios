@@ -1,4 +1,4 @@
-import UserModel from '../models/User.model';
+import UserModel from '../models/user.model';
 import connection from '../utils/connection';
 import IUser from '../interfaces/IUser';
 import HttpException from '../validations/HttpException';
