@@ -14,6 +14,12 @@ class ProductService {
     const result = await this.productModel.getAll();
     return result;
   };
+
+  public getById = async (id: number) => {
+    const result = await this.productModel.getById(id);
+
+    return result;
+  };
 }
 
 export default ProductService;

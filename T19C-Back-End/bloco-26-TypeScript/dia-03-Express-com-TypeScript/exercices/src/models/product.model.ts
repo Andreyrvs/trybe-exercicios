@@ -17,6 +17,15 @@ class ProductModel {
 
     return result as IProduct[];
   };
+
+  public getById = async (id: number): Promise<IProduct | null> => {
+    const query = `SELECT * FROM ${databaseProduct} WHERE id=?`;
+    const values = [id];
+
+    const [result] = await this.connection.execute(query, values);
+    const [product] = result as IProduct[];
+    return product || null;
+  };
 }
 
 export default ProductModel;
