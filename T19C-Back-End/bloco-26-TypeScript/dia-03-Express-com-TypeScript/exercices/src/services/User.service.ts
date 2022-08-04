@@ -1,30 +1,51 @@
 import UserModel from '../models/User.model';
 import connection from '../utils/connection';
 import IUser from '../interfaces/IUser';
+import HttpException from '../validations/HttpException';
 
 class UserService {
-  public model: UserModel;
+  public userModel: UserModel;
 
   constructor() {
-    this.model = new UserModel(connection);
+    this.userModel = new UserModel(connection);
   }
 
-  public async getAll(): Promise<IUser[]> {
-    const result = await this.model.getAll();
+  public getAll = async () => {
+    const result = await this.userModel.getAll();
     return result;
-  }
+  };
 
-  public async getById(id: number): Promise<IUser[]> {
-    const result = await this.model.getById(id);
+  public getById = async (id: number) => {
+    const result = await this.userModel.getById(id);
+    if (!result) throw new HttpException('NotFoundError', 'Pessoa não encontrada');
+    return result;
+  };
+
+  public create = async (user: IUser) => {
+    const userExist = await this.userModel.getByEmail(user.email);
+
+    if (userExist) throw new HttpException('NotFoundError', 'Pessoa já cadastrada');
+
+    const result = await this.userModel.create(user);
+    return result;
+  };
+
+  public update = async (id: number, user: IUser) => {
+    const userExist = await this.userModel.getById(id);
+
+    if (!userExist) throw new HttpException('NotFoundError', 'Pessoa não existe');
+
+    const result = await this.userModel.update(id, user);
+    return result;
+  };
+
+  public remove = async (id:number) => {
+    const result = await this.userModel.remove(id);
+
+    if (!result) throw new HttpException('NotFoundError', 'Pessoa não existe');
 
     return result;
-  }
-
-  public async create(user: IUser): Promise<IUser> {
-    const result = await this.model.create(user);
-
-    return result;
-  }
+  };
 }
 
 export default UserService;
