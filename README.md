@@ -200,7 +200,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 25-1: _Introdução - Deploy_
 - [x] 25-1: _Infraestrutura - Deploy com Heroku_
 - [x] 25-2: _Deploy Docker & Heroku_
-- [x] 25-3: _[Projeto - Stranger Things]()_
+- [x] 25-3: _[Projeto - Stranger Things](-)_
 
 #### Bloco 26: TypeScript
 
@@ -208,7 +208,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 26-1: _Introdução - TypeScript_
 - [x] 26-2: _Tipagem Estática e Generics_
 - [x] 26-3: _Express com TypeScript_
-- [x] 26-4: _[Projeto - Trybe Smith]()_
+- [x] 26-4: _[Projeto - Trybe Smith](-)_
 
 #### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
 
@@ -217,11 +217,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 27-3: _Polimorfismo_
 - [ ] 27-4: _SOLID - Introdução e Princípios S, O e D_
 - [ ] 27-5: _SOLID - Princípios L e I_
-- [ ] 27-3: _[Projeto - Trybers and Dragons]()_
+- [ ] 27-3: _[Projeto - Trybers and Dragons](-)_
 
 #### Bloco 28: Projeto - TFC - Trybe Futebol Clube
 
-- [ ] 28-1: _[Projeto - TFC - Trybe Futebol Clube]()_
+- [ ] 28-1: _[Projeto - TFC - Trybe Futebol Clube](-)_
 
 #### Bloco 29: Introdução ao MongoDB
 
@@ -231,17 +231,17 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 29-3: _Operadores de consulta_
 - [ ] 29-4: _Updates Simples_
 - [ ] 29-5: _Updates Complexos - Arrays_
-- [ ] 29-3: _[Projeto - Commerce]()_
+- [ ] 29-3: _[Projeto - Commerce](-)_
 
 #### Bloco 30: MongoDB com Node.js e POO
 
 - [ ] 30-1: _Mongoose e arquitetura MSC(camada Model)_
 - [ ] 30-2: _Mongoose e arquitetura MSC(camada Service e Controller)s_
-- [ ] 30-3: _[Projeto - Car Shop]()_
+- [ ] 30-3: _[Projeto - Car Shop](-)_
 
 #### Bloco 31: Projeto
 
-- [ ] 31-1: _[Bloco 31: Projeto - App de Delivery]()_
+- [ ] 31-1: _[Bloco 31: Projeto - App de Delivery](-)_
 
 #### Bloco 32: MasterClass - VPS, CI/CD
 
@@ -258,27 +258,27 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 33-1: _
 - [ ] 33-2: _
 - [ ] 33-3: _
-- [ ] 33-4: _[]()_
+- [ ] 33-4: _[](-)_
 
 #### Bloco 34
 
 - [ ] 34-1: _
 - [ ] 34-2: _
 - [ ] 34-3: _
-- [ ] 34-4: _[]()_
+- [ ] 34-4: _[](-)_
 
 #### Bloco 35
 
 - [ ] 35-1: _
 - [ ] 35-2: _
-- [ ] 35-3: _[]()_
+- [ ] 35-3: _[](-)_
 
 #### Bloco 36: Python
 
 - [ ] 36-1: _
 - [ ] 36-2: _
 - [ ] 36-3: _
-- [ ] 36-4: _[]()_
+- [ ] 36-4: _[](-)_
 
 #### Bloco 37
 
@@ -286,10 +286,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 37-2: _
 - [ ] 37-3: _
 - [ ] 37-4: _
-- [ ] 37-5: _[]()_
+- [ ] 37-5: _[](-)_
 
 #### Bloco 38
 
 - [ ] 38-1: _
 - [ ] 38-2: _
-- [ ] 38-3: _[]()_
+- [ ] 38-3: _[](-)_
