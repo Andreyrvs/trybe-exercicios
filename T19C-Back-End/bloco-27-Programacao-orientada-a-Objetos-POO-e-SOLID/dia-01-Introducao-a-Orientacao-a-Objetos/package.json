@@ -4,8 +4,8 @@
   "description": "Dia 01",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node ./dist/index.js",
-    "dev": "tsnd index.ts",
+    "start": "npm run build && node ./dist/lanchonete/index.js",
+    "dev": "tsnd lanchonete/index.ts",
     "build": "npx tsc"
   },
   "keywords": [],
