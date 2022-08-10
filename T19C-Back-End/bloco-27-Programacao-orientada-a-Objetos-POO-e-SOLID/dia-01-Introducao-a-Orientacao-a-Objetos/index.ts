@@ -59,8 +59,30 @@ class Estudante {
     }
     this.notaTrabalho = value;
   }
+
+  public somaNota(): number{
+    return [...this.NotaProva, ...this.notaTrabalho]
+      .reduce((notaAnterior, nota) => {
+        nota += notaAnterior
+
+        return nota
+      }, 0)
+  }
+
+  public mediaNota(): number {
+    const quantidateNotas = this.notaProva.length + this.NotaTrabalho.length
+    return Math.round(this.somaNota() / quantidateNotas)
+  }
 }
 
-const p1 = new Estudante("2233", "Andrey", [1,2,3,4], [4,6])
-console.log(p1);
+const estudante01 = new Estudante("2233", "Andrey", [1,2,3,4], [4,6])
+console.log(estudante01);
+console.log(`Soma das notas: ${estudante01.somaNota()}`);
+console.log(`Média das notas: ${estudante01.mediaNota()}`);
 
+
+const estudante02 = new Estudante("7777", "Cortaesai", [2,4,2,3], [6,5])
+
+console.log(estudante02);
+console.log(`Soma das notas: ${estudante02.somaNota()}`);
+console.log(`Média das notas: ${estudante02.mediaNota()}`);
