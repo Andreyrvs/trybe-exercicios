@@ -1,33 +1,32 @@
+// OrderItem.ts
 export default class OrderItem {
-  private nome: string;
-  private price: number;
+  private _name: string;
+  private _price: number;
 
-  constructor(nome: string, price:number) {
-    this.nome = nome;
-    this.price = price;
+  constructor(name: string, price: number) {
+    this._name = name;
+    this._price = price;
   }
 
-  getNome(): string {
-    return this.nome
+  get name(): string {
+    return this._name;
   }
 
-  setNome(value: string) {
+  set name(value: string) {
     if (value.length < 3) {
-      throw new Error("O nome deve conter no mínimo 3 caracteres");
+      throw new Error('O nome deve conter no mínimo 3 caracteres.');
     }
 
-    return this.nome = value
+    this._name = value;
   }
 
-  getPrice(): number {
-    return this.price;
+  get price(): number {
+    return this._price;
   }
 
-  setPrice(value: number) {
-    if (value < 0) {
-      throw new Error("O preço deve ser positivo");
-    }
+  set price(value: number) {
+    if (value < 0) throw new Error('O preço deve ser positivo.');
 
-    return this.price = value
+    this._price = value;
   }
 }

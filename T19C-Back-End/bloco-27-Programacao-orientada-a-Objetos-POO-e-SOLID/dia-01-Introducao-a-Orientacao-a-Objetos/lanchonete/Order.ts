@@ -1,57 +1,75 @@
-import Cliente from './Cliente';
+// Order.ts
+import Client from './Client';
 import OrderItem from './OrderItem';
 
 export default class Order {
-  private cliente: Cliente;
-  private itemPedido: OrderItem[]= Array();
-  private formaDePagamento: string;
-  private desconto = 0;
+  private _client: Client;
+  private _items: OrderItem[] = [];
+  private _paymentMethod: string;
+  private _discount = 0;
 
-  constructor(cliente: Cliente, itemPedido: OrderItem[], formaDePagamento: string, desconto: number) {
-    this.cliente = cliente
-    this.itemPedido = itemPedido
-    this.formaDePagamento = formaDePagamento
-    this.desconto = desconto
+  constructor(
+    client: Client, 
+    items: OrderItem[], 
+    paymentMethod: string, 
+    discount: number,
+  ) {
+    this._client = client;
+    this.items = items;
+    this._paymentMethod = paymentMethod;
+    this.discount = discount;
   }
 
-  public getClient(): Cliente {
-    return this.cliente
+  get client(): Client {
+    return this._client;
   }
 
-  public setClient(value: Cliente) {
-    return this.cliente = value
+  set client(value: Client) {
+    this._client = value;
   }
 
-  public getItemPedido(): OrderItem[] {
-    return this.itemPedido
+  get items(): OrderItem[] {
+    return this._items;
   }
 
-  public setItemPedito(value: OrderItem[]) {
-    if(value.length === 0) {
-      throw new Error("O pedido deve ter pelo menos um item");
+  set items(value: OrderItem[]) {
+    if (value.length === 0) {
+      throw new Error('O pedido deve ter pelo meno um item.');
     }
-    
-    return this.itemPedido = value
+
+    this._items = value;
   }
 
-  public getFormaDePagamento(): string {
-    return this.formaDePagamento
+  get paymentMethod(): string {
+    return this._paymentMethod;
   }
 
-  public setFormaDePagamento(value: string) {
-    return this.formaDePagamento = value
+  set paymentMethod(value: string) {
+    this._paymentMethod = value;
   }
 
-  public getDesconto(): number {
-    return this.desconto
+  get discount(): number {
+    return this._discount;
   }
 
-  public setDesconto(value: number) {
+  set discount(value: number) {
     if (value < 0) {
-      throw new Error("O desconto não pode ser um valor negativo");
+      throw new Error('O desconto não pode ser um valor negativo.');
     }
 
-    return this.desconto = value
+    this._discount = value;
   }
 
+  calculateTotal(): number {
+    return this.items
+      .reduce((previousValue, item) => {
+        const total = previousValue + item.price;
+
+        return total;
+      }, 0);
+  }
+
+  calculateTotalWithDiscount(): number {
+    return this.calculateTotal() * (1 - this.discount);
+  }
 }

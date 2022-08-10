@@ -1,14 +1,16 @@
-import Cliente from './Cliente';
+//index.ts
+import Client from './Client';
 import Order from './Order';
 import OrderItem from './OrderItem';
 
-const client = new Cliente('Jao');
+const client = new Client('João');
 
-const sanduiche = new OrderItem('Sanduiche natural', 5.00);
+const sandwich = new OrderItem('Sanduíche Natural', 5.00);
+const juice = new OrderItem('Suco de Abacaxi', 5.00);
+const dessert = new OrderItem('Gelatina de Uva', 2.50);
 
-const suco = new OrderItem('Suco de laranja', 10.00);
-const sobreMesa = new OrderItem('laranja', 30.00);
+const order = new Order(client, [sandwich, juice, dessert], 'dinheiro', 0.10);
 
-const pedido = new Order(client, [sanduiche, suco, sobreMesa], 'credito', 0.10)
-
-console.log(pedido);
+console.log(order);
+console.log('Valor normal: ', order.calculateTotal());
+console.log('Valor com desconto: ', order.calculateTotalWithDiscount());
