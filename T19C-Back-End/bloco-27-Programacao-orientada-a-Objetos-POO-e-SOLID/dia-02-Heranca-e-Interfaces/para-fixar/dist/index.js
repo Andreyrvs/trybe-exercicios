@@ -10,19 +10,17 @@ class SuperClass {
 }
 class SubClass extends SuperClass {
     constructor(isSuper = true) {
-        super();
+        super(isSuper = false);
         this.isSuper = isSuper;
-    }
-    sayHello2() {
-        return this.sayHello();
     }
 }
 function myfunc(obj) {
-    obj.sayHello2();
+    console.log(obj.isSuper ? 'Super!' : 'Sub!');
 }
-// const newObj = new SuperClass()
-// console.log(newObj.sayHello());
-const newSobj = new SubClass();
-console.log(newSobj.sayHello2());
-// myfunc(newObj)
-myfunc(newSobj);
+const newSuperClass = new SuperClass();
+// console.log(newSuperClass.sayHello());
+const newSubClass = new SubClass();
+// console.log(newSubClass.isSuper ? 'Super!' : 'Sub!');
+// console.log(newSubClass.sayHello());
+// myfunc(newSuperClass)
+// myfunc(newSubClass)

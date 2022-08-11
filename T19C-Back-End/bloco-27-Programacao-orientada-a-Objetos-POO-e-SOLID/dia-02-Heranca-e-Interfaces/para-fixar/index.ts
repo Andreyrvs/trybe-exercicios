@@ -15,16 +15,15 @@ class SubClass extends SuperClass {
 }
 
 function myfunc(obj: SuperClass) {
-  obj.sayHello()
+  console.log(obj.isSuper ? 'Super!' : 'Sub!');
 }
 
 const newSuperClass = new SuperClass()
-console.log(newSuperClass.isSuper ? 'Super!' : 'Sub!');
 
 // console.log(newSuperClass.sayHello());
 const newSubClass = new SubClass()
-console.log(newSubClass.isSuper ? 'Super!' : 'Sub!');
+// console.log(newSubClass.isSuper ? 'Super!' : 'Sub!');
 // console.log(newSubClass.sayHello());
 
-// myfunc(newSuperClass)
-// myfunc(newSubClass)
+myfunc(newSuperClass)
+myfunc(newSubClass)
