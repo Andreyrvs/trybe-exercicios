@@ -13,13 +13,16 @@ class SubClass extends SuperClass {
         super();
         this.isSuper = isSuper;
     }
+    sayHello2() {
+        return this.sayHello();
+    }
 }
 function myfunc(obj) {
-    obj.sayHello();
+    obj.sayHello2();
 }
-const newObj = new SuperClass();
-console.log(newObj.sayHello());
+// const newObj = new SuperClass()
+// console.log(newObj.sayHello());
 const newSobj = new SubClass();
-console.log(newSobj.sayHello());
-myfunc(newObj);
+console.log(newSobj.sayHello2());
+// myfunc(newObj)
 myfunc(newSobj);
