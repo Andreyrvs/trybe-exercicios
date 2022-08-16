@@ -1,9 +1,12 @@
-class Name {
-
-  constructor(parameters: string) {
-
+class Person {
+  private name: string
+  private birthDate: string
+  constructor(name: string, birthDate: string) {
+    this.name = name;
+    this.birthDate = birthDate
   }
-  
+
+
 }
 
-export default Name
+export default Person
