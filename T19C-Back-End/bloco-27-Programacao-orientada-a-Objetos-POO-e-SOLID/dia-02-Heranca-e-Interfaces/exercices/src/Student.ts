@@ -1,11 +1,13 @@
 import Person from './Person';
 
 class Student extends Person {
+  private _enrollment = String()
+  private _examsGrades: number[] = []
+  private _worksGrades: number[] = []
+  constructor(name: string, birthDate: Date) {
+    super(name, birthDate);
 
-  constructor(
-    private _enrollment: string, private _examsGrades: number[], private _worksGrades: number[]
-  ) {
-    super('jao', new Date('1999/1/15'));
+    this.enrollment = this.generateEnrollment()
   }
 
   public get enrollment(): string {
@@ -23,7 +25,7 @@ class Student extends Person {
 
   public set examsGrades(value: number[]) {
     this.validateGrades(value)
-    this._examsGrades = value;
+    this._examsGrades = value
   }
 
   public get worksGrades(): number[] {
@@ -31,6 +33,7 @@ class Student extends Person {
   }
 
   public set worksGrades(value: number[]) {
+    this.validateWorks(value)
     this._worksGrades = value;
   }
 
@@ -43,31 +46,39 @@ class Student extends Person {
 
   validateGrades(value: number[]): void {
     const numberOfGrades = 4
-    if (value.length !== numberOfGrades) {
+    if (value.length > numberOfGrades) {
       throw new Error(`Deve ter ${numberOfGrades} notas de provas`);
     }
   }
 
   validateWorks(value: number[]): void {
     const numberOfWorks = 2
-    if (value.length !== numberOfWorks) {
+    if (value.length > numberOfWorks) {
       throw new Error(`Deve ter ${numberOfWorks} notas de trabalhos`);
     }
   }
 
-  sumGrades(): number {
-    return [...this._examsGrades, ...this._worksGrades].reduce((prevValue, current) => {
-      const sum = prevValue + current;
+  generateEnrollment(): string {
+    const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
 
-      return sum;
-    });
-  }
-
-  sumAvarageGrade(): number {
-    const avarage = this._examsGrades.length + this._worksGrades.length
-
-    return this.sumGrades() / avarage
+    return `STU${randomStr}`;
   }
 }
 
 export default Student
+
+
+
+  // sumGrades() {
+  //   return [...this._examsGrades, ...this._worksGrades].reduce((prevValue, current) => {
+  //     const sum = prevValue + current;
+
+  //     return sum;
+  //   });
+  // }
+
+  // sumAvarageGrade() {
+  //   const avarage = this._examsGrades.length + this._worksGrades.length
+
+  //   return this.sumGrades() / avarage
+  // }
