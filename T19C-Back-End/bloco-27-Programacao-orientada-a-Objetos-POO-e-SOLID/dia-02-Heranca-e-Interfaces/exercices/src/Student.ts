@@ -58,7 +58,7 @@ class Student extends Person {
     }
   }
 
-  generateEnrollment(): string {
+  private generateEnrollment(): string {
     const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
 
     return `STU${randomStr}`;
