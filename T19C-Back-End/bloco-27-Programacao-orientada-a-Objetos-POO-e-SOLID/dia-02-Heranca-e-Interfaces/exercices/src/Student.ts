@@ -37,21 +37,21 @@ class Student extends Person {
     this._worksGrades = value;
   }
 
-  validateEnrollment(value: string): void {
+  private validateEnrollment(value: string): void {
     const minimumOfCharacters = 16
     if (value.length < minimumOfCharacters) {
       throw new Error(`A matricula deve ter possuir no minimo ${minimumOfCharacters} caracteres`);
     }
   }
 
-  validateGrades(value: number[]): void {
+  private validateGrades(value: number[]): void {
     const numberOfGrades = 4
     if (value.length > numberOfGrades) {
       throw new Error(`Deve ter ${numberOfGrades} notas de provas`);
     }
   }
 
-  validateWorks(value: number[]): void {
+  private validateWorks(value: number[]): void {
     const numberOfWorks = 2
     if (value.length > numberOfWorks) {
       throw new Error(`Deve ter ${numberOfWorks} notas de trabalhos`);

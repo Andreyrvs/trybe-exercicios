@@ -1,7 +1,7 @@
 // import Person from './Person';
 import Student from './Student'
 import Employee from './interfaces/Employee';
-
+import Subject from './Subject';
 // Exercicio 01
 /* const andrey = new Person('andrey', new Date('1997/06/16'))
 const junin = new Person('junin', new Date('2000/02/10'))
@@ -33,6 +33,7 @@ console.log(fernando); */
 
 // Exercicio 03
 /* const testInterfaceEmployee: Employee = {
+
   registration: 'FNC1234567891011',
   salary: 1200.00,
   admissionDate: new Date(),
@@ -44,3 +45,9 @@ console.log(fernando); */
 }
 console.log("🚀 ~ testInterfaceEmployee", testInterfaceEmployee)
  */
+
+// Exercicio 04
+
+const classe01 = new Subject('art')
+
+console.log(classe01);

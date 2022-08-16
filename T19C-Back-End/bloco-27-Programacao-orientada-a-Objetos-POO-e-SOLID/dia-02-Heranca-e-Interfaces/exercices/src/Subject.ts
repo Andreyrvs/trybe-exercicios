@@ -12,7 +12,7 @@ class Subject {
     this._name = value
   }
 
-  validateName(value: string): void {
+  private validateName(value: string): void {
     const minimunOfCharacters = 3
     if (value.length < minimunOfCharacters) {
       throw new Error("O nome tem que possuir no mínimo 03 caracteres");
