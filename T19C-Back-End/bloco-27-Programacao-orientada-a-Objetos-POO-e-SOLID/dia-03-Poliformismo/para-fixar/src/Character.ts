@@ -55,19 +55,59 @@ class LocalDbModel implements IModel {
 }
 
 class CharacterService {
-  constructor(parameters) {
-    
+  constructor(readonly model: LocalDbModel) { }
+
+  async create(character:Character) {
+    const newCharacter = await this.model.create(character);
+    return ({ status: 201, data: newCharacter})
   }
+
+  async getAll() {
+    const allCharacter = await this.model.getAll();
+    return ({ status: 200, data: allCharacter });
+  }
+
+    /* Implementação dos outros métodos */
 }
 
 class MockedDbModel implements IModel {
-  create: (character: Character) => Promise<DbCharacter>;
-  update: (id: number, character: Character) => Promise<DbCharacter>;
-  delete: (id: number) => Promise<Boolean>;
-  getAll: () => Promise<DbCharacter[]>;
-  getById: (id: number) => Promise<DbCharacter>;
+  async create(character: Character) {
+    console.log('character created');
+    return {id: 1, name: 'Peach', specialMove: 'Toad'}
+  }
 
-  constructor(parameters) {
-    
+  async update(id: number, character: Character) {
+    console.log('character updated');
+    return { id: 1, name: 'Yoshi', specialMove: 'Egg Lay' };
+  }
+
+  async delete(id: number) {
+    console.log('character deleted');
+    return true
+  }
+
+  async getAll() {
+    return [
+      { id: 1, name: 'Samus', specialMove: 'Charge Shot' },
+      { id: 2, name: 'Kirby', specialMove: 'Inhale' },
+    ];
+  }
+
+  async getById(id: number) {
+    return { id: 1, name: 'Mario', specialMove: 'Fireball' };
+  }
+
+  findIndexById = (id: number) => {
+    const index = db.findIndex((character) => character.id === id);
+    if (index < 0 ) {
+      throw new Error("Character not found");
+    }
+    return index;
   }
 }
+
+const A = new CharacterService(new LocalDbModel())
+A.getAll().then(console.log)
+
+const B = new CharacterService(new MockedDbModel());
+B.getAll().then(console.log);
