@@ -29,40 +29,52 @@ class Teacher extends Person implements Employee {
   }
 
   public set salary(value: number) {
-    if (value < 0) {
-      throw new Error(" O salário não pode ser negativo.");
-    }
+    this.validateSalary(value)
     this._salary = value;
   }
 
   public get admissionDate(): Date {
     return this._admissionDate;
   }
-  public set admissionDate(value: Date) {
-    if (value.getTime() > new Date().getTime()) {
-      throw new Error("A data de admissão não pode ser no futuro");
 
-    }
+  public set admissionDate(value: Date) {
+    this.validateAdmissionDate(value)
     this._admissionDate = value;
   }
 
-  public get registration() {
+  public get registration(): string {
     return this._registration;
   }
 
-  public set registration(value) {
-    const minimumOfCharacters = 16
-    if (value.length < minimumOfCharacters) {
-      throw new Error("O registro deve possuir no mínimo 16 caracteres");
-    }
+  public set registration(value: string) {
+    this.validateRegistration(value)
     this._registration = value;
   }
 
   generateRegistration(): string {
     const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
-    return `STU${randomStr}`;
+    return `PRF${randomStr}`;
   }
 
+  private validateSalary(value: number) {
+    const positiveSalary = 0
+    if (value < positiveSalary) {
+      throw new Error(" O salário não pode ser negativo.");
+    }
+  }
+
+  private validateAdmissionDate(value: Date) {
+    if (value.getTime() > new Date().getTime()) {
+      throw new Error("A data de admissão não pode ser no futuro");
+    }
+  }
+
+  private validateRegistration(value: string) {
+    const minimumOfCharacters = 16
+    if (value.length < minimumOfCharacters) {
+      throw new Error("O registro deve possuir no mínimo 16 caracteres");
+    }
+  }
 }
 
 
