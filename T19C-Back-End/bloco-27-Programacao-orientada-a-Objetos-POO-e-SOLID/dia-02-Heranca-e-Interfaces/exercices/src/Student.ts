@@ -63,22 +63,23 @@ class Student extends Person {
 
     return `STU${randomStr}`;
   }
+
+  public sumGrades(): number {
+    return [...this._examsGrades, ...this._worksGrades].reduce((prevValue, current) => {
+      const sum = prevValue + current;
+
+      return sum;
+    }, 0);
+  }
+
+  public sumAvarageGrade(): number {
+    const avarage = this._examsGrades.length + this._worksGrades.length
+
+    return Math.round(this.sumGrades() / avarage)
+  }
 }
 
 export default Student
 
 
 
-  // sumGrades() {
-  //   return [...this._examsGrades, ...this._worksGrades].reduce((prevValue, current) => {
-  //     const sum = prevValue + current;
-
-  //     return sum;
-  //   });
-  // }
-
-  // sumAvarageGrade() {
-  //   const avarage = this._examsGrades.length + this._worksGrades.length
-
-  //   return this.sumGrades() / avarage
-  // }

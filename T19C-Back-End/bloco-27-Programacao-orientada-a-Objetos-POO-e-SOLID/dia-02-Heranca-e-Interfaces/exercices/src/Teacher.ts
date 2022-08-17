@@ -77,5 +77,4 @@ class Teacher extends Person implements Employee {
   }
 }
 
-
 export default Teacher
