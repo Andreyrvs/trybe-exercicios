@@ -1,24 +1,19 @@
 class Subject {
-
   constructor(private _name: string) {
-    this.name = _name
+    this.name = _name;
   }
 
   public get name(): string {
-    return this._name
+    return this._name;
   }
+
   public set name(value: string) {
-    this.validateName(value)
-    this._name = value
-  }
-
-  private validateName(value: string): void {
-    const minimunOfCharacters = 3
+    const minimunOfCharacters = 3;
     if (value.length < minimunOfCharacters) {
-      throw new Error("O nome tem que possuir no mínimo 03 caracteres");
+      throw new Error('O nome tem que possuir no mínimo 03 caracteres');
     }
+    this._name = value;
   }
-
 }
 
-export default Subject
+export default Subject;

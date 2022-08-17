@@ -3,6 +3,7 @@ import Student from './Student'
 import Employee from './interfaces/Employee';
 import Subject from './Subject';
 import Teacher from './Teacher';
+
 // Exercicio 01
 /* const andrey = new Person('andrey', new Date('1997/06/16'))
 const junin = new Person('junin', new Date('2000/02/10'))
@@ -89,4 +90,3 @@ const lucio = new Teacher('Lucio Teixeira', new Date('1986/01/29'), 2000, philos
 console.log(marta);
 console.log(joao);
 console.log(lucio); */
-
