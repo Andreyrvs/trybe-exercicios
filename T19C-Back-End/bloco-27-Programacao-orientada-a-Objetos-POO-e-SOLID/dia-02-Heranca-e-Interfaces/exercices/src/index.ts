@@ -2,6 +2,7 @@
 import Student from './Student'
 import Employee from './interfaces/Employee';
 import Subject from './Subject';
+import Teacher from './Teacher';
 // Exercicio 01
 /* const andrey = new Person('andrey', new Date('1997/06/16'))
 const junin = new Person('junin', new Date('2000/02/10'))
@@ -48,6 +49,17 @@ console.log("🚀 ~ testInterfaceEmployee", testInterfaceEmployee)
 
 // Exercicio 04
 
-const classe01 = new Subject('art')
+/* const math = new Subject('math')
+const story = new Subject('story')
+const philosophy = new Subject('philosophy')
 
-console.log(classe01);
+console.log(math);
+console.log(story);
+console.log(philosophy);
+ */
+
+// Exercicio 05 
+
+const teacherAna = new Teacher('Ana', new Date('1980/4/23'), 2300, new Subject('Matematica'))
+
+console.log(teacherAna);
