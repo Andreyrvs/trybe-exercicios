@@ -1,55 +1,54 @@
-import Enrollable from './Enrollable'
-import Person from './Person'
+// Employee.ts
+
+import Enrollable from './Enrollable';
+import Person from './Person';
 
 export default class Employee extends Person implements Enrollable {
-  private _enrollment =String()
-  private _admissionDate: Date
+  private _enrollment = String();
+  private _admissionDate: Date;
 
-  constructor(name:string, birthDate: Date, private _salary: number) {
-    super(name, birthDate)
+  constructor(name: string, birthDate: Date, private _salary: number) {
+    super(name, birthDate);
 
-    this.salary = _salary
-    this._admissionDate = new Date()
-    this.enrollment = this.generateEnrollment()
+    this.salary = _salary;
+    this._admissionDate = new Date();
+    this.enrollment = this.generateEnrollment();
   }
 
-  public get enrollment() : string {
+  get enrollment(): string {
     return this._enrollment;
   }
-  
-  public set enrollment(value : string) {
-    const minimumOfCharacters = 16
-    if (value.length < minimumOfCharacters) {
-      throw new Error(`A matricula deve ter possuir no minimo ${minimumOfCharacters} caracteres`);
+
+  set enrollment(value: string) {
+    if (value.length < 16) {
+      throw new Error('A matrícula deve possuir no mínimo 16 caracteres.');
     }
+
     this._enrollment = value;
   }
-  
-  public get salary() : number {
-    return this._salary
+
+  get salary(): number {
+    return this._salary;
   }
-  
-  public set salary(value : number) {
-    const positiveSalary = 0
-    if (value < positiveSalary ) {
-      throw new Error('O salário não pode ser negativo.');
-    }
+
+  set salary(value: number) {
+    if (value < 0) throw new Error('O salário não pode ser negativo.');
 
     this._salary = value;
   }
 
-  public get admissionDate() : Date {
-    return this._admissionDate
+  get admissionDate(): Date {
+    return this._admissionDate;
   }
 
-  public set admissionDate(value : Date) {
+  set admissionDate(value: Date) {
     if (value.getTime() > new Date().getTime()) {
-      throw new Error("A data de admissão não pode ser uma data no futuro.");
+      throw new Error('A data de admissão não pode ser uma data no futuro.');
     }
 
     this._admissionDate = value;
   }
-  
+
   generateEnrollment(): string {
     const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
 
