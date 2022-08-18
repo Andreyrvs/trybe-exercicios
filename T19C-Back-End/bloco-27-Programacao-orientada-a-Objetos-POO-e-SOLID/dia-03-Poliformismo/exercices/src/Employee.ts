@@ -1,4 +1,4 @@
-import Enrollable from './interfaces/Enrollable'
+import Enrollable from './Enrollable'
 import Person from './Person'
 
 export default class Employee extends Person implements Enrollable {

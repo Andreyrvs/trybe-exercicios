@@ -1,52 +1,46 @@
-import Enrollable from './interfaces/Enrollable';
+// Student.ts
+
+import Enrollable from './Enrollable';
 import Person from './Person';
+import EvaluationResult from './EvaluationResult';
 
 export default class Student extends Person implements Enrollable {
-  private _enrollment = String()
-  private _examsGrades: number[] = []
-  private _worksGrades: number[] = []
+  private _enrollment = String();
+  private _evaluationsResults: EvaluationResult[];
+
   constructor(name: string, birthDate: Date) {
     super(name, birthDate);
-
-    this.enrollment = this.generateEnrollment()
+    this.enrollment = this.generateEnrollment();
+    this._evaluationsResults = [];
   }
 
-  public get enrollment(): string {
+  get enrollment(): string {
     return this._enrollment;
   }
 
-  public set enrollment(value: string) {
-    const minimumOfCharacters = 16
-    if (value.length < minimumOfCharacters) {
-      throw new Error(`A matricula deve ter possuir no minimo ${minimumOfCharacters} caracteres`);
+  set enrollment(value: string) {
+    if (value.length < 16) {
+      throw new Error('A matrícula deve possuir no mínimo 16 caracteres.');
     }
+
     this._enrollment = value;
   }
 
-  public get examsGrades(): number[] {
-    return this._examsGrades;
+  get evaluationsResults(): EvaluationResult[] {
+    return this._evaluationsResults;
   }
 
-  public set examsGrades(value: number[]) {
-    const numberOfGrades = 4
-    if (value.length > numberOfGrades) {
-      throw new Error(`Deve ter ${numberOfGrades} notas de provas`);
-    }
-    this._examsGrades = value
+  sumGrades(): number {
+    return [...this._evaluationsResults]
+      .reduce((previousNote, note) => note.score + previousNote, 0);
   }
 
-  public get worksGrades(): number[] {
-    return this._worksGrades;
-  }
+  sumAverageGrade(): number {
+    const sumGrades = this.sumGrades();
+    const divider = this._evaluationsResults.length;
 
-  public set worksGrades(value: number[]) {
-    const numberOfWorks = 2
-    if (value.length > numberOfWorks) {
-      throw new Error(`Deve ter ${numberOfWorks} notas de trabalhos`);
-    }
-    this._worksGrades = value;
+    return Math.round(sumGrades / divider);
   }
-
 
   generateEnrollment(): string {
     const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
@@ -54,17 +48,7 @@ export default class Student extends Person implements Enrollable {
     return `STU${randomStr}`;
   }
 
-  sumGrades(): number {
-    return [...this._examsGrades, ...this._worksGrades].reduce((prevValue, current) => {
-      const sum = prevValue + current;
-
-      return sum;
-    }, 0);
-  }
-
-  sumAvarageGrade(): number {
-    const avarage = this._examsGrades.length + this._worksGrades.length
-
-    return Math.round(this.sumGrades() / avarage)
+  addEvaluationResult(value: EvaluationResult): void {
+    this._evaluationsResults.push(value);
   }
 }
