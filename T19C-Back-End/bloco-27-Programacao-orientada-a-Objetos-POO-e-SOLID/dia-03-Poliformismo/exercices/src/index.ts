@@ -3,16 +3,25 @@ import Student from './Student'
 import Employee from './interfaces/Employee';
 import Subject from './Subject';
 import Teacher from './Teacher';
+import Person from './Person';
 
 // Exercicio 01
-/* const andrey = new Person('andrey', new Date('1997/06/16'))
-const junin = new Person('junin', new Date('2000/02/10'))
 
-console.log(andrey);
-console.log(junin); */
+// tentar fazer isso agora deve gerar um erro
+// já que nossa classe se tornou abstrata e não podemos criar instâncias de classes abstratas
+// const pessoa = new Person('Carolina da Silva', new Date('2005/03/17'));
+
+// isso não deve gerar nenhum erro
+const carolina = new Student('Carolina da Silva', new Date('2005/03/17'));
+console.log(carolina);
+
+const math = new Subject('Matemática');
+// isso também não deve gerar nenhum erro
+const marta = new Teacher('Marta da Silva', new Date('1980/03/30'), 2000, math);
+console.log(marta);
 
 // Exercicio 02
-const andrey = new Student('Andrey', new Date('1997/06/16'));
+/* const andrey = new Student('Andrey', new Date('1997/06/16'));
 const carolina = new Student('Carolina da Silva', new Date('2005/03/17'));
 const lucas = new Student('Lucas Peixoto Salgueiro', new Date('2006/07/19'));
 const jessica = new Student('Jéssica Bianca Nunes', new Date('2004/06/06'));
@@ -48,7 +57,7 @@ console.log(`Media de Todas as notas: ${tamires.sumAvarageGrade()}`);
 
 console.log(fernando);
 console.log(`Soma de Todas as notas: ${fernando.sumGrades()}`);
-console.log(`Media de Todas as notas: ${fernando.sumAvarageGrade()}`);
+console.log(`Media de Todas as notas: ${fernando.sumAvarageGrade()}`); */
 
 // Exercicio 03
 /* const testInterfaceEmployee: Employee = {
@@ -90,3 +99,5 @@ const lucio = new Teacher('Lucio Teixeira', new Date('1986/01/29'), 2000, philos
 console.log(marta);
 console.log(joao);
 console.log(lucio); */
+
+// ==== Polimorfismo

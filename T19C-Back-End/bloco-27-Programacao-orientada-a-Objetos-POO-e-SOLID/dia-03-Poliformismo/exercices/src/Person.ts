@@ -1,4 +1,4 @@
-class Person {
+export default abstract class Person {
   constructor(private _name: string, private _birthDate: Date) {
     this.name = _name;
     this.birthDate = _birthDate;
@@ -46,5 +46,3 @@ class Person {
     }
   }
 }
-
-export default Person;
