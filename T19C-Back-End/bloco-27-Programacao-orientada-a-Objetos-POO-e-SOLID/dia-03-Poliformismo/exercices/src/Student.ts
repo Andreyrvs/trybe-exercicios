@@ -1,6 +1,7 @@
+import Enrollable from './interfaces/Enrollable';
 import Person from './Person';
 
-class Student extends Person {
+export default class Student extends Person implements Enrollable {
   private _enrollment = String()
   private _examsGrades: number[] = []
   private _worksGrades: number[] = []
@@ -15,7 +16,10 @@ class Student extends Person {
   }
 
   public set enrollment(value: string) {
-    this.validateEnrollment(value)
+    const minimumOfCharacters = 16
+    if (value.length < minimumOfCharacters) {
+      throw new Error(`A matricula deve ter possuir no minimo ${minimumOfCharacters} caracteres`);
+    }
     this._enrollment = value;
   }
 
@@ -24,7 +28,10 @@ class Student extends Person {
   }
 
   public set examsGrades(value: number[]) {
-    this.validateGrades(value)
+    const numberOfGrades = 4
+    if (value.length > numberOfGrades) {
+      throw new Error(`Deve ter ${numberOfGrades} notas de provas`);
+    }
     this._examsGrades = value
   }
 
@@ -33,38 +40,21 @@ class Student extends Person {
   }
 
   public set worksGrades(value: number[]) {
-    this.validateWorks(value)
-    this._worksGrades = value;
-  }
-
-  private validateEnrollment(value: string): void {
-    const minimumOfCharacters = 16
-    if (value.length < minimumOfCharacters) {
-      throw new Error(`A matricula deve ter possuir no minimo ${minimumOfCharacters} caracteres`);
-    }
-  }
-
-  private validateGrades(value: number[]): void {
-    const numberOfGrades = 4
-    if (value.length > numberOfGrades) {
-      throw new Error(`Deve ter ${numberOfGrades} notas de provas`);
-    }
-  }
-
-  private validateWorks(value: number[]): void {
     const numberOfWorks = 2
     if (value.length > numberOfWorks) {
       throw new Error(`Deve ter ${numberOfWorks} notas de trabalhos`);
     }
+    this._worksGrades = value;
   }
 
-  private generateEnrollment(): string {
+
+  generateEnrollment(): string {
     const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
 
     return `STU${randomStr}`;
   }
 
-  public sumGrades(): number {
+  sumGrades(): number {
     return [...this._examsGrades, ...this._worksGrades].reduce((prevValue, current) => {
       const sum = prevValue + current;
 
@@ -72,11 +62,9 @@ class Student extends Person {
     }, 0);
   }
 
-  public sumAvarageGrade(): number {
+  sumAvarageGrade(): number {
     const avarage = this._examsGrades.length + this._worksGrades.length
 
     return Math.round(this.sumGrades() / avarage)
   }
 }
-
-export default Student
