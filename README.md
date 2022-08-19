@@ -208,16 +208,16 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 26-1: _Introdução - TypeScript_
 - [x] 26-2: _Tipagem Estática e Generics_
 - [x] 26-3: _Express com TypeScript_
-- [x] 26-4: _[Projeto - Trybe Smith](-)_
+- [x] 26-4: _[Projeto - Trybe Smith](https://github.com/Andreyrvs/trybe-smith)_
 
 #### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
 
 - [x] 27-1: _Introdução à Orientação a Objetos_
-- [ ] 27-2: _Herança e Interfaces_
-- [ ] 27-3: _Polimorfismo_
-- [ ] 27-4: _SOLID - Introdução e Princípios S, O e D_
-- [ ] 27-5: _SOLID - Princípios L e I_
-- [ ] 27-3: _[Projeto - Trybers and Dragons](-)_
+- [x] 27-2: _Herança e Interfaces_
+- [x] 27-3: _Polimorfismo_
+- [x] 27-4: _SOLID - Introdução e Princípios S, O e D_
+- [x] 27-5: _SOLID - Princípios L e I_
+- [x] 27-3: _[Projeto - Trybers and Dragons](https://github.com/Andreyrvs/trybers-and-dragons)_
 
 #### Bloco 28: Projeto - TFC - Trybe Futebol Clube
 
