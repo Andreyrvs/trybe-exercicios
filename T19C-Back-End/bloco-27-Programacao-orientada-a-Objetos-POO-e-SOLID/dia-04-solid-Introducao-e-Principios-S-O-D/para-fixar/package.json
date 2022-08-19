@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -r ts-node/register ./tests/**/*.{test,spec}.[t,j]s",
-    "lint": "eslint  -c .eslintrc.json src/**/*.[t,j]s"
+    "lint": "eslint -c .eslintrc.json src/**/*.[t,j]s"
   },
   "keywords": [],
   "author": "",
