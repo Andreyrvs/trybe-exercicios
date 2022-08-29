@@ -11,37 +11,47 @@ type Student = {
   disciplines: Discipline[];
 };
 
-/* "Converter" */
-const percentageGradesIntoLetters = ({ name: studentName, disciplines }: Student): {
-  name: string, disciplines: Discipline[]} => ({
-    name: studentName,
-    disciplines: disciplines.map(({ name, grade }) => {
-      let letterGrade;
+/* Apoio para a função `getGradeLetter` */
 
-      if (grade >= 0.9) letterGrade = 'A';
-      else if (grade >= 0.8) letterGrade = 'B';
-      else if (grade >= 0.7) letterGrade = 'C';
-      else if (grade >= 0.6) letterGrade = 'D';
-      else if (grade >= 0.1) letterGrade = 'E';
-      else letterGrade = 'F';
+const GRADE_DICT = {
+  numbers: [0.9, 0.8, 0.7, 0.6, 0.1, 0],
+  letters: ['A', 'B', 'C', 'D', 'E', 'F'],
 
-      return { name, grade, letterGrade };
-    }),
-  });
+};
+
+/* Função menor para remover o uso excessivo de `if{}else`s */
+
+const getGradeLetter = (gradeNumber: number): string => {
+  const gradeNumbers = GRADE_DICT.numbers;
+  const gradeLetters = GRADE_DICT.letters;
+  for (let index = 0; index < gradeNumbers.length; index += 1) {
+    if (gradeNumber >= gradeNumbers[index]) return gradeLetters[index];
+  }
+  return 'F';
+};
+
+/*  Coletar notas */
+
+const getLetterGrades = (discipline: Discipline): Discipline => ({
+  ...discipline,
+  letterGrade: getGradeLetter(discipline.grade),
+});
+
+/* converter */
+
+const percentageGradesIntoLetters = (student: Student): Student => ({
+  ...student,
+  disciplines: student.disciplines.map(getLetterGrades) });
 
 /* Determinar */
-
 const approvedStudents = ({ disciplines }: Student): boolean =>
-  disciplines.every(
-    ({ grade }) => grade > 0.7,
-  );
+  disciplines.every(({ grade }) => grade > 0.7);
 
 /* Atualizar */
+const updateAppovalData = (student: Student): void => {
+  console.log(`A pessoa com nome ${student.name} foi aprovada!`);
 
-const updateAppovalData = ({ name: studentName, disciplines }: Student): void => {
-  console.log(`A pessoa com nome ${studentName} foi aprovada!`);
-
-  disciplines.map(({ name, letterGrade }) => 
+  student.disciplines.forEach(({ name, letterGrade }) => 
     console.log(`${name}: ${letterGrade}`));
 };
 
