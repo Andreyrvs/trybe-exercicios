@@ -48,23 +48,24 @@ const approvedStudents = ({ disciplines }: Student): boolean =>
   disciplines.every(({ grade }) => grade > 0.7);
 
 /* Atualizar */
-const updateAppovalData = (student: Student): void => {
+const updateApprovalData = (student: Student): void => {
   console.log(`A pessoa com nome ${student.name} foi aprovada!`);
 
   student.disciplines.forEach(({ name, letterGrade }) => 
     console.log(`${name}: ${letterGrade}`));
 };
 
-function setAproved(students: Student[]): void {
+function setApproved(students: Student[]): void {
   students
     .map(percentageGradesIntoLetters)
     .filter(approvedStudents)
-    .map(updateAppovalData);
+    .map(updateApprovalData);
 }
 
 export {
   percentageGradesIntoLetters,
   approvedStudents,
-  updateAppovalData,
-  setAproved,
+  updateApprovalData,
+  setApproved,
+  getLetterGrades,
 };
