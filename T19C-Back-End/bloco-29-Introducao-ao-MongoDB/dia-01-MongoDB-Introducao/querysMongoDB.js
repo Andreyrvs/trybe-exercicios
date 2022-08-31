@@ -14,3 +14,4 @@ db.bios.find({"name.first": "John"}).pretty()
 db.bios.find({"name.first": "John"}).pretty()
 
 // Exercicio 06
+db.bios.find({}).limit(2).skip(5)
