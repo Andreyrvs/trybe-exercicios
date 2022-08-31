@@ -22,6 +22,7 @@ db.bios.find({}).limit(2).skip(5)
 db.books.countDocuments({})
 
 // Exercicio 08 
+db.books.countDocuments({status: "PUBLISH"})
 
 // Exercicio 09 
 
