@@ -5,6 +5,7 @@ db.bios.find({_id:8})
 db.bios.find({_id:8}, {_id: 1, name: 1})
 
 // Exercicio 03
+db.bios.find({_id: 8}, {name: 1, birth: 1})
 
 // Exercicio 04
 
