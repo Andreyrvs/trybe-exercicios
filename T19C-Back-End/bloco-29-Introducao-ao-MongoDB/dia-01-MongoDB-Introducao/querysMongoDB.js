@@ -8,6 +8,7 @@ db.bios.find({_id:8}, {_id: 1, name: 1})
 db.bios.find({_id: 8}, {name: 1, birth: 1})
 
 // Exercicio 04
+db.bios.find({"name.first": "John"}).pretty()
 
 // Exercicio 05
 
