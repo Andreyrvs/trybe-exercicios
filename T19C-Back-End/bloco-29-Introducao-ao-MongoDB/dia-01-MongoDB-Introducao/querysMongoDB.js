@@ -25,5 +25,7 @@ db.books.countDocuments({})
 db.books.countDocuments({status: "PUBLISH"})
 
 // Exercicio 09 
+db.books.find({},{title: 1, isbn: 1, pageCount: 1, _id: 0}).limit(3)
 
 // Exercicio 10 
+db.books.find({},{_id: 1, title: 1, authors: 1, status: "MEAP"}).skip(5).limit(10)
