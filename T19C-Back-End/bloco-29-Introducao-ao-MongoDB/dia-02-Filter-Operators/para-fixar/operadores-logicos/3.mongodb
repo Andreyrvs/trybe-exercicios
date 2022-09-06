@@ -1,7 +1,7 @@
 use ('business')
- db.restaurants.find({
-  $and: [
-  {borough: { $in: ["Queens", "Staten Island", "Bronx"] }  },
-  {rating: {$gte: 4}}
-  ]
-}).count()
+  db.restaurants.find({
+    $and: [
+      { borough: { $in: ["Queens", "Staten Island", "Bronx"] } },
+      { rating: {$gt: 4 } },
+    ]
+  }).count()

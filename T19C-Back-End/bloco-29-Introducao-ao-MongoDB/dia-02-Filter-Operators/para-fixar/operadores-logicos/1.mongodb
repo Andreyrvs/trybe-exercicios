@@ -1,7 +1,7 @@
 use ('business')
- db.restaurants.find({
-  $and: [
-    {rating: {$not:{$lte: 5}}},
-    {rating: {$exists: true}}
-  ] 
-}).count()
+  db.restaurants.find({
+    $and: [
+      { rating: { $not: { $lte: 5 } }},
+      { rating: { $exists: true }}
+    ] 
+  }).count()
