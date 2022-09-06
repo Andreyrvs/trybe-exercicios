@@ -1,0 +1,12 @@
+use("class");
+  db.superheroes.find({
+    $and: [
+      {
+        $or: [{ "aspects.weight": 180}, {"aspects.weight": 200} ]
+      },
+      {
+        "publisher": "Marvel Comics"
+      },
+    ]
+  }
+)
