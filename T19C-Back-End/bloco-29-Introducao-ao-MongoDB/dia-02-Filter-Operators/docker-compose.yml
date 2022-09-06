@@ -6,7 +6,7 @@ services:
     image: mongo
     container_name: bloco_29
     ports:
-      - 8080:27017
+      - 27017:27017
     volumes:
       - ./backup:/data/db
     # environment:
