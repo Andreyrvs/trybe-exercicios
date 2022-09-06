@@ -1,2 +1,2 @@
 use ('business')
- db.restaurants.find({rating: {$lte: 4 } }).count()
+ db.restaurants.find({rating: {$lt: 4 } }).count()

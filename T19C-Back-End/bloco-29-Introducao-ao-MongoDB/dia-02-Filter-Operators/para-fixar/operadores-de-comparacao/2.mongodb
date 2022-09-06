@@ -1,2 +1,2 @@
 use ('business')
- db.restaurants.find({cousine: {$ne: "American" } })
+ db.restaurants.find({cousine: {$ne: "American" } }).count()
