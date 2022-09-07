@@ -1,4 +1,5 @@
 use('cinema');
-  db.movies.find({
+db.movies.find({
     category: {$all: ['action', 'adventure']},
-  });
+  }
+).pretty();
