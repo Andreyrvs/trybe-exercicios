@@ -1,0 +1,8 @@
+use("class");
+db.movies.updateMany(
+  {title: "Home Alone"},
+  {$set: { "budget": 15, "imdbRating": 5.5 } }
+)
+
+use("class");
+db.movies.find({})
