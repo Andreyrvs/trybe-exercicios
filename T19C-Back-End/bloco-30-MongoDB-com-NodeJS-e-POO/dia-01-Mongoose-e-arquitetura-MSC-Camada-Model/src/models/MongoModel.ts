@@ -18,6 +18,10 @@ abstract class MongoModel<T> implements IModel<T> {
     }
     return this._model.findOne({ _id });
   }
+
+  public async read(): Promise<T | null> {
+    return this._model.find({});
+  }
 }
 
 export default MongoModel;
