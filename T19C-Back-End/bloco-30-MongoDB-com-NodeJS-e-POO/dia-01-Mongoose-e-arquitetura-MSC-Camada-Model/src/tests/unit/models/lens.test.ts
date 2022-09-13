@@ -3,13 +3,21 @@ import sinon from 'sinon';
 import LensModel from '../../../models/Lens';
 import { Model } from 'mongoose';
 import { lensMock, lensMockWithId } from '../../mocks/lensMock';
+import ILens from '../../../interfaces/Lens';
 
 describe('Lens Model', () => {
   const lensModel = new LensModel();
+  const lensList = [lensMockWithId, {
+    _id: 'xxxxxxxxxxxxx',
+    degree: 8,
+    antiGlade: false,
+    blueLightFilter: true
+  }]
 
   before(()=> {
     sinon.stub(Model, 'create').resolves(lensMockWithId);
     sinon.stub(Model, 'findOne').resolves(lensMockWithId);
+    sinon.stub(Model, 'find').resolves(lensList)
   });
 
   after(()=>{
@@ -35,6 +43,24 @@ describe('Lens Model', () => {
       } catch (error: any) {
         expect(error.message).to.be.eq('InvalidMongoId')
       }
-    })
+    });
   });
+
+  describe('searching lens', () => {
+    it('successfully found', async () => {
+      const lensFound = await lensModel.read();
+      expect(lensFound).to.be.an('array');
+      lensFound?.forEach((lens: ILens, index: number) => {
+        expect(lens).to.be.deep.equal(lensList[index])
+      });
+    });
+    it('_id not found', async () => {
+      try {
+        await lensModel.read();
+      } catch (error: any) {
+        expect(error.message).to.be.eq('InvalidMongoId')
+      }
+    });
+  });
+
 });

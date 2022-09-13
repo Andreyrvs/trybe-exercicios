@@ -7,7 +7,11 @@ import IFrame from '../../../interfaces/Frame';
 
 describe('Frame Model', () => {
   const frameModel = new FrameModel();
-  const frameList = [frameMockWithId]
+  const frameList = [frameMockWithId,  {
+    _id: 'xxxxxxxxxxxx',
+    material: 'prata',
+    color: 'Outro naipe'
+  }]
 
   before(() => {
     sinon.stub(Model, 'create').resolves(frameMockWithId);
