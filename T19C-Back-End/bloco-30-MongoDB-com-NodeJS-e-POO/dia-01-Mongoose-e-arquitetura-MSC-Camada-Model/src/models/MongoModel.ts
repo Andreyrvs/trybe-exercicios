@@ -7,11 +7,11 @@ abstract class MongoModel<T> implements IModel<T> {
   constructor(model:Model<T>) {
     this._model = model;
   }
-
+  
   public async create(obj: T): Promise<T> {
     return this._model.create({ ...obj });
   }
-
+  
   public async readOne(_id: string): Promise<T | null> {
     if (!isValidObjectId(_id)) {
       throw Error('InvalidMongoId');
@@ -19,8 +19,8 @@ abstract class MongoModel<T> implements IModel<T> {
     return this._model.findOne({ _id });
   }
 
-  public async read(): Promise<T | null> {
-    return this._model.find({});
+  public async read(): Promise<T[] | null> {
+    return this._model.find();
   }
 }
 

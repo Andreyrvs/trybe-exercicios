@@ -16,7 +16,7 @@ describe('Lens Model', () => {
     sinon.restore();
   });
 
-  describe('creating a frame', () => {
+  describe('creating a lens', () => {
     it('successfully created',async () => {
       const newLens = await lensModel.create(lensMock)
       expect(newLens).to.be.deep.equal(lensMockWithId)
