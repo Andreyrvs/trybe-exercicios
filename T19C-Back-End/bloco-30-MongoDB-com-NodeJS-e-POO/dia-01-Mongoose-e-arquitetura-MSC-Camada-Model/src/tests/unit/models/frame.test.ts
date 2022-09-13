@@ -73,7 +73,7 @@ describe('Frame Model', () => {
 
     it('_id not found', async () => {
       try {
-        await frameModel.readOne('123ERRADO');
+        await frameModel.destroy('123ERRADO');
       } catch (error: any) {
         expect(error.message).to.be.eq('InvalidMongoId');
       }
