@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import FrameController from '../controllers/Frame';
-import FrameModel from '../models/FrameModel';
-import FrameService from '../services/FrameService';
+import FrameModel from '../models/Frame';
+import FrameService from '../services/Frame';
 
 const route = Router();
 

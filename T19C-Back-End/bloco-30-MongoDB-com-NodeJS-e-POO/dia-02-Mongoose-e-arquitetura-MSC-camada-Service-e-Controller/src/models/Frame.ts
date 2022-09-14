@@ -7,10 +7,10 @@ const frameMongooseSchema = new Schema<IFrame>({
   color: String,
 });
 
-class FrameModel extends MongoModel<IFrame> {
+class Frame extends MongoModel<IFrame> {
   constructor(model = mongooseCreateModel('Frame', frameMongooseSchema)) {
     super(model);
   }
 }
 
-export default FrameModel;
+export default Frame;

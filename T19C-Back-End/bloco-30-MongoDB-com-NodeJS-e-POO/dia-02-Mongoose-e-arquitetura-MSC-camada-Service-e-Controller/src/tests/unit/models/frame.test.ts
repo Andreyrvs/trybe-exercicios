@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
-import FrameModel from '../../../models/FrameModel';
+import FrameModel from '../../../models/Frame';
 import { Model } from 'mongoose';
 import { frameMock, frameMockWithId } from '../../mocks/frameMock';
 import IFrame from '../../../interfaces/Frame';

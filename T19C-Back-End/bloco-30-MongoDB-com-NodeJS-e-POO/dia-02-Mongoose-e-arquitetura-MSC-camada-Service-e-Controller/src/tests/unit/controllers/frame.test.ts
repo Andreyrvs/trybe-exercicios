@@ -3,8 +3,8 @@ import * as sinon from 'sinon';
 import { NextFunction, Request, Response } from 'express';
 import { frameMock, frameMockWithId } from '../../mocks/frameMock';
 import FrameController from '../../../controllers/Frame';
-import FrameService from '../../../services/FrameService';
-import FrameModel from '../../../models/FrameModel';
+import FrameService from '../../../services/Frame';
+import FrameModel from '../../../models/Frame';
 
 
 describe('Frame Controller', () => {

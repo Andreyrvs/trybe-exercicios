@@ -2,8 +2,8 @@ import { expect } from 'chai';
 import * as sinon from 'sinon';
 import { ZodError } from 'zod';
 import { ErrorTypes } from '../../../errors/catalog';
-import FrameModel from '../../../models/FrameModel';
-import FrameService from '../../../services/FrameService';
+import FrameModel from '../../../models/Frame';
+import FrameService from '../../../services/Frame';
 import { frameMock, frameMockWithId } from '../../mocks/frameMock';
 
 describe('Frame Service', () => {
