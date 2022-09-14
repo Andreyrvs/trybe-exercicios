@@ -19,6 +19,7 @@ describe('Frame Controller', () => {
   before(() => {
     sinon.stub(frameService, 'create').resolves(frameMock);
     sinon.stub(frameService, 'readOne').resolves(frameMock);
+    sinon.stub(frameService, 'read').resolves([frameMockWithId])
 
     res.status = sinon.stub().returns(res);
     res.json = sinon.stub().returns(res);
@@ -45,6 +46,17 @@ describe('Frame Controller', () => {
       // logo ele só precisa ser um string e existir
       req.params = { id: frameMockWithId._id };
       await frameController.readOne(req, res);
+
+      expect((res.status as sinon.SinonStub).calledWith(200)).to.be.true;
+      expect((res.json as sinon.SinonStub).calledWith(frameMock)).to.be.true;
+    });
+  });
+
+  describe('Read Frames', () => {
+    it('Success', async () => {
+      // como fizemos o dublê da service o valor do `req.params.id` não vai chegar na model
+      // logo ele só precisa ser um string e existir
+      await frameController.read(req, res);
 
       expect((res.status as sinon.SinonStub).calledWith(200)).to.be.true;
       expect((res.json as sinon.SinonStub).calledWith(frameMock)).to.be.true;
