@@ -15,6 +15,7 @@ describe('Frame Service', () => {
     sinon.stub(frameModel, 'readOne')
       .onCall(0).resolves(frameMockWithId)
       .onCall(1).resolves(null);
+    sinon.stub(frameModel, 'read').resolves([frameMockWithId])
   })
 
   after(() => {
@@ -55,6 +56,13 @@ describe('Frame Service', () => {
 
       expect(error, 'error should be defined').not.to.be.undefined;
       // expect(error,message).to.be.deep.equal(ErrorTypes.EntityNotFound);
+    });
+  });
+
+  describe('Read Frames', () => {
+    it('Success', async () => {
+      const frames = await frameService.read();
+      expect(frames).to.be.deep.equal([frameMockWithId]);
     });
   });
 });
