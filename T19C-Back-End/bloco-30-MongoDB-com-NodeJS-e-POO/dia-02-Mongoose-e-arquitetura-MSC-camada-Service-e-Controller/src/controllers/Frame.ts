@@ -30,4 +30,12 @@ export default class FrameController {
     const result = await this._service.read();
     return res.status(200).json(result);
   }
+
+  public async destroy(
+    req: Request,
+    res: Response<IFrame>,
+  ) {
+    const result = await this._service.destroy(req.params.id);
+    return res.status(200).json(result);
+  }
 }
