@@ -54,8 +54,6 @@ describe('Frame Controller', () => {
 
   describe('Read Frames', () => {
     it('Success', async () => {
-      // como fizemos o dublê da service o valor do `req.params.id` não vai chegar na model
-      // logo ele só precisa ser um string e existir
       await frameController.read(req, res);
 
       expect((res.status as sinon.SinonStub).calledWith(200)).to.be.true;
