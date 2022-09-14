@@ -26,6 +26,10 @@ class FrameService implements IService<IFrame> {
     }
     return frame;
   }
+
+  public async read(): Promise<IFrame[]> {
+    return this._frame.read();
+  }
 }
 
 export default FrameService;
