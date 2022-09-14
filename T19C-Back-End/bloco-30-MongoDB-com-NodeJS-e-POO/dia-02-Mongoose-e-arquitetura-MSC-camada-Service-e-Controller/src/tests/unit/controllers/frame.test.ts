@@ -20,6 +20,7 @@ describe('Frame Controller', () => {
     sinon.stub(frameService, 'create').resolves(frameMock);
     sinon.stub(frameService, 'readOne').resolves(frameMock);
     sinon.stub(frameService, 'read').resolves([frameMockWithId])
+    sinon.stub(frameService, 'destroy').resolves(frameMockWithId);
 
     res.status = sinon.stub().returns(res);
     res.json = sinon.stub().returns(res);
@@ -58,6 +59,16 @@ describe('Frame Controller', () => {
 
       expect((res.status as sinon.SinonStub).calledWith(200)).to.be.true;
       expect((res.json as sinon.SinonStub).calledWith(frameMock)).to.be.true;
+    });
+  });
+
+  describe('Delete Frame', () => {
+    it('Success', async () => {
+      req.params = { id: frameMockWithId._id }
+      await frameController.destroy(req, res);
+
+      expect((res.status as sinon.SinonStub).calledWith(200)).to.be.true;
+      expect((res.json as sinon.SinonStub).calledWith(frameMockWithId)).to.be.true;
     });
   });
 });
