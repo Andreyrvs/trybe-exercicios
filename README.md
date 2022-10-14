@@ -139,7 +139,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [x] 18-1: _[Projeto - App de Receitas](https://github.com/Andreyrvs/recipes-app)_
 
-## Desenvolvimento Back-end :hourglass_flowing_sand: |
+## Desenvolvimento Back-end :white_check_mark: |
 
 ### Turma 19 C
 
@@ -235,61 +235,60 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 #### Bloco 30: MongoDB com Node.js e POO
 
-- [ ] 30-1: _Mongoose e arquitetura MSC(camada Model)_
-- [ ] 30-2: _Mongoose e arquitetura MSC(camada Service e Controller)s_
-- [ ] 30-3: _[Projeto - Car Shop](-)_
+- [x] 30-1: _Mongoose e arquitetura MSC(camada Model)_
+- [x] 30-2: _Mongoose e arquitetura MSC(camada Service e Controller)s_
+- [x] 30-3: _[Projeto - Car Shop](-)_
 
 #### Bloco 31: Projeto
 
-- [ ] 31-1: _[Bloco 31: Projeto - App de Delivery](-)_
+- [x] 31-1: _[Bloco 31: Projeto - App de Delivery](-)_
 
 #### Bloco 32: MasterClass - VPS, CI/CD
 
-- [ ] 32-1: _Dia 1 - VPS_
-- [ ] 32-2: _Dia 2_
+- [x] 32-1: _Dia 1 - VPS_
+- [x] 32-2: _Dia 2_
 
 ## Ciência da Computação :hourglass_flowing_sand: |
 
 ### Turma 19
 
-#### Bloco 33
+#### Seções 01: Introdução à Python
 
-- [ ] 33-1: _
-- [ ] 33-1: _
-- [ ] 33-2: _
-- [ ] 33-3: _
-- [ ] 33-4: _[](-)_
+- [ ] 1-1: _Aprendendo Python_
+- [ ] 1-2: _Entrada e Saída de Dados_
+- [ ] 1-3: _Testes_
+- [ ] 1-4: _[Projeto - Job Insights](-)_
 
-#### Bloco 34
+#### Seções 02
 
-- [ ] 34-1: _
-- [ ] 34-2: _
-- [ ] 34-3: _
-- [ ] 34-4: _[](-)_
+- [ ] 2-1: _
+- [ ] 2-2: _
+- [ ] 2-3: _
+- [ ] 2-4: _[](-)_
 
-#### Bloco 35
+#### Seções 03
 
-- [ ] 35-1: _
-- [ ] 35-2: _
-- [ ] 35-3: _[](-)_
+- [ ] 3-1: _
+- [ ] 3-2: _
+- [ ] 3-3: _[](-)_
 
-#### Bloco 36: Python
+#### Seções 04
 
-- [ ] 36-1: _
-- [ ] 36-2: _
-- [ ] 36-3: _
-- [ ] 36-4: _[](-)_
+- [ ] 4-1: _
+- [ ] 4-2: _
+- [ ] 4-3: _
+- [ ] 4-4: _[](-)_
 
-#### Bloco 37
+#### Seções 05
 
-- [ ] 37-1: _
-- [ ] 37-2: _
-- [ ] 37-3: _
-- [ ] 37-4: _
-- [ ] 37-5: _[](-)_
+- [ ] 5-1: _
+- [ ] 5-2: _
+- [ ] 5-3: _
+- [ ] 5-4: _
+- [ ] 5-5: _[](-)_
 
-#### Bloco 38
+#### Seções 06
 
-- [ ] 38-1: _
-- [ ] 38-2: _
-- [ ] 38-3: _[](-)_
+- [ ] 6-1: _
+- [ ] 6-2: _
+- [ ] 6-3: _[](-)_
