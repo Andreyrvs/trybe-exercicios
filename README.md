@@ -250,11 +250,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ## Ciência da Computação :hourglass_flowing_sand: |
 
-### Turma 19
+### Turma 20 A
 
 #### Seções 01: Introdução à Python
 
-- [ ] 1-1: _Aprendendo Python_
+- [x] 1-1: _Aprendendo Python_
 - [ ] 1-2: _Entrada e Saída de Dados_
 - [ ] 1-3: _Testes_
 - [ ] 1-4: _[Projeto - Job Insights](-)_
